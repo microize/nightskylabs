@@ -15,6 +15,7 @@ const DocumentationPage = React.lazy(() => import('./pages/DocumentationPage'));
 const HelpCenterPage = React.lazy(() => import('./pages/HelpCenterPage'));
 const CommunityPage = React.lazy(() => import('./pages/CommunityPage'));
 const ServicesPage = React.lazy(() => import('./pages/ServicesPage'));
+const IndustriesPage = React.lazy(() => import('./pages/IndustriesPage'));
 const CareersPage = React.lazy(() => import('./pages/CareersPage'));
 const InvestorsPage = React.lazy(() => import('./pages/InvestorsPage'));
 const PressPage = React.lazy(() => import('./pages/PressPage'));
@@ -60,6 +61,7 @@ function App() {
               <Route path="/help" element={<HelpCenterPage />} />
               <Route path="/community" element={<CommunityPage />} />
               <Route path="/services" element={<ServicesPage />} />
+              <Route path="/industries" element={<IndustriesPage />} />
               <Route path="/careers" element={<CareersPage />} />
               <Route path="/investors" element={<InvestorsPage />} />
               <Route path="/press" element={<PressPage />} />

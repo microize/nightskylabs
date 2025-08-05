@@ -27,16 +27,6 @@ const MobileHeroSection = ({ title, subtitle, description }) => {
             </p>
           </div>
         )}
-
-        {/* Mobile Scroll Indicator - Positioned between video and text */}
-        <div className="relative z-30 flex flex-col items-center space-y-2">
-          <span className="text-sm text-black font-thin micro-pulse">SCROLL</span>
-          <div>
-            <svg className="w-4 h-4 text-black" fill="currentColor" viewBox="0 0 24 24">
-              <path d="M12 16l-6-6h12l-6 6z"/>
-            </svg>
-          </div>
-        </div>
       </div>
     </section>
   );
