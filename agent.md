@@ -15,7 +15,7 @@
 ### Project Structure
 ```
 nightskylabs/
-└── hello-world-website/
+└── night-sky-labs/
     ├── src/
     │   ├── components/
     │   │   ├── shared/          # Navigation, Footer, HeroSection, etc.

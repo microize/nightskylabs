@@ -317,7 +317,7 @@ git clone <repository-url>
 cd nightskylabs
 
 # Navigate to the website directory
-cd hello-world-website
+cd night-sky-labs
 ```
 
 ### Step 2: Install Dependencies
@@ -400,7 +400,7 @@ npm run eject
 ### File Structure for Development
 
 ```
-hello-world-website/
+night-sky-labs/
 ├── src/
 │   ├── components/           # Edit React components here
 │   │   ├── shared/          # Navigation, Footer, etc.
@@ -605,7 +605,7 @@ code --install-extension christian-kohler.path-intellisense
 # 1. Install Node.js from nodejs.org
 # 2. Clone and setup
 git clone <repo-url>
-cd nightskylabs\hello-world-website
+cd nightskylabs\night-sky-labs
 npm install
 npm start
 ```
@@ -618,7 +618,7 @@ sudo apt install -y nodejs
 
 # 2. Clone and setup  
 git clone <repo-url>
-cd nightskylabs/hello-world-website
+cd nightskylabs/night-sky-labs
 npm install
 npm start
 ```

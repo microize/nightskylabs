@@ -6,21 +6,21 @@
 
 ## 🚀 Products Portfolio
 
-### [Soul](./hello-world-website/src/pages/SoulPage.js)
+### [Soul](./night-sky-labs/src/pages/SoulPage.js)
 **AI-Powered Coding CLI Tool**
 - Intelligent command-line interface for developers
 - AI-driven code assistance and automation
 - Designed to amplify developer capabilities
 - Target: Software developers and development teams
 
-### [Voice](./hello-world-website/src/pages/VoicePage.js)
+### [Voice](./night-sky-labs/src/pages/VoicePage.js)
 **Realtime Interview Tool**
 - AI-driven voice interview platform for recruitment
 - Intelligent candidate assessment and analysis
 - Streamlines hiring processes with AI insights
 - Target: HR teams and recruitment agencies
 
-### [Qurious](./hello-world-website/src/pages/QuriousPage.js)
+### [Qurious](./night-sky-labs/src/pages/QuriousPage.js)
 **Personalized AI Learning Platform**
 - Adaptive learning system with AI tutoring
 - Personalized educational experiences
@@ -56,7 +56,7 @@
 
 ```
 nightskylabs/
-└── hello-world-website/          # Main React application
+└── night-sky-labs/          # Main React application
     ├── public/                   # Static assets and media files
     │   ├── *.mp4                # Hero background videos
     │   └── index.html           # HTML template
@@ -85,7 +85,7 @@ nightskylabs/
 
 1. **Navigate to the project directory:**
    ```bash
-   cd hello-world-website
+   cd night-sky-labs
    ```
 
 2. **Install dependencies:**
@@ -104,7 +104,7 @@ nightskylabs/
    ```
 
 ### Alternative: Simple HTML Version
-For quick testing, open `hello-world-website/simple-hello-world.html` directly in your browser. This standalone version includes all functionality without requiring a build process.
+For quick testing, open `night-sky-labs/simple-hello-world.html` directly in your browser. This standalone version includes all functionality without requiring a build process.
 
 ### Detailed Setup Instructions
 For comprehensive setup instructions including Windows and Linux environments, troubleshooting, and IDE configuration, see **[SETUP.md](./SETUP.md)**.
