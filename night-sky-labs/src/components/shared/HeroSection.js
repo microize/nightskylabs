@@ -14,8 +14,7 @@ const HeroSection = ({
     <div className="hero-artboard relative w-full bg-white overflow-hidden pt-16 md:pt-24" 
          style={{ 
            height: '100vh', 
-           minHeight: '600px',
-           maxHeight: '1000px'
+           minHeight: '100vh'
          }}>
       
       {/* Background Video - Responsive */}
@@ -63,19 +62,19 @@ const HeroSection = ({
       )}
       
       {/* Content Container - Desktop Layout */}
-      <div className="hidden md:flex relative z-10 h-full flex-col items-start px-12" style={{ paddingTop: '25vh' }}>
+      <div className="hidden md:flex relative z-10 h-full flex-col items-start px-12" style={{ paddingTop: '12%' }}>
         
         {/* Hero Text Section - Desktop */}
         <div className="flex flex-col items-start text-left w-full max-w-4xl ml-[35%]">
-          <div className="hero-text-creating animate-hero-text-1 mb-8">
-            <h1 className="text-7xl lg:text-8xl xl:text-9xl font-thin text-black leading-relaxed">
+          <div className="hero-text-creating animate-hero-text-1 mb-0 md:mb-0">
+            <h1 className="font-thin text-black leading-tight md:leading-relaxed" style={{ fontSize: '12vh' }}>
               {title}
             </h1>
           </div>
 
           {subtitle && (
-            <div className="hero-text-users animate-hero-text-2 mb-16">
-              <h2 className="text-5xl lg:text-6xl xl:text-7xl font-thin text-black leading-relaxed">
+            <div className="hero-text-users animate-hero-text-2 mb-8 md:mb-10">
+              <h2 className="font-thin text-gray-600 leading-tight md:leading-relaxed" style={{ fontSize: '6vh' }}>
                 {subtitle}
               </h2>
             </div>
@@ -84,8 +83,8 @@ const HeroSection = ({
 
         {/* Description Text - Desktop Position */}
         {description && (
-          <div className="hero-description animate-hero-fade-in absolute bottom-24 right-12 max-w-md">
-            <p className="text-justify text-lg lg:text-xl font-light text-gray-600 leading-relaxed">
+          <div className="hero-description animate-hero-fade-in absolute right-12" style={{ bottom: '5%', width: '25%' }}>
+            <p className="text-justify font-light text-gray-600 leading-relaxed" style={{ fontSize: '2.5vh' }}>
               {description}
             </p>
           </div>
@@ -93,9 +92,9 @@ const HeroSection = ({
 
         {/* Scroll Indicator - Desktop */}
         {showScrollIndicator && (
-          <div className="hidden md:block hero-scroll animate-hero-scroll absolute bottom-16 left-1/2 transform -translate-x-1/2">
+          <div className="hidden md:block hero-scroll animate-hero-scroll absolute left-1/2 transform -translate-x-1/2" style={{ bottom: '2%' }}>
             <div className="flex flex-col items-center space-y-2">
-              <span className="text-sm text-black font-thin micro-pulse">SCROLL</span>
+              <span className="text-black font-thin micro-pulse" style={{ fontSize: '1.8vh' }}>SCROLL</span>
               <div>
                 <svg className="w-4 h-4 text-black" fill="currentColor" viewBox="0 0 24 24">
                   <path d="M12 16l-6-6h12l-6 6z"/>

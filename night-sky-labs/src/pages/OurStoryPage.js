@@ -31,12 +31,12 @@ const OurStoryPage = () => {
                   We saw an opportunity to bridge this gap.
                 </p>
                 <p className="text-lg font-thin text-gray-600">
-                  Founded in 2023 by a team of AI researchers and software engineers, we set out to create 
+                  Founded in 2025 by Sripathi Mohansundaram, an AI researcher and software engineer, we set out to create 
                   intelligent tools that would enhance human capability rather than replace it. Our mission 
                   was clear: make AI accessible, practical, and beneficial for everyday professionals.
                 </p>
                 <p className="text-lg font-thin text-gray-600">
-                  Starting with a small team in San Francisco, we focused on understanding the real pain points 
+                  Starting with operations in Chennai, India, we focused on understanding the real pain points 
                   that professionals faced in their daily workflows. This research-first approach would become 
                   the foundation of everything we built.
                 </p>
@@ -44,20 +44,20 @@ const OurStoryPage = () => {
             </div>
             <div className="bg-white rounded-2xl p-8 shadow-sm">
               <div className="text-center">
-                <div className="text-6xl font-thin text-black mb-4">2023</div>
+                <div className="text-6xl font-thin text-black mb-4">2025</div>
                 <h3 className="text-2xl font-thin text-black mb-4">Company Founded</h3>
                 <p className="text-base font-thin text-gray-600 mb-6">
-                  Three co-founders with backgrounds in AI research, software engineering, 
-                  and product design came together with a shared vision.
+                  Solo founder Sripathi Mohansundaram with background in AI research and software engineering 
+                  launched the company with a clear vision to democratize AI tools.
                 </p>
                 <div className="space-y-2">
                   <div className="flex justify-between text-sm font-thin">
-                    <span className="text-gray-600">Initial Team</span>
-                    <span className="text-black">3 Co-founders</span>
+                    <span className="text-gray-600">Founder</span>
+                    <span className="text-black">Sripathi Mohansundaram</span>
                   </div>
                   <div className="flex justify-between text-sm font-thin">
                     <span className="text-gray-600">First Office</span>
-                    <span className="text-black">San Francisco</span>
+                    <span className="text-black">Chennai, India</span>
                   </div>
                   <div className="flex justify-between text-sm font-thin">
                     <span className="text-gray-600">Initial Focus</span>

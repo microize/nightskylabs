@@ -1,16 +1,57 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { Link } from 'react-router-dom';
+import { useReadingAnimation } from '../hooks/useReadingAnimation';
 
 const HeroLayout = () => {
+  useReadingAnimation();
+  
+  useEffect(() => {
+    const observerOptions = {
+      root: null,
+      rootMargin: '0px',
+      threshold: 0.3
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          const readingElement = entry.target.querySelector('#reading-text');
+          if (readingElement && !readingElement.dataset.animated) {
+            readingElement.dataset.animated = 'true';
+            
+            const wordElements = readingElement.querySelectorAll('.reading-word');
+            wordElements.forEach((word, index) => {
+              setTimeout(() => {
+                word.classList.remove('text-gray-400');
+                word.classList.add('text-black');
+              }, index * 150);
+            });
+          }
+        }
+      });
+    }, observerOptions);
+
+    const levelUpSection = document.querySelector('.level-up-section');
+    if (levelUpSection) {
+      observer.observe(levelUpSection);
+    }
+
+    return () => {
+      if (levelUpSection) {
+        observer.unobserve(levelUpSection);
+      }
+    };
+  }, []);
+  
   return (
     <div className="relative w-full bg-white overflow-hidden">
 
       {/* Level Up Section */}
-      <section className="level-up-section relative w-full bg-white py-16 md:py-32">
-        <div className="w-4/5 mx-auto px-6 md:px-12">
+      <section className="level-up-section animated-section relative w-full bg-white py-16 md:py-32">
+        <div className="w-full mx-auto px-6 md:px-12">
           <div className="w-full text-center md:text-left">
-            <h2 className="text-xl md:text-2xl lg:text-3xl xl:text-4xl font-thin text-black mb-8" id="reading-text" style={{ lineHeight: '2' }}>
-              We don't help you compete. We help you level up. We help you punch above your weight by turning GenAI into a strategic edge. With agentic systems grounded in behavioral science and built on safety-first engineering, we replace guesswork with precision, manual work with intelligent automation, and operational drag with momentum. This isn't just adoption - it's transformation, built to outperform.
+            <h2 className="text-xl md:text-2xl lg:text-3xl xl:text-4xl font-thin mb-8" id="reading-text" style={{ lineHeight: '2' }}>
+              <span className="reading-word text-gray-400">We</span> <span className="reading-word text-gray-400">don't</span> <span className="reading-word text-gray-400">help</span> <span className="reading-word text-gray-400">you</span> <span className="reading-word text-gray-400">compete.</span> <span className="reading-word text-gray-400">We</span> <span className="reading-word text-gray-400">help</span> <span className="reading-word text-gray-400">you</span> <span className="reading-word text-gray-400">level</span> <span className="reading-word text-gray-400">up.</span> <span className="reading-word text-gray-400">We</span> <span className="reading-word text-gray-400">help</span> <span className="reading-word text-gray-400">you</span> <span className="reading-word text-gray-400">punch</span> <span className="reading-word text-gray-400">above</span> <span className="reading-word text-gray-400">your</span> <span className="reading-word text-gray-400">weight</span> <span className="reading-word text-gray-400">by</span> <span className="reading-word text-gray-400">turning</span> <span className="reading-word text-gray-400">GenAI</span> <span className="reading-word text-gray-400">into</span> <span className="reading-word text-gray-400">a</span> <span className="reading-word text-gray-400">strategic</span> <span className="reading-word text-gray-400">edge.</span> <span className="reading-word text-gray-400">With</span> <span className="reading-word text-gray-400">agentic</span> <span className="reading-word text-gray-400">systems</span> <span className="reading-word text-gray-400">grounded</span> <span className="reading-word text-gray-400">in</span> <span className="reading-word text-gray-400">behavioral</span> <span className="reading-word text-gray-400">science</span> <span className="reading-word text-gray-400">and</span> <span className="reading-word text-gray-400">built</span> <span className="reading-word text-gray-400">on</span> <span className="reading-word text-gray-400">safety-first</span> <span className="reading-word text-gray-400">engineering,</span> <span className="reading-word text-gray-400">we</span> <span className="reading-word text-gray-400">replace</span> <span className="reading-word text-gray-400">guesswork</span> <span className="reading-word text-gray-400">with</span> <span className="reading-word text-gray-400">precision,</span> <span className="reading-word text-gray-400">manual</span> <span className="reading-word text-gray-400">work</span> <span className="reading-word text-gray-400">with</span> <span className="reading-word text-gray-400">intelligent</span> <span className="reading-word text-gray-400">automation,</span> <span className="reading-word text-gray-400">and</span> <span className="reading-word text-gray-400">operational</span> <span className="reading-word text-gray-400">drag</span> <span className="reading-word text-gray-400">with</span> <span className="reading-word text-gray-400">momentum.</span> <span className="reading-word text-gray-400">This</span> <span className="reading-word text-gray-400">isn't</span> <span className="reading-word text-gray-400">just</span> <span className="reading-word text-gray-400">adoption</span> <span className="reading-word text-gray-400">-</span> <span className="reading-word text-gray-400">it's</span> <span className="reading-word text-gray-400">transformation,</span> <span className="reading-word text-gray-400">built</span> <span className="reading-word text-gray-400">to</span> <span className="reading-word text-gray-400">outperform.</span>
             </h2>
           </div>
         </div>
@@ -22,31 +63,27 @@ const HeroLayout = () => {
           <div className="animate-marquee flex items-center space-x-6 md:space-x-12 whitespace-nowrap">
             <span className="text-2xl md:text-3xl lg:text-3xl font-thin text-gray-400">generative ai</span>
             <span className="text-2xl md:text-3xl lg:text-3xl font-thin text-gray-400">•</span>
-            <span className="text-2xl md:text-3xl lg:text-3xl font-thin text-gray-400">natural language processing</span>
+            <span className="text-2xl md:text-3xl lg:text-3xl font-thin text-gray-400">agentic ai</span>
             <span className="text-2xl md:text-3xl lg:text-3xl font-thin text-gray-400">•</span>
-            <span className="text-2xl md:text-3xl lg:text-3xl font-thin text-gray-400">machine learning</span>
+            <span className="text-2xl md:text-3xl lg:text-3xl font-thin text-gray-400">computer use</span>
             <span className="text-2xl md:text-3xl lg:text-3xl font-thin text-gray-400">•</span>
-            <span className="text-2xl md:text-3xl lg:text-3xl font-thin text-gray-400">deep learning</span>
+            <span className="text-2xl md:text-3xl lg:text-3xl font-thin text-gray-400">model fine-tuning</span>
             <span className="text-2xl md:text-3xl lg:text-3xl font-thin text-gray-400">•</span>
-            <span className="text-2xl md:text-3xl lg:text-3xl font-thin text-gray-400">neural networks</span>
+            <span className="text-2xl md:text-3xl lg:text-3xl font-thin text-gray-400">llm customization</span>
             <span className="text-2xl md:text-3xl lg:text-3xl font-thin text-gray-400">•</span>
-            <span className="text-2xl md:text-3xl lg:text-3xl font-thin text-gray-400">automation</span>
+            <span className="text-2xl md:text-3xl lg:text-3xl font-thin text-gray-400">workflow automation</span>
             <span className="text-2xl md:text-3xl lg:text-3xl font-thin text-gray-400">•</span>
             <span className="text-2xl md:text-3xl lg:text-3xl font-thin text-gray-400">ai agents</span>
+            <span className="text-2xl md:text-3xl lg:text-3xl font-thin text-gray-400">•</span>
+            <span className="text-2xl md:text-3xl lg:text-3xl font-thin text-gray-400">prompt engineering</span>
+            <span className="text-2xl md:text-3xl lg:text-3xl font-thin text-gray-400">•</span>
+            <span className="text-2xl md:text-3xl lg:text-3xl font-thin text-gray-400">multi-agent systems</span>
+            <span className="text-2xl md:text-3xl lg:text-3xl font-thin text-gray-400">•</span>
+            <span className="text-2xl md:text-3xl lg:text-3xl font-thin text-gray-400">intelligent automation</span>
+            <span className="text-2xl md:text-3xl lg:text-3xl font-thin text-gray-400">•</span>
+            <span className="text-2xl md:text-3xl lg:text-3xl font-thin text-gray-400">domain adaptation</span>
             <span className="text-2xl md:text-3xl lg:text-3xl font-thin text-gray-400">•</span>
             <span className="text-2xl md:text-3xl lg:text-3xl font-thin text-gray-400">generative ai</span>
-            <span className="text-2xl md:text-3xl lg:text-3xl font-thin text-gray-400">•</span>
-            <span className="text-2xl md:text-3xl lg:text-3xl font-thin text-gray-400">natural language processing</span>
-            <span className="text-2xl md:text-3xl lg:text-3xl font-thin text-gray-400">•</span>
-            <span className="text-2xl md:text-3xl lg:text-3xl font-thin text-gray-400">machine learning</span>
-            <span className="text-2xl md:text-3xl lg:text-3xl font-thin text-gray-400">•</span>
-            <span className="text-2xl md:text-3xl lg:text-3xl font-thin text-gray-400">deep learning</span>
-            <span className="text-2xl md:text-3xl lg:text-3xl font-thin text-gray-400">•</span>
-            <span className="text-2xl md:text-3xl lg:text-3xl font-thin text-gray-400">neural networks</span>
-            <span className="text-2xl md:text-3xl lg:text-3xl font-thin text-gray-400">•</span>
-            <span className="text-2xl md:text-3xl lg:text-3xl font-thin text-gray-400">automation</span>
-            <span className="text-2xl md:text-3xl lg:text-3xl font-thin text-gray-400">•</span>
-            <span className="text-2xl md:text-3xl lg:text-3xl font-thin text-gray-400">ai agents</span>
             <span className="text-2xl md:text-3xl lg:text-3xl font-thin text-gray-400">•</span>
           </div>
         </div>
@@ -54,231 +91,276 @@ const HeroLayout = () => {
 
       {/* Strategic Sectors Section */}
       <section id="strategic-sectors" className="strategic-sectors-section relative w-full bg-white py-16 md:py-24 overflow-hidden">
-        <div className="w-full px-8 md:px-16">
+        <div className="w-full px-6 md:px-12">
           
           {/* Section Header */}
           <div className="text-center mb-16 md:mb-20">
             <h2 className="text-4xl md:text-6xl font-thin text-black mb-4 leading-tight">How We Level You Up</h2>
-            <div className="w-24 h-0.5 bg-black mx-auto mt-8"></div>
           </div>
           
           {/* Mixed Square Grid Layout */}
-          <div className="grid grid-cols-4 md:grid-cols-6 gap-3 md:gap-4">
+          <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-2 md:gap-3 lg:gap-4">
             
             {/* Row 1 */}
-            {/* Square Card 1 - Video (1x1) */}
-            <div className="col-span-1 aspect-square rounded-2xl shadow-lg hover:shadow-xl transition-all duration-500 hover:-translate-y-1 border border-gray-100 group overflow-hidden">
-              <video 
-                autoPlay 
-                muted 
-                loop
-                playsInline
-                className="h-full w-full object-cover transition-all duration-300 filter grayscale group-hover:brightness-110"
-              >
-                <source src="/frog_breathing.mp4" type="video/mp4" />
-                <div className="h-full w-full bg-black flex items-center justify-center">
-                  <div className="text-white text-xs font-thin opacity-50">Video not supported</div>
+            {/* Square Card 1 - Agentic AI Systems TEXT (1x1) */}
+            <div className="col-span-1 aspect-square bg-white rounded-2xl shadow-lg hover:shadow-xl transition-all duration-500 hover:-translate-y-1 border border-gray-100 group">
+              <div className="p-2 md:p-3 h-full flex flex-col justify-start items-start text-left">
+                <div className="mb-3">
+                  <h3 className="text-sm md:text-base font-thin text-black mb-2 group-hover:text-gray-800 transition-colors">Agentic AI Systems</h3>
+                  <div className="w-8 h-0.5 bg-black transition-all duration-300 group-hover:w-12"></div>
                 </div>
-              </video>
+                
+                <div className="space-y-2">
+                  <div className="flex flex-wrap gap-1">
+                    <span className="px-2 py-1 bg-gray-50 text-black rounded-full text-xs font-thin border border-gray-300 hover:bg-black hover:text-white hover:border-black transition-all duration-300 cursor-pointer">multi-agent</span>
+                    <span className="px-2 py-1 bg-gray-50 text-black rounded-full text-xs font-thin border border-gray-300 hover:bg-black hover:text-white hover:border-black transition-all duration-300 cursor-pointer">autonomous</span>
+                  </div>
+                  <div className="flex flex-wrap gap-1">
+                    <span className="px-2 py-1 bg-gray-50 text-black rounded-full text-xs font-thin border border-gray-300 hover:bg-black hover:text-white hover:border-black transition-all duration-300 cursor-pointer">workflows</span>
+                    <span className="px-2 py-1 bg-gray-50 text-black rounded-full text-xs font-thin border border-gray-300 hover:bg-black hover:text-white hover:border-black transition-all duration-300 cursor-pointer">decisions</span>
+                  </div>
+                  <div className="flex flex-wrap gap-1">
+                    <span className="px-2 py-1 bg-gray-50 text-black rounded-full text-xs font-thin border border-gray-300 hover:bg-black hover:text-white hover:border-black transition-all duration-300 cursor-pointer">coordination</span>
+                  </div>
+                </div>
+              </div>
             </div>
 
-            {/* Square Card 2 - Video (1x1) */}
-            <div className="col-span-1 aspect-square rounded-2xl shadow-lg hover:shadow-xl transition-all duration-500 hover:-translate-y-1 border border-gray-100 group overflow-hidden">
-              <video 
-                autoPlay 
-                muted 
-                loop
-                playsInline
-                className="h-full w-full object-cover transition-all duration-300 filter grayscale group-hover:brightness-110"
-              >
-                <source src="/astronaut_waving.mp4" type="video/mp4" />
-                <div className="h-full w-full bg-black flex items-center justify-center">
-                  <div className="text-white text-xs font-thin opacity-50">Video not supported</div>
+            {/* Square Card 2 - Computer Use Automation TEXT (1x1) */}
+            <div className="col-span-1 aspect-square bg-gradient-to-br from-black to-gray-800 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-0.5 hover:scale-102 border border-gray-100 group">
+              <div className="p-2 md:p-3 h-full flex flex-col justify-start items-start text-left">
+                <div className="mb-3">
+                  <h3 className="text-sm md:text-base font-thin text-white mb-2 group-hover:text-gray-200 transition-colors">Computer Use Automation</h3>
+                  <div className="w-8 h-0.5 bg-white transition-all duration-300 group-hover:w-12"></div>
                 </div>
-              </video>
+                
+                <div className="space-y-2">
+                  <div className="flex flex-wrap gap-1">
+                    <span className="px-2 py-1 bg-gray-700 text-gray-300 rounded-full text-xs font-thin border border-gray-600 hover:bg-white hover:text-black hover:border-white transition-all duration-300 cursor-pointer">ui automation</span>
+                  </div>
+                  <div className="flex flex-wrap gap-1">
+                    <span className="px-2 py-1 bg-gray-700 text-gray-300 rounded-full text-xs font-thin border border-gray-600 hover:bg-white hover:text-black hover:border-white transition-all duration-300 cursor-pointer">software control</span>
+                  </div>
+                  <div className="flex flex-wrap gap-1">
+                    <span className="px-2 py-1 bg-gray-700 text-gray-300 rounded-full text-xs font-thin border border-gray-600 hover:bg-white hover:text-black hover:border-white transition-all duration-300 cursor-pointer">cross-platform</span>
+                  </div>
+                </div>
+              </div>
             </div>
 
             {/* Square Card 3 - Strategic Design Solutions TEXT (2x2) */}
-            <div className="col-span-2 md:col-span-2 row-span-2 aspect-square bg-gradient-to-br from-gray-50 to-gray-100 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-500 hover:-translate-y-1 border border-gray-100 group">
-              <div className="p-4 md:p-6 h-full flex flex-col justify-center">
-                <div className="mb-4">
-                  <h3 className="text-lg md:text-xl font-thin text-black mb-3 group-hover:text-gray-800 transition-colors">Strategic Design Solutions</h3>
-                  <div className="w-12 h-0.5 bg-black transition-all duration-300 group-hover:w-16"></div>
-                </div>
-                
-                <div className="space-y-2">
-                  <div className="flex flex-wrap gap-2">
-                    <span className="px-3 py-1.5 bg-gray-50 text-black rounded-full text-xs font-thin hover:bg-black hover:text-white transition-all duration-300 cursor-pointer">ai strategy</span>
-                    <span className="px-3 py-1.5 bg-gray-50 text-black rounded-full text-xs font-thin hover:bg-black hover:text-white transition-all duration-300 cursor-pointer">automation</span>
-                  </div>
-                  <div className="flex flex-wrap gap-2">
-                    <span className="px-3 py-1.5 bg-gray-50 text-black rounded-full text-xs font-thin hover:bg-black hover:text-white transition-all duration-300 cursor-pointer">behavioral analysis</span>
-                  </div>
-                  <div className="flex flex-wrap gap-2">
-                    <span className="px-3 py-1.5 bg-gray-50 text-black rounded-full text-xs font-thin hover:bg-black hover:text-white transition-all duration-300 cursor-pointer">workflows</span>
-                    <span className="px-3 py-1.5 bg-gray-50 text-black rounded-full text-xs font-thin hover:bg-black hover:text-white transition-all duration-300 cursor-pointer">genai</span>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            {/* Square Card 9 - AI Training TEXT (1x1) - Desktop Row 1 */}
-            <div className="hidden md:block col-span-1 aspect-square bg-gradient-to-br from-gray-50 to-gray-100 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-500 hover:-translate-y-1 border border-gray-100 group">
-              <div className="p-3 h-full flex flex-col justify-center">
-                <div className="mb-3">
-                  <h3 className="text-sm md:text-base font-thin text-black mb-2 group-hover:text-gray-800 transition-colors">AI Training</h3>
-                  <div className="w-8 h-0.5 bg-black transition-all duration-300 group-hover:w-12"></div>
-                </div>
-                
-                <div className="space-y-2">
-                  <div className="flex flex-wrap gap-1">
-                    <span className="px-2 py-1 bg-gray-50 text-black rounded-full text-xs font-thin hover:bg-black hover:text-white transition-all duration-300 cursor-pointer">model training</span>
-                  </div>
-                  <div className="flex flex-wrap gap-1">
-                    <span className="px-2 py-1 bg-gray-50 text-black rounded-full text-xs font-thin hover:bg-black hover:text-white transition-all duration-300 cursor-pointer">fine-tuning</span>
-                    <span className="px-2 py-1 bg-gray-50 text-black rounded-full text-xs font-thin hover:bg-black hover:text-white transition-all duration-300 cursor-pointer">validation</span>
-                  </div>
-                  <div className="flex flex-wrap gap-1">
-                    <span className="px-2 py-1 bg-gray-50 text-black rounded-full text-xs font-thin hover:bg-black hover:text-white transition-all duration-300 cursor-pointer">optimization</span>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            {/* Square Card 10 - Video (1x1) - Desktop Row 1 */}
-            <div className="hidden md:block col-span-1 aspect-square rounded-2xl shadow-lg hover:shadow-xl transition-all duration-500 hover:-translate-y-1 border border-gray-100 group overflow-hidden">
+            <div className="col-span-2 md:col-span-2 lg:col-span-2 row-span-2 aspect-square bg-gradient-to-bl from-gray-200 to-gray-50 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-500 hover:-translate-y-1 border border-gray-100 group relative overflow-hidden">
               <video 
                 autoPlay 
                 muted 
                 loop
                 playsInline
-                className="h-full w-full object-cover transition-all duration-300 filter grayscale group-hover:brightness-110"
+                className="absolute inset-0 h-full w-full object-cover opacity-20 filter grayscale group-hover:opacity-30 transition-all duration-500"
               >
-                <source src="/frog_breathing.mp4" type="video/mp4" />
-                <div className="h-full w-full bg-black flex items-center justify-center">
-                  <div className="text-white text-xs font-thin opacity-50">Video not supported</div>
-                </div>
+                <source src="/butterfly.mp4" type="video/mp4" />
               </video>
-            </div>
-
-            {/* Row 2 */}
-            {/* Square Card 5 - AI Consulting TEXT (1x2) */}
-            <div className="col-span-1 row-span-2 bg-gradient-to-br from-gray-50 to-gray-100 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-500 hover:-translate-y-1 border border-gray-100 group" style={{ aspectRatio: '1 / 2' }}>
-              <div className="p-3 h-full flex flex-col justify-center">
+              <div className="relative p-3 md:p-4 lg:p-6 h-full flex flex-col justify-end items-start text-left">
                 <div className="mb-4">
-                  <h3 className="text-sm md:text-base font-thin text-black mb-2 group-hover:text-gray-800 transition-colors">AI Consulting</h3>
-                  <div className="w-8 h-0.5 bg-black transition-all duration-300 group-hover:w-12"></div>
+                  <h3 className="text-sm md:text-lg lg:text-xl font-thin text-black mb-2 md:mb-3 group-hover:text-gray-800 transition-colors">Strategic Design Solutions</h3>
+                  <div className="w-12 h-0.5 bg-black transition-all duration-300 group-hover:w-16"></div>
                 </div>
                 
-                <div className="space-y-2">
-                  <div className="flex flex-wrap gap-1">
-                    <span className="px-2 py-1 bg-gray-50 text-black rounded-full text-xs font-thin hover:bg-black hover:text-white transition-all duration-300 cursor-pointer">strategic planning</span>
+                <div className="space-y-1 md:space-y-2">
+                  <div className="flex flex-wrap gap-1 md:gap-2">
+                    <span className="px-2 md:px-3 py-1 md:py-1.5 bg-gray-50 text-black rounded-full text-xs font-thin border border-gray-300 hover:bg-black hover:text-white hover:border-black transition-all duration-300 cursor-pointer">genai strategy</span>
+                    <span className="px-2 md:px-3 py-1 md:py-1.5 bg-gray-50 text-black rounded-full text-xs font-thin border border-gray-300 hover:bg-black hover:text-white hover:border-black transition-all duration-300 cursor-pointer">agentic systems</span>
                   </div>
-                  <div className="flex flex-wrap gap-1">
-                    <span className="px-2 py-1 bg-gray-50 text-black rounded-full text-xs font-thin hover:bg-black hover:text-white transition-all duration-300 cursor-pointer">implementation</span>
+                  <div className="flex flex-wrap gap-1 md:gap-2">
+                    <span className="px-2 md:px-3 py-1 md:py-1.5 bg-gray-50 text-black rounded-full text-xs font-thin border border-gray-300 hover:bg-black hover:text-white hover:border-black transition-all duration-300 cursor-pointer">automation architecture</span>
                   </div>
-                  <div className="flex flex-wrap gap-1">
-                    <span className="px-2 py-1 bg-gray-50 text-black rounded-full text-xs font-thin hover:bg-black hover:text-white transition-all duration-300 cursor-pointer">optimization</span>
-                  </div>
-                  <div className="flex flex-wrap gap-1">
-                    <span className="px-2 py-1 bg-gray-50 text-black rounded-full text-xs font-thin hover:bg-black hover:text-white transition-all duration-300 cursor-pointer">roi analysis</span>
+                  <div className="flex flex-wrap gap-1 md:gap-2">
+                    <span className="px-2 md:px-3 py-1 md:py-1.5 bg-gray-50 text-black rounded-full text-xs font-thin border border-gray-300 hover:bg-black hover:text-white hover:border-black transition-all duration-300 cursor-pointer">ai transformation</span>
+                    <span className="px-2 md:px-3 py-1 md:py-1.5 bg-gray-50 text-black rounded-full text-xs font-thin border border-gray-300 hover:bg-black hover:text-white hover:border-black transition-all duration-300 cursor-pointer">model selection</span>
                   </div>
                 </div>
               </div>
             </div>
 
-            {/* Square Card 4 - Data Analytics TEXT (1x1) */}
-            <div className="col-span-1 aspect-square bg-gradient-to-br from-gray-50 to-gray-100 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-500 hover:-translate-y-1 border border-gray-100 group">
-              <div className="p-3 h-full flex flex-col justify-center">
+            {/* Square Card 9 - LLM Fine-Tuning TEXT (1x1) - Desktop Row 1 */}
+            <div className="hidden lg:block col-span-1 aspect-square bg-white rounded-2xl shadow-lg hover:shadow-xl transition-all duration-500 hover:-translate-y-1 border border-gray-100 group">
+              <div className="p-2 md:p-3 h-full flex flex-col justify-start items-start text-left">
                 <div className="mb-3">
-                  <h3 className="text-sm md:text-base font-thin text-black mb-2 group-hover:text-gray-800 transition-colors">Data Analytics</h3>
+                  <h3 className="text-sm md:text-base font-thin text-black mb-2 group-hover:text-gray-800 transition-colors">LLM Fine-Tuning</h3>
                   <div className="w-8 h-0.5 bg-black transition-all duration-300 group-hover:w-12"></div>
                 </div>
                 
                 <div className="space-y-2">
                   <div className="flex flex-wrap gap-1">
-                    <span className="px-2 py-1 bg-gray-50 text-black rounded-full text-xs font-thin hover:bg-black hover:text-white transition-all duration-300 cursor-pointer">insights</span>
-                    <span className="px-2 py-1 bg-gray-50 text-black rounded-full text-xs font-thin hover:bg-black hover:text-white transition-all duration-300 cursor-pointer">reporting</span>
+                    <span className="px-2 py-1 bg-gray-50 text-black rounded-full text-xs font-thin border border-gray-300 hover:bg-black hover:text-white hover:border-black transition-all duration-300 cursor-pointer">custom llms</span>
                   </div>
                   <div className="flex flex-wrap gap-1">
-                    <span className="px-2 py-1 bg-gray-50 text-black rounded-full text-xs font-thin hover:bg-black hover:text-white transition-all duration-300 cursor-pointer">visualization</span>
+                    <span className="px-2 py-1 bg-gray-50 text-black rounded-full text-xs font-thin border border-gray-300 hover:bg-black hover:text-white hover:border-black transition-all duration-300 cursor-pointer">domain fine-tuning</span>
                   </div>
                   <div className="flex flex-wrap gap-1">
-                    <span className="px-2 py-1 bg-gray-50 text-black rounded-full text-xs font-thin hover:bg-black hover:text-white transition-all duration-300 cursor-pointer">intelligence</span>
+                    <span className="px-2 py-1 bg-gray-50 text-black rounded-full text-xs font-thin border border-gray-300 hover:bg-black hover:text-white hover:border-black transition-all duration-300 cursor-pointer">prompt engineering</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {/* Square Card 10 - Model Fine-Tuning TEXT (1x1) - Desktop Row 1 */}
+            <div className="hidden lg:block col-span-1 aspect-square bg-gradient-to-br from-black to-gray-800 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-0.5 hover:scale-102 border border-gray-100 group">
+              <div className="p-2 md:p-3 h-full flex flex-col justify-start items-start text-left">
+                <div className="mb-3">
+                  <h3 className="text-sm md:text-base font-thin text-white mb-2 group-hover:text-gray-200 transition-colors">Model Fine-Tuning</h3>
+                  <div className="w-8 h-0.5 bg-white transition-all duration-300 group-hover:w-12"></div>
+                </div>
+                
+                <div className="space-y-2">
+                  <div className="flex flex-wrap gap-1">
+                    <span className="px-2 py-1 bg-gray-700 text-gray-300 rounded-full text-xs font-thin border border-gray-600 hover:bg-white hover:text-black hover:border-white transition-all duration-300 cursor-pointer">custom llms</span>
+                  </div>
+                  <div className="flex flex-wrap gap-1">
+                    <span className="px-2 py-1 bg-gray-700 text-gray-300 rounded-full text-xs font-thin border border-gray-600 hover:bg-white hover:text-black hover:border-white transition-all duration-300 cursor-pointer">domain training</span>
+                  </div>
+                  <div className="flex flex-wrap gap-1">
+                    <span className="px-2 py-1 bg-gray-700 text-gray-300 rounded-full text-xs font-thin border border-gray-600 hover:bg-white hover:text-black hover:border-white transition-all duration-300 cursor-pointer">optimization</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {/* Row 2 */}
+            {/* Square Card 5 - GenAI Consulting TEXT (1x1) */}
+            <div className="col-span-1 aspect-square bg-gradient-to-br from-black to-gray-800 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-0.5 hover:scale-102 border border-gray-100 group">
+              <div className="p-2 md:p-3 h-full flex flex-col justify-start items-start text-left">
+                <div className="mb-3">
+                  <h3 className="text-sm md:text-base font-thin text-white mb-2 group-hover:text-gray-200 transition-colors">GenAI Consulting</h3>
+                  <div className="w-8 h-0.5 bg-white transition-all duration-300 group-hover:w-12"></div>
+                </div>
+                
+                <div className="space-y-2">
+                  <div className="flex flex-wrap gap-1">
+                    <span className="px-2 py-1 bg-gray-700 text-gray-300 rounded-full text-xs font-thin border border-gray-600 hover:bg-white hover:text-black hover:border-white transition-all duration-300 cursor-pointer">genai strategy</span>
+                  </div>
+                  <div className="flex flex-wrap gap-1">
+                    <span className="px-2 py-1 bg-gray-700 text-gray-300 rounded-full text-xs font-thin border border-gray-600 hover:bg-white hover:text-black hover:border-white transition-all duration-300 cursor-pointer">automation roadmap</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {/* Square Card 4 - AI-Powered Analytics TEXT (1x1) */}
+            <div className="col-span-1 aspect-square bg-white rounded-2xl shadow-lg hover:shadow-xl transition-all duration-500 hover:-translate-y-1 border border-gray-100 group">
+              <div className="p-2 md:p-3 h-full flex flex-col justify-start items-start text-left">
+                <div className="mb-3">
+                  <h3 className="text-sm md:text-base font-thin text-black mb-2 group-hover:text-gray-800 transition-colors">AI-Powered Analytics</h3>
+                  <div className="w-8 h-0.5 bg-black transition-all duration-300 group-hover:w-12"></div>
+                </div>
+                
+                <div className="space-y-2">
+                  <div className="flex flex-wrap gap-1">
+                    <span className="px-2 py-1 bg-gray-50 text-black rounded-full text-xs font-thin border border-gray-300 hover:bg-black hover:text-white hover:border-black transition-all duration-300 cursor-pointer">genai insights</span>
+                  </div>
+                  <div className="flex flex-wrap gap-1">
+                    <span className="px-2 py-1 bg-gray-50 text-black rounded-full text-xs font-thin border border-gray-300 hover:bg-black hover:text-white hover:border-black transition-all duration-300 cursor-pointer">automated reporting</span>
+                  </div>
+                  <div className="flex flex-wrap gap-1">
+                    <span className="px-2 py-1 bg-gray-50 text-black rounded-full text-xs font-thin border border-gray-300 hover:bg-black hover:text-white hover:border-black transition-all duration-300 cursor-pointer">predictive modeling</span>
                   </div>
                 </div>
               </div>
             </div>
 
             {/* Row 3 */}
-            {/* Square Card 6 - Video (1x1) */}
-            <div className="col-span-1 aspect-square rounded-2xl shadow-lg hover:shadow-xl transition-all duration-500 hover:-translate-y-1 border border-gray-100 group overflow-hidden">
+            {/* Square Card 11 - Fish Swimming Video Card (1x1) */}
+            <div className="col-span-1 aspect-square bg-black rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-0.5 border border-gray-100 group relative overflow-hidden">
               <video 
                 autoPlay 
                 muted 
                 loop
                 playsInline
-                className="h-full w-full object-cover transition-all duration-300 filter grayscale group-hover:brightness-110"
+                className="absolute inset-0 h-full w-full object-cover"
               >
-                <source src="/meadow_breeze.mp4" type="video/mp4" />
-                <div className="h-full w-full bg-black flex items-center justify-center">
-                  <div className="text-white text-xs font-thin opacity-50">Video not supported</div>
-                </div>
+                <source src="/fish_swimming.mp4" type="video/mp4" />
               </video>
             </div>
 
-            {/* Square Card 7 - Implementation Services TEXT (1x1) */}
-            <div className="col-span-1 aspect-square bg-gradient-to-br from-gray-50 to-gray-100 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-500 hover:-translate-y-1 border border-gray-100 group">
-              <div className="p-3 h-full flex flex-col justify-center">
+            {/* Square Card 6 - GenAI Tool Development TEXT (1x1) */}
+            <div className="col-span-1 aspect-square bg-white rounded-2xl shadow-lg hover:shadow-xl transition-all duration-500 hover:-translate-y-1 border border-gray-100 group">
+              <div className="p-2 md:p-3 h-full flex flex-col justify-start items-start text-left">
                 <div className="mb-3">
-                  <h3 className="text-sm md:text-base font-thin text-black mb-2 group-hover:text-gray-800 transition-colors">Implementation Services</h3>
+                  <h3 className="text-sm md:text-base font-thin text-black mb-2 group-hover:text-gray-800 transition-colors">GenAI Tool Development</h3>
                   <div className="w-8 h-0.5 bg-black transition-all duration-300 group-hover:w-12"></div>
                 </div>
                 
                 <div className="space-y-2">
                   <div className="flex flex-wrap gap-1">
-                    <span className="px-2 py-1 bg-gray-50 text-black rounded-full text-xs font-thin hover:bg-black hover:text-white transition-all duration-300 cursor-pointer">development</span>
+                    <span className="px-2 py-1 bg-gray-50 text-black rounded-full text-xs font-thin border border-gray-300 hover:bg-black hover:text-white hover:border-black transition-all duration-300 cursor-pointer">custom solutions</span>
                   </div>
                   <div className="flex flex-wrap gap-1">
-                    <span className="px-2 py-1 bg-gray-50 text-black rounded-full text-xs font-thin hover:bg-black hover:text-white transition-all duration-300 cursor-pointer">integration</span>
-                    <span className="px-2 py-1 bg-gray-50 text-black rounded-full text-xs font-thin hover:bg-black hover:text-white transition-all duration-300 cursor-pointer">deployment</span>
+                    <span className="px-2 py-1 bg-gray-50 text-black rounded-full text-xs font-thin border border-gray-300 hover:bg-black hover:text-white hover:border-black transition-all duration-300 cursor-pointer">api integration</span>
                   </div>
                   <div className="flex flex-wrap gap-1">
-                    <span className="px-2 py-1 bg-gray-50 text-black rounded-full text-xs font-thin hover:bg-black hover:text-white transition-all duration-300 cursor-pointer">optimization</span>
+                    <span className="px-2 py-1 bg-gray-50 text-black rounded-full text-xs font-thin border border-gray-300 hover:bg-black hover:text-white hover:border-black transition-all duration-300 cursor-pointer">intelligent apps</span>
                   </div>
                 </div>
               </div>
             </div>
 
-            {/* Square Card 8 - Video (1x1) */}
-            <div className="col-span-1 aspect-square rounded-2xl shadow-lg hover:shadow-xl transition-all duration-500 hover:-translate-y-1 border border-gray-100 group overflow-hidden">
-              <video 
-                autoPlay 
-                muted 
-                loop
-                playsInline
-                className="h-full w-full object-cover transition-all duration-300 filter grayscale group-hover:brightness-110"
-              >
-                <source src="/fish_swimming.mp4" type="video/mp4" />
-                <div className="h-full w-full bg-black flex items-center justify-center">
-                  <div className="text-white text-xs font-thin opacity-50">Video not supported</div>
+            {/* Square Card 7 - GenAI Implementation TEXT (1x1) */}
+            <div className="col-span-1 aspect-square bg-white rounded-2xl shadow-lg hover:shadow-xl transition-all duration-500 hover:-translate-y-1 border border-gray-100 group">
+              <div className="p-2 md:p-3 h-full flex flex-col justify-start items-start text-left">
+                <div className="mb-3">
+                  <h3 className="text-sm md:text-base font-thin text-black mb-2 group-hover:text-gray-800 transition-colors">GenAI Implementation</h3>
+                  <div className="w-8 h-0.5 bg-black transition-all duration-300 group-hover:w-12"></div>
                 </div>
-              </video>
+                
+                <div className="space-y-2">
+                  <div className="flex flex-wrap gap-1">
+                    <span className="px-2 py-1 bg-gray-50 text-black rounded-full text-xs font-thin border border-gray-300 hover:bg-black hover:text-white hover:border-black transition-all duration-300 cursor-pointer">model deployment</span>
+                  </div>
+                  <div className="flex flex-wrap gap-1">
+                    <span className="px-2 py-1 bg-gray-50 text-black rounded-full text-xs font-thin border border-gray-300 hover:bg-black hover:text-white hover:border-black transition-all duration-300 cursor-pointer">agent integration</span>
+                  </div>
+                  <div className="flex flex-wrap gap-1">
+                    <span className="px-2 py-1 bg-gray-50 text-black rounded-full text-xs font-thin border border-gray-300 hover:bg-black hover:text-white hover:border-black transition-all duration-300 cursor-pointer">genai workflows</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {/* Square Card 8 - Workflow Automation TEXT (1x1) */}
+            <div className="col-span-1 aspect-square bg-white rounded-2xl shadow-lg hover:shadow-xl transition-all duration-500 hover:-translate-y-1 border border-gray-100 group">
+              <div className="p-2 md:p-3 h-full flex flex-col justify-start items-start text-left">
+                <div className="mb-3">
+                  <h3 className="text-sm md:text-base font-thin text-black mb-2 group-hover:text-gray-800 transition-colors">Workflow Automation</h3>
+                  <div className="w-8 h-0.5 bg-black transition-all duration-300 group-hover:w-12"></div>
+                </div>
+                
+                <div className="space-y-2">
+                  <div className="flex flex-wrap gap-1">
+                    <span className="px-2 py-1 bg-gray-50 text-black rounded-full text-xs font-thin border border-gray-300 hover:bg-black hover:text-white hover:border-black transition-all duration-300 cursor-pointer">process optimization</span>
+                  </div>
+                  <div className="flex flex-wrap gap-1">
+                    <span className="px-2 py-1 bg-gray-50 text-black rounded-full text-xs font-thin border border-gray-300 hover:bg-black hover:text-white hover:border-black transition-all duration-300 cursor-pointer">task delegation</span>
+                  </div>
+                  <div className="flex flex-wrap gap-1">
+                    <span className="px-2 py-1 bg-gray-50 text-black rounded-full text-xs font-thin border border-gray-300 hover:bg-black hover:text-white hover:border-black transition-all duration-300 cursor-pointer">intelligent flows</span>
+                  </div>
+                </div>
+              </div>
             </div>
 
             {/* Industries We Serve Card - Takes space of 4 x 1x1 cards */}
-            <Link to="/industries" className="col-span-4 bg-gradient-to-r from-gray-50 to-gray-100 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-500 border border-gray-100 group cursor-pointer block" style={{ aspectRatio: '4 / 1' }}>
-              <div className="p-6 md:p-8 h-full flex flex-col md:flex-row items-center justify-center gap-6">
-                <div className="flex-1 text-center md:text-left">
-                  <h3 className="text-lg md:text-xl font-thin text-black mb-4 group-hover:text-gray-800 transition-colors">Industries We Serve</h3>
-                  <p className="text-sm font-thin text-gray-600 leading-relaxed">
+            <Link to="/industries" className="col-span-2 md:col-span-4 lg:col-span-4 aspect-square md:aspect-[4/1] bg-gradient-to-br from-black to-gray-800 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-500 border border-gray-100 group cursor-pointer block hover:scale-105">
+              <div className="p-3 md:p-6 lg:p-8 h-full flex flex-col justify-between text-left relative">
+                <div>
+                  <h3 className="text-sm md:text-lg lg:text-xl font-thin text-white mb-2 md:mb-4 group-hover:text-gray-200 transition-colors">Industries We Serve</h3>
+                  <div className="w-12 md:w-16 h-0.5 bg-white transition-all duration-300 group-hover:w-16 md:group-hover:w-20"></div>
+                </div>
+                <div className="flex items-end justify-between">
+                  <p className="text-xs md:text-sm font-thin text-gray-300 leading-relaxed max-w-lg group-hover:text-gray-200 transition-colors">
                     From enterprise software and financial services to healthcare systems and legal intelligence, we provide AI solutions that improve efficiency, decision-making, and competitive positioning across strategic sectors.
                   </p>
-                </div>
-                <div className="flex-shrink-0">
-                  <div className="w-16 h-16 bg-white rounded-full flex items-center justify-center shadow-md group-hover:shadow-lg transition-all duration-300">
-                    <svg className="w-8 h-8 text-black" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6" />
+                  <div className="ml-4 flex-shrink-0">
+                    <svg className="w-5 h-5 md:w-6 md:h-6 text-gray-400 group-hover:text-white transition-all duration-300 group-hover:rotate-12" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6" />
                     </svg>
                   </div>
                 </div>
@@ -320,7 +402,7 @@ const HeroLayout = () => {
               </p>
               <div className="space-y-2">
                 <p className="text-body font-thin text-gray-400">hello@nightskylabs.com</p>
-                <p className="text-small font-thin text-gray-500">San Francisco • Remote First</p>
+                <p className="text-small font-thin text-gray-500">Chennai, India • Remote First</p>
               </div>
             </div>
             

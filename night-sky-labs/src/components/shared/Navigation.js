@@ -74,9 +74,9 @@ const Navigation = ({ currentPage }) => {
               </a>
               
               {/* Products Dropdown */}
-              <div className="absolute top-full left-1/2 transform -translate-x-1/2 w-screen max-w-7xl bg-white shadow-xl border border-gray-100 rounded-3xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50">
-                <div className="px-12 py-16">
-                  <div className="grid grid-cols-3 gap-12 divide-x divide-gray-200">
+              <div className="absolute top-full left-1/2 transform -translate-x-1/2 w-screen max-w-6xl bg-white shadow-xl border border-gray-100 rounded-3xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50">
+                <div className="px-8 md:px-12 py-12 md:py-16 max-w-5xl mx-auto">
+                  <div className="grid grid-cols-3 gap-8 md:gap-12 divide-x divide-gray-200">
                     
                     {/* Soul */}
                     <div className="text-center">

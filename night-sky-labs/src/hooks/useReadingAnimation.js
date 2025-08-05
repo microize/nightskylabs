@@ -11,6 +11,25 @@ export const useReadingAnimation = () => {
     const observer = new IntersectionObserver((entries) => {
       entries.forEach((entry) => {
         if (entry.isIntersecting) {
+          // Handle reading animation for #reading-text
+          const readingElement = document.querySelector('#reading-text');
+          if (readingElement && !readingElement.dataset.animated) {
+            console.log('Starting reading animation');
+            readingElement.dataset.animated = 'true';
+            
+            const wordElements = readingElement.querySelectorAll('.reading-word');
+            console.log('Found words:', wordElements.length);
+            
+            wordElements.forEach((word, index) => {
+              setTimeout(() => {
+                word.classList.remove('text-gray-400');
+                word.classList.add('text-black');
+                console.log('Animating word:', index, word.textContent);
+              }, index * 200);
+            });
+          }
+
+          // Handle other reading animations
           const textElement = entry.target.querySelector('.reading-text');
           if (textElement && !textElement.dataset.animated) {
             textElement.dataset.animated = 'true';
@@ -45,12 +64,24 @@ export const useReadingAnimation = () => {
       });
     }, observerOptions);
 
+    // Observe specifically the level-up section and other animated sections
+    const levelUpSection = document.querySelector('.level-up-section');
     const animatedSections = document.querySelectorAll('.animated-section');
+    
+    if (levelUpSection) {
+      observer.observe(levelUpSection);
+      console.log('Observing level-up section');
+    }
+    
     animatedSections.forEach(section => {
       observer.observe(section);
+      console.log('Observing animated section:', section.className);
     });
 
     return () => {
+      if (levelUpSection) {
+        observer.unobserve(levelUpSection);
+      }
       animatedSections.forEach(section => {
         observer.unobserve(section);
       });

@@ -31,7 +31,7 @@ const Footer = () => {
             </p>
             <div className="space-y-2">
               <p className="text-base md:text-body font-thin text-gray-400">hello@nightskylabs.com</p>
-              <p className="text-sm md:text-small font-thin text-gray-500">San Francisco • Remote First</p>
+              <p className="text-sm md:text-small font-thin text-gray-500">Chennai, India • Remote First</p>
             </div>
           </div>
           

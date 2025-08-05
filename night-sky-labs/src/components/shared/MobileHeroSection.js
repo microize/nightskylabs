@@ -2,18 +2,18 @@ import React from 'react';
 
 const MobileHeroSection = ({ title, subtitle, description }) => {
   return (
-    <section className="md:hidden bg-white py-16 px-6">
+    <section className="md:hidden bg-white py-8 px-6">
       <div className="max-w-2xl mx-auto text-center">
         {/* Mobile Hero Text */}
-        <div className="mb-4">
-          <h1 className="text-5xl sm:text-6xl font-thin text-black leading-tight">
+        <div className="mb-0">
+          <h1 className="text-6xl sm:text-7xl md:text-8xl font-thin text-black leading-tight">
             {title}
           </h1>
         </div>
 
         {subtitle && (
-          <div className="mb-8">
-            <h2 className="text-4xl sm:text-5xl font-thin text-black leading-tight">
+          <div className="mb-4">
+            <h2 className="text-4xl sm:text-5xl md:text-6xl font-thin text-gray-600 leading-tight">
               {subtitle}
             </h2>
           </div>

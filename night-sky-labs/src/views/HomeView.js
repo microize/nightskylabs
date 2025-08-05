@@ -3,8 +3,11 @@ import Navigation from '../components/shared/Navigation';
 import HeroSection from '../components/shared/HeroSection';
 import MobileHeroSection from '../components/shared/MobileHeroSection';
 import HeroLayout from '../components/HeroLayout';
+import { useReadingAnimation } from '../hooks/useReadingAnimation';
 
 const HomeView = () => {
+  useReadingAnimation();
+  
   return (
     <div className="relative w-full bg-white overflow-hidden">
       <Navigation currentPage="home" />
