@@ -66,18 +66,36 @@ const HeroLayout = () => {
           <div className="grid grid-cols-4 md:grid-cols-6 gap-3 md:gap-4">
             
             {/* Row 1 */}
-            {/* Square Card 1 - Image (1x1) */}
+            {/* Square Card 1 - Video (1x1) */}
             <div className="col-span-1 aspect-square rounded-2xl shadow-lg hover:shadow-xl transition-all duration-500 hover:-translate-y-1 border border-gray-100 group overflow-hidden">
-              <div className="h-full w-full bg-black flex items-center justify-center">
-                <div className="text-white text-xs font-thin opacity-50">Card 1</div>
-              </div>
+              <video 
+                autoPlay 
+                muted 
+                loop
+                playsInline
+                className="h-full w-full object-cover transition-all duration-300 filter grayscale group-hover:brightness-110"
+              >
+                <source src="/frog_breathing.mp4" type="video/mp4" />
+                <div className="h-full w-full bg-black flex items-center justify-center">
+                  <div className="text-white text-xs font-thin opacity-50">Video not supported</div>
+                </div>
+              </video>
             </div>
 
-            {/* Square Card 2 - Image (1x1) */}
+            {/* Square Card 2 - Video (1x1) */}
             <div className="col-span-1 aspect-square rounded-2xl shadow-lg hover:shadow-xl transition-all duration-500 hover:-translate-y-1 border border-gray-100 group overflow-hidden">
-              <div className="h-full w-full bg-black flex items-center justify-center">
-                <div className="text-white text-xs font-thin opacity-50">Card 2</div>
-              </div>
+              <video 
+                autoPlay 
+                muted 
+                loop
+                playsInline
+                className="h-full w-full object-cover transition-all duration-300 filter grayscale group-hover:brightness-110"
+              >
+                <source src="/astronaut_waving.mp4" type="video/mp4" />
+                <div className="h-full w-full bg-black flex items-center justify-center">
+                  <div className="text-white text-xs font-thin opacity-50">Video not supported</div>
+                </div>
+              </video>
             </div>
 
             {/* Square Card 3 - Strategic Design Solutions TEXT (2x2) */}
@@ -127,11 +145,20 @@ const HeroLayout = () => {
               </div>
             </div>
 
-            {/* Square Card 10 - Image (1x1) - Desktop Row 1 */}
+            {/* Square Card 10 - Video (1x1) - Desktop Row 1 */}
             <div className="hidden md:block col-span-1 aspect-square rounded-2xl shadow-lg hover:shadow-xl transition-all duration-500 hover:-translate-y-1 border border-gray-100 group overflow-hidden">
-              <div className="h-full w-full bg-black flex items-center justify-center">
-                <div className="text-white text-xs font-thin opacity-50">Card 10</div>
-              </div>
+              <video 
+                autoPlay 
+                muted 
+                loop
+                playsInline
+                className="h-full w-full object-cover transition-all duration-300 filter grayscale group-hover:brightness-110"
+              >
+                <source src="/frog_breathing.mp4" type="video/mp4" />
+                <div className="h-full w-full bg-black flex items-center justify-center">
+                  <div className="text-white text-xs font-thin opacity-50">Video not supported</div>
+                </div>
+              </video>
             </div>
 
             {/* Row 2 */}
@@ -184,11 +211,20 @@ const HeroLayout = () => {
             </div>
 
             {/* Row 3 */}
-            {/* Square Card 6 - Image (1x1) */}
+            {/* Square Card 6 - Video (1x1) */}
             <div className="col-span-1 aspect-square rounded-2xl shadow-lg hover:shadow-xl transition-all duration-500 hover:-translate-y-1 border border-gray-100 group overflow-hidden">
-              <div className="h-full w-full bg-black flex items-center justify-center">
-                <div className="text-white text-xs font-thin opacity-50">Card 6</div>
-              </div>
+              <video 
+                autoPlay 
+                muted 
+                loop
+                playsInline
+                className="h-full w-full object-cover transition-all duration-300 filter grayscale group-hover:brightness-110"
+              >
+                <source src="/meadow_breeze.mp4" type="video/mp4" />
+                <div className="h-full w-full bg-black flex items-center justify-center">
+                  <div className="text-white text-xs font-thin opacity-50">Video not supported</div>
+                </div>
+              </video>
             </div>
 
             {/* Square Card 7 - Implementation Services TEXT (1x1) */}
@@ -214,11 +250,20 @@ const HeroLayout = () => {
               </div>
             </div>
 
-            {/* Square Card 8 - Image (1x1) */}
+            {/* Square Card 8 - Video (1x1) */}
             <div className="col-span-1 aspect-square rounded-2xl shadow-lg hover:shadow-xl transition-all duration-500 hover:-translate-y-1 border border-gray-100 group overflow-hidden">
-              <div className="h-full w-full bg-black flex items-center justify-center">
-                <div className="text-white text-xs font-thin opacity-50">Card 8</div>
-              </div>
+              <video 
+                autoPlay 
+                muted 
+                loop
+                playsInline
+                className="h-full w-full object-cover transition-all duration-300 filter grayscale group-hover:brightness-110"
+              >
+                <source src="/fish_swimming.mp4" type="video/mp4" />
+                <div className="h-full w-full bg-black flex items-center justify-center">
+                  <div className="text-white text-xs font-thin opacity-50">Video not supported</div>
+                </div>
+              </video>
             </div>
 
             {/* Industries We Serve Card - Takes space of 4 x 1x1 cards */}
