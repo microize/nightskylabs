@@ -1,37 +1,14 @@
 import React from 'react';
+import { LuClock } from 'react-icons/lu';
 import Navigation from '../components/shared/Navigation';
 import HeroSection from '../components/shared/HeroSection';
 import MobileHeroSection from '../components/shared/MobileHeroSection';
-import FeatureList from '../components/shared/FeatureList';
 import Footer from '../components/shared/Footer';
 import { useReadingAnimation } from '../hooks/useReadingAnimation';
 
 const VoicePage = () => {
   useReadingAnimation();
 
-  const voiceData = {
-    title: "Voice",
-    subtitle: "Real-time Interview Platform",
-    description: "Voice revolutionizes the hiring process with AI-driven voice interviews that provide real-time insights into candidate capabilities. Our platform analyzes communication skills, technical knowledge, and cultural fit through natural conversation.",
-    features: [
-      {
-        title: "AI-Powered Analysis",
-        description: "Real-time assessment of communication and technical skills"
-      },
-      {
-        title: "Bias Reduction",
-        description: "Objective evaluation based on skills, not demographics"
-      },
-      {
-        title: "Scalable Screening",
-        description: "Handle hundreds of interviews simultaneously"
-      },
-      {
-        title: "Detailed Reports",
-        description: "Comprehensive candidate insights and recommendations"
-      }
-    ]
-  };
 
   return (
     <div className="relative w-full bg-white overflow-hidden">
@@ -57,11 +34,11 @@ const VoicePage = () => {
       <section className="animated-section relative w-full bg-white py-16 md:py-24">
         <div className="max-w-7xl mx-auto px-6 md:px-12">
           <div className="text-center mb-16">
-            <h3 className="text-3xl md:text-5xl font-thin text-black mb-6">Transform Your Hiring Process</h3>
+            <h3 className="text-3xl md:text-5xl font-thin text-black mb-6">Professional AI Recruitment Implementation</h3>
             <div className="w-24 h-0.5 bg-black mx-auto mb-8"></div>
             <p className="text-lg font-thin text-gray-600 max-w-3xl mx-auto">
-              Voice revolutionizes talent acquisition with AI-powered interviews that eliminate bias, 
-              accelerate screening, and deliver unprecedented insights into candidate potential.
+              Voice helps organizations implement advanced AI recruitment capabilities effectively. We provide the expertise and custom development 
+              needed to integrate GenAI tools into your hiring process, making professional-grade recruitment automation accessible.
             </p>
           </div>
 
@@ -145,7 +122,7 @@ const VoicePage = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             <div className="text-center">
               <div className="w-20 h-20 bg-black rounded-2xl mx-auto mb-6 flex items-center justify-center">
-                <span className="text-white text-2xl font-thin">75%</span>
+                <LuClock size={24} className="text-white" />
               </div>
               <h4 className="text-lg font-thin text-black mb-2">Faster Hiring</h4>
               <p className="text-sm font-thin text-gray-600">Reduce time-to-hire with automated screening</p>
@@ -153,26 +130,26 @@ const VoicePage = () => {
 
             <div className="text-center">
               <div className="w-20 h-20 bg-black rounded-2xl mx-auto mb-6 flex items-center justify-center">
-                <span className="text-white text-2xl font-thin">94%</span>
+                <LuClock size={24} className="text-white" />
               </div>
-              <h4 className="text-lg font-thin text-black mb-2">Prediction Accuracy</h4>
-              <p className="text-sm font-thin text-gray-600">AI-powered insights improve hiring decisions</p>
+              <h4 className="text-lg font-thin text-black mb-2">Better Insights</h4>
+              <p className="text-sm font-thin text-gray-600">AI-powered analysis improves hiring decisions</p>
             </div>
 
             <div className="text-center">
               <div className="w-20 h-20 bg-black rounded-2xl mx-auto mb-6 flex items-center justify-center">
-                <span className="text-white text-2xl font-thin">10x</span>
+                <LuClock size={24} className="text-white" />
               </div>
-              <h4 className="text-lg font-thin text-black mb-2">Scale Capacity</h4>
-              <p className="text-sm font-thin text-gray-600">Interview more candidates simultaneously</p>
+              <h4 className="text-lg font-thin text-black mb-2">Scalable Process</h4>
+              <p className="text-sm font-thin text-gray-600">Handle multiple interviews efficiently</p>
             </div>
 
             <div className="text-center">
               <div className="w-20 h-20 bg-black rounded-2xl mx-auto mb-6 flex items-center justify-center">
-                <span className="text-white text-2xl font-thin">100%</span>
+                <LuClock size={24} className="text-white" />
               </div>
-              <h4 className="text-lg font-thin text-black mb-2">Bias-Free</h4>
-              <p className="text-sm font-thin text-gray-600">Objective evaluation based on merit alone</p>
+              <h4 className="text-lg font-thin text-black mb-2">Fair Assessment</h4>
+              <p className="text-sm font-thin text-gray-600">Objective evaluation reduces bias</p>
             </div>
           </div>
         </div>

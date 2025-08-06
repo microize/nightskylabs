@@ -23,7 +23,7 @@ const PerformanceAnalysisPage = () => {
         <div className="max-w-7xl mx-auto px-6 md:px-12">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div>
-              <h2 className="text-3xl md:text-5xl font-thin text-black mb-8">Measurable Impact</h2>
+              <h2 className="text-3xl md:text-5xl font-thin text-black mb-8">Performance Insights</h2>
               <div className="space-y-6">
                 <p className="text-lg font-thin text-gray-600">
                   Our Performance Analysis service provides deep insights into the business impact 
@@ -163,37 +163,37 @@ const PerformanceAnalysisPage = () => {
       <section className="relative w-full bg-gray-50 py-16 md:py-24">
         <div className="max-w-7xl mx-auto px-6 md:px-12">
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-5xl font-thin text-black mb-6">Analysis Value</h2>
+            <h2 className="text-3xl md:text-5xl font-thin text-black mb-6">Expected Benefits</h2>
             <p className="text-lg font-thin text-gray-600 max-w-3xl mx-auto">
-              Comprehensive performance analysis drives measurable improvements in AI ROI 
+              Comprehensive performance analysis is designed to drive improvements in AI ROI 
               and operational effectiveness through data-driven optimization.
             </p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             <div className="bg-white rounded-2xl p-8 text-center shadow-sm">
-              <div className="text-4xl font-thin text-black mb-4">4x</div>
-              <h3 className="text-xl font-thin text-black mb-4">ROI Improvement</h3>
+              <div className="text-4xl font-thin text-black mb-4">Better</div>
+              <h3 className="text-xl font-thin text-black mb-4">ROI Potential</h3>
               <p className="text-base font-thin text-gray-600">
-                Data-driven optimization and performance tuning deliver 
-                significantly higher returns on AI investments.
+                Data-driven optimization and performance tuning can help deliver 
+                better returns on AI investments.
               </p>
             </div>
 
             <div className="bg-white rounded-2xl p-8 text-center shadow-sm">
-              <div className="text-4xl font-thin text-black mb-4">85%</div>
-              <h3 className="text-xl font-thin text-black mb-4">Faster Decision Making</h3>
+              <div className="text-4xl font-thin text-black mb-4">Faster</div>
+              <h3 className="text-xl font-thin text-black mb-4">Decision Making</h3>
               <p className="text-base font-thin text-gray-600">
-                Real-time insights and automated reporting accelerate 
+                Real-time insights and automated reporting can accelerate 
                 strategic decisions and operational adjustments.
               </p>
             </div>
 
             <div className="bg-white rounded-2xl p-8 text-center shadow-sm">
-              <div className="text-4xl font-thin text-black mb-4">95%</div>
+              <div className="text-4xl font-thin text-black mb-4">Better</div>
               <h3 className="text-xl font-thin text-black mb-4">Issue Prevention</h3>
               <p className="text-base font-thin text-gray-600">
-                Predictive analysis and early warning systems prevent 
+                Predictive analysis and early warning systems can help prevent 
                 performance degradation before it impacts operations.
               </p>
             </div>
@@ -205,10 +205,10 @@ const PerformanceAnalysisPage = () => {
       <section className="relative w-full bg-white py-16 md:py-24">
         <div className="max-w-7xl mx-auto px-6 md:px-12">
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-5xl font-thin text-black mb-6">Analysis Impact</h2>
+            <h2 className="text-3xl md:text-5xl font-thin text-black mb-6">Our Methodology</h2>
             <p className="text-lg font-thin text-gray-600 max-w-3xl mx-auto">
-              How our performance analysis helped a retail chain optimize their AI-powered 
-              inventory management system, reducing waste by 60% and increasing profitability.
+              Our performance analysis approach helps organizations understand and optimize their AI systems 
+              through systematic measurement and data-driven insights.
             </p>
           </div>
 
@@ -217,18 +217,18 @@ const PerformanceAnalysisPage = () => {
               <div>
                 <h3 className="text-2xl font-thin text-black mb-6">The Challenge</h3>
                 <p className="text-base font-thin text-gray-600 mb-6">
-                  A major retail chain deployed an AI inventory management system but struggled 
-                  to measure its effectiveness. They needed to understand ROI, identify optimization 
-                  opportunities, and justify continued investment in AI technology.
+                  Organizations often deploy AI systems but struggle to measure their effectiveness. 
+                  They need to understand ROI, identify optimization opportunities, and justify 
+                  continued investment in AI technology.
                 </p>
                 <div className="space-y-3">
                   <div className="flex items-center space-x-3">
                     <div className="w-2 h-2 border border-black rounded-full"></div>
-                    <span className="text-sm font-thin text-gray-600">Unclear ROI and business impact from AI investment</span>
+                    <span className="text-sm font-thin text-gray-600">Limited visibility into ROI and business impact</span>
                   </div>
                   <div className="flex items-center space-x-3">
                     <div className="w-2 h-2 border border-black rounded-full"></div>
-                    <span className="text-sm font-thin text-gray-600">Inconsistent performance across store locations</span>
+                    <span className="text-sm font-thin text-gray-600">Inconsistent performance across different locations</span>
                   </div>
                   <div className="flex items-center space-x-3">
                     <div className="w-2 h-2 border border-black rounded-full"></div>
@@ -239,18 +239,18 @@ const PerformanceAnalysisPage = () => {
               <div>
                 <h3 className="text-2xl font-thin text-black mb-6">The Solution</h3>
                 <p className="text-base font-thin text-gray-600 mb-6">
-                  We implemented comprehensive performance tracking across all stores, 
-                  created predictive analytics for inventory optimization, and established 
-                  automated reporting systems for continuous improvement.
+                  We implement comprehensive performance tracking systems, 
+                  create predictive analytics for optimization, and establish 
+                  automated reporting for continuous improvement.
                 </p>
                 <div className="space-y-3">
                   <div className="flex items-center space-x-3">
                     <div className="w-2 h-2 border border-black rounded-full"></div>
-                    <span className="text-sm font-thin text-gray-600">Multi-dimensional KPI tracking and ROI measurement</span>
+                    <span className="text-sm font-thin text-gray-600">Multi-dimensional KPI tracking and measurement frameworks</span>
                   </div>
                   <div className="flex items-center space-x-3">
                     <div className="w-2 h-2 border border-black rounded-full"></div>
-                    <span className="text-sm font-thin text-gray-600">Predictive analysis for demand forecasting optimization</span>
+                    <span className="text-sm font-thin text-gray-600">Predictive analysis for operational optimization</span>
                   </div>
                   <div className="flex items-center space-x-3">
                     <div className="w-2 h-2 border border-black rounded-full"></div>
@@ -261,16 +261,16 @@ const PerformanceAnalysisPage = () => {
             </div>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-12 pt-12 border-t border-gray-200">
               <div className="text-center">
-                <div className="text-3xl font-thin text-black mb-2">425%</div>
-                <div className="text-base font-thin text-gray-600">ROI Increase</div>
+                <div className="text-3xl font-thin text-black mb-2">Better</div>
+                <div className="text-base font-thin text-gray-600">ROI Understanding</div>
               </div>
               <div className="text-center">
-                <div className="text-3xl font-thin text-black mb-2">60%</div>
-                <div className="text-base font-thin text-gray-600">Waste Reduction</div>
+                <div className="text-3xl font-thin text-black mb-2">Reduced</div>
+                <div className="text-base font-thin text-gray-600">Operational Waste</div>
               </div>
               <div className="text-center">
-                <div className="text-3xl font-thin text-black mb-2">$25M</div>
-                <div className="text-base font-thin text-gray-600">Annual Savings</div>
+                <div className="text-3xl font-thin text-black mb-2">Improved</div>
+                <div className="text-base font-thin text-gray-600">Efficiency</div>
               </div>
             </div>
           </div>

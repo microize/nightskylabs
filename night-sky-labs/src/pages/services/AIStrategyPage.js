@@ -162,38 +162,38 @@ const AIStrategyPage = () => {
       <section className="relative w-full bg-gray-50 py-16 md:py-24">
         <div className="max-w-7xl mx-auto px-6 md:px-12">
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-5xl font-thin text-black mb-6">Strategic Advantages</h2>
+            <h2 className="text-3xl md:text-5xl font-thin text-black mb-6">Expected Benefits</h2>
             <p className="text-lg font-thin text-gray-600 max-w-3xl mx-auto">
-              Organizations that invest in comprehensive AI strategy see significantly better outcomes 
+              Organizations that invest in comprehensive AI strategy are positioned for better outcomes 
               from their AI initiatives.
             </p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             <div className="bg-white rounded-2xl p-8 text-center shadow-sm">
-              <div className="text-4xl font-thin text-black mb-4">3x</div>
-              <h3 className="text-xl font-thin text-black mb-4">Faster Implementation</h3>
+              <div className="text-4xl font-thin text-black mb-4">Faster</div>
+              <h3 className="text-xl font-thin text-black mb-4">Implementation</h3>
               <p className="text-base font-thin text-gray-600">
-                Clear roadmaps and pre-validated approaches accelerate deployment timelines 
+                Clear roadmaps and pre-validated approaches can accelerate deployment timelines 
                 and reduce implementation risks.
               </p>
             </div>
 
             <div className="bg-white rounded-2xl p-8 text-center shadow-sm">
-              <div className="text-4xl font-thin text-black mb-4">5x</div>
-              <h3 className="text-xl font-thin text-black mb-4">Higher ROI</h3>
+              <div className="text-4xl font-thin text-black mb-4">Higher</div>
+              <h3 className="text-xl font-thin text-black mb-4">ROI Potential</h3>
               <p className="text-base font-thin text-gray-600">
-                Strategic prioritization ensures resources are invested in high-impact 
-                AI applications with measurable business value.
+                Strategic prioritization helps ensure resources are invested in high-impact 
+                AI applications with potential business value.
               </p>
             </div>
 
             <div className="bg-white rounded-2xl p-8 text-center shadow-sm">
-              <div className="text-4xl font-thin text-black mb-4">80%</div>
-              <h3 className="text-xl font-thin text-black mb-4">Risk Reduction</h3>
+              <div className="text-4xl font-thin text-black mb-4">Reduced</div>
+              <h3 className="text-xl font-thin text-black mb-4">Risk</h3>
               <p className="text-base font-thin text-gray-600">
-                Comprehensive planning and risk assessment prevent costly mistakes 
-                and ensure successful AI adoption.
+                Comprehensive planning and risk assessment help prevent costly mistakes 
+                and improve chances of successful AI adoption.
               </p>
             </div>
           </div>

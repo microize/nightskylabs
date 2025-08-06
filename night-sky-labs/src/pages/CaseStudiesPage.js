@@ -1,6 +1,7 @@
 import React from 'react';
 import Navigation from '../components/shared/Navigation';
 import Footer from '../components/shared/Footer';
+import { LuChartBar as BarChart3 } from 'react-icons/lu';
 
 const CaseStudiesPage = () => {
   return (
@@ -13,7 +14,7 @@ const CaseStudiesPage = () => {
           <h1 className="text-4xl md:text-6xl font-thin text-black mb-6">Case Studies</h1>
           <div className="w-24 h-0.5 bg-black mx-auto mb-8"></div>
           <p className="text-lg md:text-xl font-thin text-gray-600 max-w-4xl mx-auto">
-            Real-world success stories and client implementations showcasing the transformative power of AI solutions.
+Showcasing our approach to AI solution development and the potential impact of our upcoming products.
           </p>
         </div>
       </section>
@@ -23,7 +24,7 @@ const CaseStudiesPage = () => {
         <div className="max-w-5xl mx-auto px-6 md:px-12 text-center">
           <div className="bg-white rounded-2xl p-8 md:p-12 shadow-lg">
             <div className="w-24 h-24 bg-gray-100 rounded-2xl mx-auto mb-8 flex items-center justify-center">
-              <span className="text-gray-400 text-4xl">📊</span>
+              <BarChart3 size={32} className="text-gray-400" />
             </div>
             <h2 className="text-2xl md:text-4xl font-thin text-black mb-6">Detailed Case Studies Coming Soon</h2>
             <p className="text-lg font-thin text-gray-600 mb-8 max-w-3xl mx-auto">

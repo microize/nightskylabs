@@ -1,4 +1,5 @@
 import React from 'react';
+import { LuSettings as Settings, LuBot as Bot, LuPhone as Phone } from 'react-icons/lu';
 import Navigation from '../../components/shared/Navigation';
 import Footer from '../../components/shared/Footer';
 
@@ -78,7 +79,11 @@ const AutomationDesignPage = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             <div className="bg-gray-50 rounded-2xl p-8">
               <div className="w-16 h-16 bg-black rounded-2xl mb-6 flex items-center justify-center">
-                <span className="text-white text-2xl">📊</span>
+                <div className="w-6 h-6 border-2 border-white rounded flex items-end justify-between">
+                  <div className="w-1 h-3 bg-white"></div>
+                  <div className="w-1 h-5 bg-white"></div>
+                  <div className="w-1 h-4 bg-white"></div>
+                </div>
               </div>
               <h3 className="text-xl font-thin text-black mb-4">Data Automation</h3>
               <p className="text-base font-thin text-gray-600 mb-4">
@@ -95,7 +100,7 @@ const AutomationDesignPage = () => {
 
             <div className="bg-gray-50 rounded-2xl p-8">
               <div className="w-16 h-16 bg-black rounded-2xl mb-6 flex items-center justify-center">
-                <span className="text-white text-2xl">⚙️</span>
+                <Settings size={24} className="text-white" />
               </div>
               <h3 className="text-xl font-thin text-black mb-4">Process Automation</h3>
               <p className="text-base font-thin text-gray-600 mb-4">
@@ -112,7 +117,7 @@ const AutomationDesignPage = () => {
 
             <div className="bg-gray-50 rounded-2xl p-8">
               <div className="w-16 h-16 bg-black rounded-2xl mb-6 flex items-center justify-center">
-                <span className="text-white text-2xl">🤖</span>
+                <Bot size={24} className="text-white" />
               </div>
               <h3 className="text-xl font-thin text-black mb-4">Intelligent Automation</h3>
               <p className="text-base font-thin text-gray-600 mb-4">
@@ -129,7 +134,7 @@ const AutomationDesignPage = () => {
 
             <div className="bg-gray-50 rounded-2xl p-8">
               <div className="w-16 h-16 bg-black rounded-2xl mb-6 flex items-center justify-center">
-                <span className="text-white text-2xl">📞</span>
+                <Phone size={24} className="text-white" />
               </div>
               <h3 className="text-xl font-thin text-black mb-4">Communication Automation</h3>
               <p className="text-base font-thin text-gray-600 mb-4">
@@ -146,7 +151,9 @@ const AutomationDesignPage = () => {
 
             <div className="bg-gray-50 rounded-2xl p-8">
               <div className="w-16 h-16 bg-black rounded-2xl mb-6 flex items-center justify-center">
-                <span className="text-white text-2xl">💼</span>
+                <div className="w-6 h-6 border-2 border-white rounded flex items-center justify-center">
+                  <div className="w-4 h-3 border border-white rounded"></div>
+                </div>
               </div>
               <h3 className="text-xl font-thin text-black mb-4">Business Automation</h3>
               <p className="text-base font-thin text-gray-600 mb-4">
@@ -163,7 +170,9 @@ const AutomationDesignPage = () => {
 
             <div className="bg-gray-50 rounded-2xl p-8">
               <div className="w-16 h-16 bg-black rounded-2xl mb-6 flex items-center justify-center">
-                <span className="text-white text-2xl">🔧</span>
+                <div className="w-6 h-6 border-2 border-white rounded flex items-center justify-center">
+                  <div className="w-4 h-1 bg-white rounded transform rotate-45"></div>
+                </div>
               </div>
               <h3 className="text-xl font-thin text-black mb-4">Infrastructure Automation</h3>
               <p className="text-base font-thin text-gray-600 mb-4">
@@ -338,33 +347,33 @@ const AutomationDesignPage = () => {
         </div>
       </section>
 
-      {/* Results & Benefits */}
+      {/* Expected Benefits */}
       <section className="relative w-full bg-white py-16 md:py-24">
         <div className="max-w-7xl mx-auto px-6 md:px-12">
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-5xl font-thin text-black mb-6">Transformation Results</h2>
+            <h2 className="text-3xl md:text-5xl font-thin text-black mb-6">Expected Benefits</h2>
             <p className="text-lg font-thin text-gray-600 max-w-3xl mx-auto">
-              Organizations implementing our automation designs see significant improvements 
+              Our automation design approach is built to deliver significant improvements 
               in efficiency, accuracy, and employee satisfaction.
             </p>
           </div>
 
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
             <div className="text-center">
-              <div className="text-4xl md:text-6xl font-thin text-black mb-2">75%</div>
+              <div className="text-lg font-thin text-black mb-2">Significant</div>
               <div className="text-base font-thin text-gray-600">Time Savings</div>
             </div>
             <div className="text-center">
-              <div className="text-4xl md:text-6xl font-thin text-black mb-2">90%</div>
-              <div className="text-base font-thin text-gray-600">Error Reduction</div>
+              <div className="text-lg font-thin text-black mb-2">Reduced</div>
+              <div className="text-base font-thin text-gray-600">Human Error</div>
             </div>
             <div className="text-center">
-              <div className="text-4xl md:text-6xl font-thin text-black mb-2">60%</div>
-              <div className="text-base font-thin text-gray-600">Cost Reduction</div>
+              <div className="text-lg font-thin text-black mb-2">Lower</div>
+              <div className="text-base font-thin text-gray-600">Operational Costs</div>
             </div>
             <div className="text-center">
-              <div className="text-4xl md:text-6xl font-thin text-black mb-2">95%</div>
-              <div className="text-base font-thin text-gray-600">User Satisfaction</div>
+              <div className="text-lg font-thin text-black mb-2">Improved</div>
+              <div className="text-base font-thin text-gray-600">User Experience</div>
             </div>
           </div>
         </div>

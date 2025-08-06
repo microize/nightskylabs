@@ -1,6 +1,7 @@
 import React from 'react';
 import Navigation from '../components/shared/Navigation';
 import Footer from '../components/shared/Footer';
+import { LuTarget as Target, LuMicroscope as Microscope, LuTrendingUp as TrendingUp, LuUsers as Users, LuZap as Zap, LuGlobe as Globe } from 'react-icons/lu';
 
 const OurStoryPage = () => {
   return (
@@ -23,22 +24,23 @@ const OurStoryPage = () => {
         <div className="max-w-7xl mx-auto px-6 md:px-12">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div>
-              <h2 className="text-3xl md:text-5xl font-thin text-black mb-8">The Beginning</h2>
+              <h2 className="text-3xl md:text-5xl font-thin text-black mb-8">The Revolution</h2>
               <div className="space-y-6">
                 <p className="text-lg font-thin text-gray-600">
-                  NightSkyLabs was born from a simple observation: while AI was transforming industries, 
-                  the tools that developers, recruiters, and educators used daily remained largely unchanged. 
-                  We saw an opportunity to bridge this gap.
+                  The AI revolution is here, and it's time to break the monopoly of big tech giants. 
+                  While they build AI for themselves, we're democratizing this power for everyone. 
+                  Generative AI will transform every industry - from startups to enterprises, 
+                  everyone deserves access to world-class AI capabilities.
                 </p>
                 <p className="text-lg font-thin text-gray-600">
-                  Founded in 2025 by Sripathi Mohansundaram, an AI researcher and software engineer, we set out to create 
-                  intelligent tools that would enhance human capability rather than replace it. Our mission 
-                  was clear: make AI accessible, practical, and beneficial for everyday professionals.
+                  Too many organizations are held back by outdated systems and expensive solutions. 
+                  We're changing that. Every business should be able to compete with giants like Google and Microsoft. 
+                  NightSkyLabs exists to level the playing field and put cutting-edge AI in the hands of ambitious teams everywhere.
                 </p>
                 <p className="text-lg font-thin text-gray-600">
-                  Starting with operations in Chennai, India, we focused on understanding the real pain points 
-                  that professionals faced in their daily workflows. This research-first approach would become 
-                  the foundation of everything we built.
+                  We're not just building software - we're building the future. From intelligent development tools 
+                  to physical AI and wearable devices, we're pushing boundaries that others won't dare to cross. 
+                  The status quo ends here. The future belongs to those bold enough to seize it.
                 </p>
               </div>
             </div>
@@ -47,8 +49,8 @@ const OurStoryPage = () => {
                 <div className="text-6xl font-thin text-black mb-4">2025</div>
                 <h3 className="text-2xl font-thin text-black mb-4">Company Founded</h3>
                 <p className="text-base font-thin text-gray-600 mb-6">
-                  Solo founder Sripathi Mohansundaram with background in AI research and software engineering 
-                  launched the company with a clear vision to democratize AI tools.
+                  Founded by Sripathi Mohansundaram with a mission to challenge big tech dominance 
+                  and democratize AI for organizations worldwide. From software to physical AI - we're building tomorrow, today.
                 </p>
                 <div className="space-y-2">
                   <div className="flex justify-between text-sm font-thin">
@@ -61,7 +63,7 @@ const OurStoryPage = () => {
                   </div>
                   <div className="flex justify-between text-sm font-thin">
                     <span className="text-gray-600">Initial Focus</span>
-                    <span className="text-black">Developer Tools</span>
+                    <span className="text-black">GenAI Products</span>
                   </div>
                 </div>
               </div>
@@ -117,7 +119,7 @@ const OurStoryPage = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             <div className="text-center">
               <div className="w-16 h-16 bg-gray-100 rounded-2xl mx-auto mb-6 flex items-center justify-center">
-                <span className="text-gray-400 text-2xl">🎯</span>
+                <Target size={24} className="text-gray-400" />
               </div>
               <h3 className="text-xl font-thin text-black mb-4">Human-Centric AI</h3>
               <p className="text-base font-thin text-gray-600">
@@ -128,7 +130,7 @@ const OurStoryPage = () => {
 
             <div className="text-center">
               <div className="w-16 h-16 bg-gray-100 rounded-2xl mx-auto mb-6 flex items-center justify-center">
-                <span className="text-gray-400 text-2xl">🔬</span>
+                <Microscope size={24} className="text-gray-400" />
               </div>
               <h3 className="text-xl font-thin text-black mb-4">Research-Driven</h3>
               <p className="text-base font-thin text-gray-600">
@@ -139,7 +141,7 @@ const OurStoryPage = () => {
 
             <div className="text-center">
               <div className="w-16 h-16 bg-gray-100 rounded-2xl mx-auto mb-6 flex items-center justify-center">
-                <span className="text-gray-400 text-2xl">🌱</span>
+                <TrendingUp size={24} className="text-gray-400" />
               </div>
               <h3 className="text-xl font-thin text-black mb-4">Continuous Learning</h3>
               <p className="text-base font-thin text-gray-600">
@@ -150,7 +152,7 @@ const OurStoryPage = () => {
 
             <div className="text-center">
               <div className="w-16 h-16 bg-gray-100 rounded-2xl mx-auto mb-6 flex items-center justify-center">
-                <span className="text-gray-400 text-2xl">🤝</span>
+                <Users size={24} className="text-gray-400" />
               </div>
               <h3 className="text-xl font-thin text-black mb-4">Ethical Innovation</h3>
               <p className="text-base font-thin text-gray-600">
@@ -161,7 +163,7 @@ const OurStoryPage = () => {
 
             <div className="text-center">
               <div className="w-16 h-16 bg-gray-100 rounded-2xl mx-auto mb-6 flex items-center justify-center">
-                <span className="text-gray-400 text-2xl">⚡</span>
+                <Zap size={24} className="text-gray-400" />
               </div>
               <h3 className="text-xl font-thin text-black mb-4">Excellence</h3>
               <p className="text-base font-thin text-gray-600">
@@ -172,7 +174,7 @@ const OurStoryPage = () => {
 
             <div className="text-center">
               <div className="w-16 h-16 bg-gray-100 rounded-2xl mx-auto mb-6 flex items-center justify-center">
-                <span className="text-gray-400 text-2xl">🌍</span>
+                <Globe size={24} className="text-gray-400" />
               </div>
               <h3 className="text-xl font-thin text-black mb-4">Global Impact</h3>
               <p className="text-base font-thin text-gray-600">

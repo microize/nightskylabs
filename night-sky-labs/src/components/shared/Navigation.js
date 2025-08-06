@@ -29,11 +29,6 @@ const Navigation = ({ currentPage }) => {
     setExpandedSection(expandedSection === section ? null : section);
   };
 
-  const navItems = [
-    { to: '/services', label: 'Services', key: 'services' },
-    { to: '/about', label: 'About', key: 'about' },
-    { to: '/resources', label: 'Resources', key: 'resources' }
-  ];
 
   const productItems = [
     { to: '/soul', label: 'Soul', key: 'soul' },
@@ -311,7 +306,7 @@ const Navigation = ({ currentPage }) => {
                         <div>
                           <Link to="/case-studies" className="block hover:bg-gray-50 p-2 rounded transition-colors">
                             <h4 className="text-base font-thin text-black mb-1">Case Studies</h4>
-                            <p className="text-sm font-thin text-gray-600">Success stories and client implementations</p>
+                            <p className="text-sm font-thin text-gray-600">Our approach to AI solution development</p>
                           </Link>
                         </div>
                         <div>

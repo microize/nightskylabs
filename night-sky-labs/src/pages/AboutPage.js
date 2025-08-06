@@ -1,4 +1,5 @@
 import React from 'react';
+import { LuTarget as Target, LuLock as Lock, LuZap as Zap, LuHandshake as Handshake } from 'react-icons/lu';
 import Navigation from '../components/shared/Navigation';
 import Footer from '../components/shared/Footer';
 
@@ -27,25 +28,27 @@ const AboutPage = () => {
               <h2 className="text-3xl md:text-5xl font-thin text-black mb-8">Our Story</h2>
               <div className="space-y-6 text-base md:text-lg font-thin text-gray-600" style={{ lineHeight: '1.8' }}>
                 <p>
-                  Founded with a vision to democratize artificial intelligence, NightSkyLabs emerged from the belief 
-                  that AI should empower everyone, not just tech giants. Our journey began with a simple question: 
-                  How can we make AI more accessible, ethical, and genuinely useful?
+                  We're on a mission to shatter the AI monopoly held by big tech giants. While they hoard 
+                  advanced AI capabilities, we're building a world where every organization - regardless of size - 
+                  can access and deploy world-class artificial intelligence.
                 </p>
                 <p>
-                  Today, we're building that future through three core products—Soul, Voice, and Qurious—each designed 
-                  to transform specific domains with intelligent automation and personalized experiences.
+                  The playing field is tilted in favor of trillion-dollar companies, but that changes now. 
+                  We're creating powerful AI tools that let startups compete with Google, businesses 
+                  challenge Amazon, and ambitious teams anywhere in the world build like Silicon Valley giants.
                 </p>
                 <p>
-                  Our commitment extends beyond technology. We believe in responsible AI development, transparency in 
-                  our processes, and creating solutions that genuinely improve human productivity and learning.
+                  From intelligent software to revolutionary physical AI and wearables, we're not just building 
+                  products - we're building a movement. The future belongs to the bold, the ambitious, and those 
+                  ready to challenge what everyone said was impossible.
                 </p>
               </div>
             </div>
             <div className="bg-black rounded-2xl p-8 md:p-12 text-white">
               <h3 className="text-2xl font-thin text-white mb-6">Our Mission</h3>
               <p className="text-base font-thin text-gray-300 mb-8">
-                "To transform ideas into AI reality, making intelligent technology accessible, ethical, and impactful 
-                for businesses and individuals worldwide."
+                "To break the AI monopoly and empower every organization with world-class artificial intelligence. 
+                We're not just building products - we're leading a revolution that puts cutting-edge AI in the hands of the ambitious."
               </p>
               <div className="grid grid-cols-2 gap-6">
                 <div>
@@ -115,7 +118,7 @@ const AboutPage = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             <div className="text-center">
               <div className="w-16 h-16 bg-black rounded-2xl mx-auto mb-6 flex items-center justify-center">
-                <span className="text-white text-2xl font-thin">🎯</span>
+                <Target size={24} className="text-white" />
               </div>
               <h3 className="text-lg font-thin text-black mb-4">Purpose-Driven</h3>
               <p className="text-sm font-thin text-gray-600">
@@ -125,7 +128,7 @@ const AboutPage = () => {
 
             <div className="text-center">
               <div className="w-16 h-16 bg-black rounded-2xl mx-auto mb-6 flex items-center justify-center">
-                <span className="text-white text-2xl font-thin">🔒</span>
+                <Lock size={24} className="text-white" />
               </div>
               <h3 className="text-lg font-thin text-black mb-4">Ethical AI</h3>
               <p className="text-sm font-thin text-gray-600">
@@ -135,7 +138,7 @@ const AboutPage = () => {
 
             <div className="text-center">
               <div className="w-16 h-16 bg-black rounded-2xl mx-auto mb-6 flex items-center justify-center">
-                <span className="text-white text-2xl font-thin">⚡</span>
+                <Zap size={24} className="text-white" />
               </div>
               <h3 className="text-lg font-thin text-black mb-4">Innovation</h3>
               <p className="text-sm font-thin text-gray-600">
@@ -145,7 +148,7 @@ const AboutPage = () => {
 
             <div className="text-center">
               <div className="w-16 h-16 bg-black rounded-2xl mx-auto mb-6 flex items-center justify-center">
-                <span className="text-white text-2xl font-thin">🤝</span>
+                <Handshake size={24} className="text-white" />
               </div>
               <h3 className="text-lg font-thin text-black mb-4">Collaboration</h3>
               <p className="text-sm font-thin text-gray-600">

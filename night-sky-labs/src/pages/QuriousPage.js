@@ -56,11 +56,11 @@ const QuriousPage = () => {
       <section className="animated-section relative w-full bg-white py-16 md:py-24">
         <div className="max-w-7xl mx-auto px-6 md:px-12">
           <div className="text-center mb-16">
-            <h3 className="text-3xl md:text-5xl font-thin text-black mb-6">Personalized Learning Revolution</h3>
+            <h3 className="text-3xl md:text-5xl font-thin text-black mb-6">AI-Enhanced Learning Implementation</h3>
             <div className="w-24 h-0.5 bg-black mx-auto mb-8"></div>
             <p className="text-lg font-thin text-gray-600 max-w-3xl mx-auto">
-              Qurious transforms education with AI that adapts to your unique learning style, pace, and goals—
-              making complex subjects accessible and engaging through intelligent, personalized tutoring.
+              Qurious helps educational organizations implement and integrate GenAI tools effectively. We provide the expertise and custom development 
+              needed to create personalized learning experiences that adapt to individual student needs and learning styles.
             </p>
           </div>
 
@@ -222,34 +222,34 @@ const QuriousPage = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             <div className="text-center">
               <div className="w-20 h-20 bg-black rounded-2xl mx-auto mb-6 flex items-center justify-center">
-                <span className="text-white text-2xl font-thin">96%</span>
+                <span className="text-white text-lg font-thin">AI</span>
               </div>
-              <h4 className="text-lg font-thin text-black mb-2">Learning Gains</h4>
-              <p className="text-sm font-thin text-gray-600">Students achieve measurable academic improvement</p>
+              <h4 className="text-lg font-thin text-black mb-2">Improved Outcomes</h4>
+              <p className="text-sm font-thin text-gray-600">Enhanced learning through AI implementation</p>
             </div>
 
             <div className="text-center">
               <div className="w-20 h-20 bg-black rounded-2xl mx-auto mb-6 flex items-center justify-center">
-                <span className="text-white text-2xl font-thin">4x</span>
+                <span className="text-white text-lg font-thin">∞</span>
               </div>
-              <h4 className="text-lg font-thin text-black mb-2">Retention Rate</h4>
-              <p className="text-sm font-thin text-gray-600">Better knowledge retention vs traditional methods</p>
+              <h4 className="text-lg font-thin text-black mb-2">Adaptive Content</h4>
+              <p className="text-sm font-thin text-gray-600">Personalized learning paths for each student</p>
             </div>
 
             <div className="text-center">
               <div className="w-20 h-20 bg-black rounded-2xl mx-auto mb-6 flex items-center justify-center">
-                <span className="text-white text-2xl font-thin">92%</span>
+                <span className="text-white text-lg font-thin">24/7</span>
               </div>
-              <h4 className="text-lg font-thin text-black mb-2">Satisfaction</h4>
-              <p className="text-sm font-thin text-gray-600">Students report higher engagement and enjoyment</p>
+              <h4 className="text-lg font-thin text-black mb-2">AI Tutoring</h4>
+              <p className="text-sm font-thin text-gray-600">Always-available personalized assistance</p>
             </div>
 
             <div className="text-center">
               <div className="w-20 h-20 bg-black rounded-2xl mx-auto mb-6 flex items-center justify-center">
-                <span className="text-white text-2xl font-thin">1M+</span>
+                <span className="text-white text-lg font-thin">EDU</span>
               </div>
-              <h4 className="text-lg font-thin text-black mb-2">Global Learners</h4>
-              <p className="text-sm font-thin text-gray-600">Students learning with Qurious worldwide</p>
+              <h4 className="text-lg font-thin text-black mb-2">Educational Focus</h4>
+              <p className="text-sm font-thin text-gray-600">Purpose-built for learning organizations</p>
             </div>
           </div>
         </div>

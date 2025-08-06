@@ -292,8 +292,8 @@ const ContactPage = () => {
             <div className="bg-gray-50 rounded-2xl p-8">
               <h3 className="text-xl font-thin text-black mb-4">Do you work with companies of all sizes?</h3>
               <p className="text-base font-thin text-gray-600">
-                Yes, we work with organizations ranging from startups to Fortune 500 companies. 
-                Our services are tailored to meet the specific needs and constraints of each client, 
+Yes, we're designed to work with organizations of all sizes. 
+                Our approach is tailored to meet the specific needs and constraints of each client, 
                 regardless of size or industry.
               </p>
             </div>

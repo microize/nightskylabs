@@ -163,38 +163,38 @@ const TechnicalIntegrationPage = () => {
       <section className="relative w-full bg-gray-50 py-16 md:py-24">
         <div className="max-w-7xl mx-auto px-6 md:px-12">
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-5xl font-thin text-black mb-6">Integration Benefits</h2>
+            <h2 className="text-3xl md:text-5xl font-thin text-black mb-6">Expected Benefits</h2>
             <p className="text-lg font-thin text-gray-600 max-w-3xl mx-auto">
-              Professional integration services ensure seamless AI adoption while maintaining 
+              Professional integration services are designed to ensure seamless AI adoption while maintaining 
               operational stability and maximizing existing technology investments.
             </p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             <div className="bg-white rounded-2xl p-8 text-center shadow-sm">
-              <div className="text-4xl font-thin text-black mb-4">95%</div>
+              <div className="text-4xl font-thin text-black mb-4">High</div>
               <h3 className="text-xl font-thin text-black mb-4">Uptime Maintained</h3>
               <p className="text-base font-thin text-gray-600">
-                Seamless integration processes that preserve business continuity 
+                Seamless integration processes designed to preserve business continuity 
                 and minimize operational disruption during implementation.
               </p>
             </div>
 
             <div className="bg-white rounded-2xl p-8 text-center shadow-sm">
-              <div className="text-4xl font-thin text-black mb-4">70%</div>
-              <h3 className="text-xl font-thin text-black mb-4">Faster Data Access</h3>
+              <div className="text-4xl font-thin text-black mb-4">Faster</div>
+              <h3 className="text-xl font-thin text-black mb-4">Data Access</h3>
               <p className="text-base font-thin text-gray-600">
-                Optimized data pipelines and API architectures dramatically 
+                Optimized data pipelines and API architectures can significantly 
                 improve information flow and system response times.
               </p>
             </div>
 
             <div className="bg-white rounded-2xl p-8 text-center shadow-sm">
-              <div className="text-4xl font-thin text-black mb-4">50%</div>
-              <h3 className="text-xl font-thin text-black mb-4">Reduced Complexity</h3>
+              <div className="text-4xl font-thin text-black mb-4">Lower</div>
+              <h3 className="text-xl font-thin text-black mb-4">Complexity</h3>
               <p className="text-base font-thin text-gray-600">
                 Streamlined architectures and modern integration patterns 
-                simplify maintenance and enable faster future enhancements.
+                can simplify maintenance and enable faster future enhancements.
               </p>
             </div>
           </div>
@@ -205,10 +205,10 @@ const TechnicalIntegrationPage = () => {
       <section className="relative w-full bg-white py-16 md:py-24">
         <div className="max-w-7xl mx-auto px-6 md:px-12">
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-5xl font-thin text-black mb-6">Integration Success</h2>
+            <h2 className="text-3xl md:text-5xl font-thin text-black mb-6">Our Approach</h2>
             <p className="text-lg font-thin text-gray-600 max-w-3xl mx-auto">
-              How we integrated AI-powered customer insights across a Fortune 100 company's 
-              25-year-old legacy CRM and modern cloud infrastructure.
+              Our integration methodology focuses on connecting AI-powered solutions with existing 
+              legacy systems and modern cloud infrastructure.
             </p>
           </div>
 
@@ -217,14 +217,14 @@ const TechnicalIntegrationPage = () => {
               <div>
                 <h3 className="text-2xl font-thin text-black mb-6">The Challenge</h3>
                 <p className="text-base font-thin text-gray-600 mb-6">
-                  A global financial services company needed to integrate AI-powered customer behavior 
-                  analysis with their legacy mainframe CRM system and modern cloud applications, 
-                  while maintaining strict regulatory compliance and 99.99% uptime requirements.
+                  Organizations often need to integrate AI-powered solutions with legacy systems 
+                  and modern cloud applications, while maintaining strict regulatory compliance 
+                  and high uptime requirements.
                 </p>
                 <div className="space-y-3">
                   <div className="flex items-center space-x-3">
                     <div className="w-2 h-2 border border-black rounded-full"></div>
-                    <span className="text-sm font-thin text-gray-600">25-year-old mainframe system with proprietary protocols</span>
+                    <span className="text-sm font-thin text-gray-600">Legacy systems with proprietary protocols</span>
                   </div>
                   <div className="flex items-center space-x-3">
                     <div className="w-2 h-2 border border-black rounded-full"></div>
@@ -232,16 +232,16 @@ const TechnicalIntegrationPage = () => {
                   </div>
                   <div className="flex items-center space-x-3">
                     <div className="w-2 h-2 border border-black rounded-full"></div>
-                    <span className="text-sm font-thin text-gray-600">Strict financial compliance and security requirements</span>
+                    <span className="text-sm font-thin text-gray-600">Strict compliance and security requirements</span>
                   </div>
                 </div>
               </div>
               <div>
                 <h3 className="text-2xl font-thin text-black mb-6">The Solution</h3>
                 <p className="text-base font-thin text-gray-600 mb-6">
-                  We designed a hybrid integration platform with secure API gateways, real-time 
-                  data synchronization, and compliant data transformation layers that connected 
-                  all systems without requiring legacy system modifications.
+                  We design hybrid integration platforms with secure API gateways, real-time 
+                  data synchronization, and compliant data transformation layers that can connect 
+                  systems without requiring extensive legacy system modifications.
                 </p>
                 <div className="space-y-3">
                   <div className="flex items-center space-x-3">
@@ -261,16 +261,16 @@ const TechnicalIntegrationPage = () => {
             </div>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-12 pt-12 border-t border-gray-200">
               <div className="text-center">
-                <div className="text-3xl font-thin text-black mb-2">99.99%</div>
+                <div className="text-3xl font-thin text-black mb-2">High</div>
                 <div className="text-base font-thin text-gray-600">System Uptime</div>
               </div>
               <div className="text-center">
-                <div className="text-3xl font-thin text-black mb-2">85%</div>
-                <div className="text-base font-thin text-gray-600">Faster Insights</div>
+                <div className="text-3xl font-thin text-black mb-2">Faster</div>
+                <div className="text-base font-thin text-gray-600">Insights</div>
               </div>
               <div className="text-center">
-                <div className="text-3xl font-thin text-black mb-2">$12M</div>
-                <div className="text-base font-thin text-gray-600">Efficiency Gains</div>
+                <div className="text-3xl font-thin text-black mb-2">Better</div>
+                <div className="text-base font-thin text-gray-600">Efficiency</div>
               </div>
             </div>
           </div>

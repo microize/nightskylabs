@@ -1,6 +1,7 @@
 import React from 'react';
 import Navigation from '../components/shared/Navigation';
 import Footer from '../components/shared/Footer';
+import { LuPalette as Palette, LuFileText as FileText, LuCamera as Camera } from 'react-icons/lu';
 
 const PressPage = () => {
   return (
@@ -57,11 +58,11 @@ const PressPage = () => {
                 <div className="flex-1">
                   <div className="text-sm font-thin text-gray-500 mb-2">February 28, 2024</div>
                   <h3 className="text-2xl font-thin text-black mb-4">
-                    Soul CLI Reaches 25,000 Active Developers in First Year
+                    Soul CLI Development Progresses with Early Testing
                   </h3>
                   <p className="text-base font-thin text-gray-600 mb-4">
-                    AI-powered command-line tool shows strong adoption among software development teams, 
-                    demonstrating significant productivity improvements.
+                    AI-powered command-line tool enters development phase with focus on 
+                    developer productivity and intelligent workflow automation.
                   </p>
                   <button className="text-black text-sm font-thin border-b border-black hover:border-gray-400 transition-colors">
                     Read Full Release
@@ -69,7 +70,7 @@ const PressPage = () => {
                 </div>
                 <div className="mt-6 md:mt-0 md:ml-8">
                   <span className="bg-gray-100 text-gray-600 px-3 py-1 rounded-full text-sm font-thin">
-                    Product News
+                    Product Update
                   </span>
                 </div>
               </div>
@@ -184,7 +185,7 @@ const PressPage = () => {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <div className="bg-white rounded-2xl p-8 text-center shadow-sm">
               <div className="w-16 h-16 bg-gray-100 rounded-2xl mx-auto mb-6 flex items-center justify-center">
-                <span className="text-gray-400 text-2xl">🎨</span>
+                <Palette size={24} className="text-gray-400" />
               </div>
               <h3 className="text-xl font-thin text-black mb-4">Brand Assets</h3>
               <p className="text-base font-thin text-gray-600 mb-6">
@@ -197,7 +198,7 @@ const PressPage = () => {
 
             <div className="bg-white rounded-2xl p-8 text-center shadow-sm">
               <div className="w-16 h-16 bg-gray-100 rounded-2xl mx-auto mb-6 flex items-center justify-center">
-                <span className="text-gray-400 text-2xl">📄</span>
+                <FileText size={24} className="text-gray-400" />
               </div>
               <h3 className="text-xl font-thin text-black mb-4">Company Facts</h3>
               <p className="text-base font-thin text-gray-600 mb-6">
@@ -210,7 +211,7 @@ const PressPage = () => {
 
             <div className="bg-white rounded-2xl p-8 text-center shadow-sm">
               <div className="w-16 h-16 bg-gray-100 rounded-2xl mx-auto mb-6 flex items-center justify-center">
-                <span className="text-gray-400 text-2xl">📸</span>
+                <Camera size={24} className="text-gray-400" />
               </div>
               <h3 className="text-xl font-thin text-black mb-4">Product Images</h3>
               <p className="text-base font-thin text-gray-600 mb-6">

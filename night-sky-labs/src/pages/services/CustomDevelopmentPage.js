@@ -162,38 +162,38 @@ const CustomDevelopmentPage = () => {
       <section className="relative w-full bg-gray-50 py-16 md:py-24">
         <div className="max-w-7xl mx-auto px-6 md:px-12">
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-5xl font-thin text-black mb-6">Development Advantages</h2>
+            <h2 className="text-3xl md:text-5xl font-thin text-black mb-6">Expected Benefits</h2>
             <p className="text-lg font-thin text-gray-600 max-w-3xl mx-auto">
-              Custom AI solutions deliver superior performance and ROI compared to generic 
+              Custom AI solutions are designed to deliver superior performance and ROI compared to generic 
               off-the-shelf alternatives.
             </p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             <div className="bg-white rounded-2xl p-8 text-center shadow-sm">
-              <div className="text-4xl font-thin text-black mb-4">90%</div>
-              <h3 className="text-xl font-thin text-black mb-4">Accuracy Improvement</h3>
+              <div className="text-4xl font-thin text-black mb-4">Higher</div>
+              <h3 className="text-xl font-thin text-black mb-4">Accuracy Potential</h3>
               <p className="text-base font-thin text-gray-600">
-                Custom models trained on your specific data achieve significantly 
+                Custom models trained on your specific data can achieve 
                 higher accuracy than generic solutions.
               </p>
             </div>
 
             <div className="bg-white rounded-2xl p-8 text-center shadow-sm">
-              <div className="text-4xl font-thin text-black mb-4">60%</div>
-              <h3 className="text-xl font-thin text-black mb-4">Faster Processing</h3>
+              <div className="text-4xl font-thin text-black mb-4">Faster</div>
+              <h3 className="text-xl font-thin text-black mb-4">Processing</h3>
               <p className="text-base font-thin text-gray-600">
-                Optimized algorithms and architecture deliver superior performance 
+                Optimized algorithms and architecture can deliver superior performance 
                 for your specific use cases and data patterns.
               </p>
             </div>
 
             <div className="bg-white rounded-2xl p-8 text-center shadow-sm">
-              <div className="text-4xl font-thin text-black mb-4">100%</div>
+              <div className="text-4xl font-thin text-black mb-4">Perfect</div>
               <h3 className="text-xl font-thin text-black mb-4">Business Alignment</h3>
               <p className="text-base font-thin text-gray-600">
                 Solutions designed specifically for your workflows and requirements 
-                ensure perfect integration and maximum value.
+                ensure better integration and value alignment.
               </p>
             </div>
           </div>

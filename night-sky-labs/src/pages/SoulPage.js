@@ -1,37 +1,14 @@
 import React from 'react';
+import { LuShield } from 'react-icons/lu';
 import Navigation from '../components/shared/Navigation';
 import HeroSection from '../components/shared/HeroSection';
 import MobileHeroSection from '../components/shared/MobileHeroSection';
-import FeatureList from '../components/shared/FeatureList';
 import Footer from '../components/shared/Footer';
 import { useReadingAnimation } from '../hooks/useReadingAnimation';
 
 const SoulPage = () => {
   useReadingAnimation();
 
-  const soulData = {
-    title: "Soul",
-    subtitle: "AI-Powered Coding CLI",
-    description: "Soul is an intelligent command-line interface that transforms how developers work. Like Google's CLI tools but powered by advanced AI, Soul understands your codebase, automates repetitive tasks, and provides intelligent suggestions to accelerate your development workflow.",
-    features: [
-      {
-        title: "Intelligent Code Analysis",
-        description: "AI-powered understanding of your entire codebase"
-      },
-      {
-        title: "Automated Workflows",
-        description: "Smart automation for testing, deployment, and refactoring"
-      },
-      {
-        title: "Natural Language Commands",
-        description: "Describe what you want, Soul figures out how to do it"
-      },
-      {
-        title: "Enterprise Integration",
-        description: "Seamless integration with existing development tools"
-      }
-    ]
-  };
 
   return (
     <div className="relative w-full bg-white overflow-hidden">
@@ -57,11 +34,11 @@ const SoulPage = () => {
       <section className="animated-section relative w-full bg-white py-16 md:py-24">
         <div className="max-w-7xl mx-auto px-6 md:px-12">
           <div className="text-center mb-16">
-            <h3 className="text-3xl md:text-5xl font-thin text-black mb-6">Revolutionary Developer Experience</h3>
+            <h3 className="text-3xl md:text-5xl font-thin text-black mb-6">GenAI-Powered Development Tools</h3>
             <div className="w-24 h-0.5 bg-black mx-auto mb-8"></div>
             <p className="text-lg font-thin text-gray-600 max-w-3xl mx-auto">
-              Soul transforms your development workflow with intelligent automation that understands your codebase, 
-              anticipates your needs, and accelerates your productivity through natural language commands.
+              Soul helps developers effectively leverage GenAI tools in their workflow. We provide the implementation expertise 
+              and custom integrations needed to transform how code is written, tested, and deployed using available AI capabilities.
             </p>
           </div>
 
@@ -141,7 +118,7 @@ const SoulPage = () => {
 
             <div className="text-center">
               <div className="w-20 h-20 bg-black rounded-2xl mx-auto mb-6 flex items-center justify-center">
-                <span className="text-white text-2xl font-thin">90%</span>
+                <LuShield size={24} className="text-white" />
               </div>
               <h4 className="text-lg font-thin text-black mb-2">Fewer Bugs</h4>
               <p className="text-sm font-thin text-gray-600">AI-powered code analysis and testing</p>

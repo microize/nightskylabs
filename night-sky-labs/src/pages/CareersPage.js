@@ -1,6 +1,7 @@
 import React from 'react';
 import Navigation from '../components/shared/Navigation';
 import Footer from '../components/shared/Footer';
+import { LuRocket as Rocket, LuTarget as Target, LuTrendingUp as TrendingUp } from 'react-icons/lu';
 
 const CareersPage = () => {
   return (
@@ -32,7 +33,7 @@ const CareersPage = () => {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <div className="bg-white rounded-2xl p-8 text-center shadow-sm">
               <div className="w-16 h-16 bg-black rounded-2xl mx-auto mb-6 flex items-center justify-center">
-                <span className="text-white text-2xl">🚀</span>
+                <Rocket size={24} className="text-white" />
               </div>
               <h3 className="text-xl font-thin text-black mb-4">Cutting-Edge Technology</h3>
               <p className="text-base font-thin text-gray-600">
@@ -43,7 +44,7 @@ const CareersPage = () => {
 
             <div className="bg-white rounded-2xl p-8 text-center shadow-sm">
               <div className="w-16 h-16 bg-black rounded-2xl mx-auto mb-6 flex items-center justify-center">
-                <span className="text-white text-2xl">🎯</span>
+                <Target size={24} className="text-white" />
               </div>
               <h3 className="text-xl font-thin text-black mb-4">Meaningful Impact</h3>
               <p className="text-base font-thin text-gray-600">
@@ -54,7 +55,7 @@ const CareersPage = () => {
 
             <div className="bg-white rounded-2xl p-8 text-center shadow-sm">
               <div className="w-16 h-16 bg-black rounded-2xl mx-auto mb-6 flex items-center justify-center">
-                <span className="text-white text-2xl">🌱</span>
+                <TrendingUp size={24} className="text-white" />
               </div>
               <h3 className="text-xl font-thin text-black mb-4">Growth & Learning</h3>
               <p className="text-base font-thin text-gray-600">

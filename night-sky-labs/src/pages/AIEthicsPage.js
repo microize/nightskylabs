@@ -1,6 +1,7 @@
 import React from 'react';
 import Navigation from '../components/shared/Navigation';
 import Footer from '../components/shared/Footer';
+import { LuScale as Scale, LuSearch as Search, LuLock as Lock, LuUsers as Users, LuShield as Shield, LuBookOpen as BookOpen, LuClipboardList as ClipboardList, LuMessageCircle as MessageCircle, LuUsers as UserGroup } from 'react-icons/lu';
 
 const AIEthicsPage = () => {
   return (
@@ -32,7 +33,7 @@ const AIEthicsPage = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             <div className="bg-white rounded-2xl p-8 shadow-sm">
               <div className="w-16 h-16 bg-black rounded-2xl mx-auto mb-6 flex items-center justify-center">
-                <span className="text-white text-2xl">⚖️</span>
+                <Scale size={24} className="text-white" />
               </div>
               <h3 className="text-xl font-thin text-black mb-4 text-center">Fairness & Equity</h3>
               <p className="text-base font-thin text-gray-600 text-center">
@@ -43,7 +44,7 @@ const AIEthicsPage = () => {
 
             <div className="bg-white rounded-2xl p-8 shadow-sm">
               <div className="w-16 h-16 bg-black rounded-2xl mx-auto mb-6 flex items-center justify-center">
-                <span className="text-white text-2xl">🔍</span>
+                <Search size={24} className="text-white" />
               </div>
               <h3 className="text-xl font-thin text-black mb-4 text-center">Transparency</h3>
               <p className="text-base font-thin text-gray-600 text-center">
@@ -54,7 +55,7 @@ const AIEthicsPage = () => {
 
             <div className="bg-white rounded-2xl p-8 shadow-sm">
               <div className="w-16 h-16 bg-black rounded-2xl mx-auto mb-6 flex items-center justify-center">
-                <span className="text-white text-2xl">🔒</span>
+                <Lock size={24} className="text-white" />
               </div>
               <h3 className="text-xl font-thin text-black mb-4 text-center">Privacy Protection</h3>
               <p className="text-base font-thin text-gray-600 text-center">
@@ -65,7 +66,7 @@ const AIEthicsPage = () => {
 
             <div className="bg-white rounded-2xl p-8 shadow-sm">
               <div className="w-16 h-16 bg-black rounded-2xl mx-auto mb-6 flex items-center justify-center">
-                <span className="text-white text-2xl">🤝</span>
+                <Users size={24} className="text-white" />
               </div>
               <h3 className="text-xl font-thin text-black mb-4 text-center">Human Autonomy</h3>
               <p className="text-base font-thin text-gray-600 text-center">
@@ -76,7 +77,7 @@ const AIEthicsPage = () => {
 
             <div className="bg-white rounded-2xl p-8 shadow-sm">
               <div className="w-16 h-16 bg-black rounded-2xl mx-auto mb-6 flex items-center justify-center">
-                <span className="text-white text-2xl">🛡️</span>
+                <Shield size={24} className="text-white" />
               </div>
               <h3 className="text-xl font-thin text-black mb-4 text-center">Safety & Reliability</h3>
               <p className="text-base font-thin text-gray-600 text-center">
@@ -87,7 +88,7 @@ const AIEthicsPage = () => {
 
             <div className="bg-white rounded-2xl p-8 shadow-sm">
               <div className="w-16 h-16 bg-black rounded-2xl mx-auto mb-6 flex items-center justify-center">
-                <span className="text-white text-2xl">📚</span>
+                <BookOpen size={24} className="text-white" />
               </div>
               <h3 className="text-xl font-thin text-black mb-4 text-center">Continuous Learning</h3>
               <p className="text-base font-thin text-gray-600 text-center">
@@ -394,7 +395,7 @@ const AIEthicsPage = () => {
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
             <div className="bg-gray-50 rounded-2xl p-8 text-center">
               <div className="w-16 h-16 bg-black rounded-2xl mx-auto mb-6 flex items-center justify-center">
-                <span className="text-white text-2xl">📋</span>
+                <ClipboardList size={24} className="text-white" />
               </div>
               <h3 className="text-xl font-thin text-black mb-4">Annual Ethics Report</h3>
               <p className="text-base font-thin text-gray-600 mb-6">
@@ -408,7 +409,7 @@ const AIEthicsPage = () => {
 
             <div className="bg-gray-50 rounded-2xl p-8 text-center">
               <div className="w-16 h-16 bg-black rounded-2xl mx-auto mb-6 flex items-center justify-center">
-                <span className="text-white text-2xl">🗣️</span>
+                <MessageCircle size={24} className="text-white" />
               </div>
               <h3 className="text-xl font-thin text-black mb-4">Ethics Feedback Portal</h3>
               <p className="text-base font-thin text-gray-600 mb-6">
@@ -422,7 +423,7 @@ const AIEthicsPage = () => {
 
             <div className="bg-gray-50 rounded-2xl p-8 text-center">
               <div className="w-16 h-16 bg-black rounded-2xl mx-auto mb-6 flex items-center justify-center">
-                <span className="text-white text-2xl">👥</span>
+                <UserGroup size={24} className="text-white" />
               </div>
               <h3 className="text-xl font-thin text-black mb-4">Community Engagement</h3>
               <p className="text-base font-thin text-gray-600 mb-6">

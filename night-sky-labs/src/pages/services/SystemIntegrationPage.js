@@ -342,28 +342,28 @@ const SystemIntegrationPage = () => {
       <section className="relative w-full bg-white py-16 md:py-24">
         <div className="max-w-7xl mx-auto px-6 md:px-12">
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-5xl font-thin text-black mb-6">Integration Benefits</h2>
+            <h2 className="text-3xl md:text-5xl font-thin text-black mb-6">Expected Benefits</h2>
             <p className="text-lg font-thin text-gray-600 max-w-3xl mx-auto">
-              Successful system integration delivers measurable improvements in operational 
+              Successful system integration is designed to deliver improvements in operational 
               efficiency and technological capability.
             </p>
           </div>
 
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
             <div className="text-center">
-              <div className="text-4xl md:text-6xl font-thin text-black mb-2">50%</div>
-              <div className="text-base font-thin text-gray-600">Faster Data Processing</div>
+              <div className="text-4xl md:text-6xl font-thin text-black mb-2">Faster</div>
+              <div className="text-base font-thin text-gray-600">Data Processing</div>
             </div>
             <div className="text-center">
-              <div className="text-4xl md:text-6xl font-thin text-black mb-2">99.9%</div>
+              <div className="text-4xl md:text-6xl font-thin text-black mb-2">High</div>
               <div className="text-base font-thin text-gray-600">System Uptime</div>
             </div>
             <div className="text-center">
-              <div className="text-4xl md:text-6xl font-thin text-black mb-2">40%</div>
-              <div className="text-base font-thin text-gray-600">Reduced Operational Cost</div>
+              <div className="text-4xl md:text-6xl font-thin text-black mb-2">Lower</div>
+              <div className="text-base font-thin text-gray-600">Operational Costs</div>
             </div>
             <div className="text-center">
-              <div className="text-4xl md:text-6xl font-thin text-black mb-2">95%</div>
+              <div className="text-4xl md:text-6xl font-thin text-black mb-2">Better</div>
               <div className="text-base font-thin text-gray-600">Data Accuracy</div>
             </div>
           </div>

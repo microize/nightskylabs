@@ -1,4 +1,5 @@
 import React from 'react';
+import { LuUsers as Users, LuBrain as Brain, LuTarget as Target, LuRefreshCw as RefreshCw } from 'react-icons/lu';
 import Navigation from '../../components/shared/Navigation';
 import Footer from '../../components/shared/Footer';
 
@@ -78,7 +79,7 @@ const BehavioralAnalysisPage = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             <div className="bg-gray-50 rounded-2xl p-8">
               <div className="w-16 h-16 bg-black rounded-2xl mb-6 flex items-center justify-center">
-                <span className="text-white text-2xl">👥</span>
+                <Users size={24} className="text-white" />
               </div>
               <h3 className="text-xl font-thin text-black mb-4">User Research</h3>
               <p className="text-base font-thin text-gray-600 mb-4">
@@ -95,7 +96,11 @@ const BehavioralAnalysisPage = () => {
 
             <div className="bg-gray-50 rounded-2xl p-8">
               <div className="w-16 h-16 bg-black rounded-2xl mb-6 flex items-center justify-center">
-                <span className="text-white text-2xl">📊</span>
+                <div className="w-6 h-6 border-2 border-white rounded flex items-end justify-between">
+                  <div className="w-1 h-3 bg-white"></div>
+                  <div className="w-1 h-5 bg-white"></div>
+                  <div className="w-1 h-4 bg-white"></div>
+                </div>
               </div>
               <h3 className="text-xl font-thin text-black mb-4">Data Analytics</h3>
               <p className="text-base font-thin text-gray-600 mb-4">
@@ -112,7 +117,7 @@ const BehavioralAnalysisPage = () => {
 
             <div className="bg-gray-50 rounded-2xl p-8">
               <div className="w-16 h-16 bg-black rounded-2xl mb-6 flex items-center justify-center">
-                <span className="text-white text-2xl">🧠</span>
+                <Brain size={24} className="text-white" />
               </div>
               <h3 className="text-xl font-thin text-black mb-4">Cognitive Assessment</h3>
               <p className="text-base font-thin text-gray-600 mb-4">
@@ -129,7 +134,7 @@ const BehavioralAnalysisPage = () => {
 
             <div className="bg-gray-50 rounded-2xl p-8">
               <div className="w-16 h-16 bg-black rounded-2xl mb-6 flex items-center justify-center">
-                <span className="text-white text-2xl">🎯</span>
+                <Target size={24} className="text-white" />
               </div>
               <h3 className="text-xl font-thin text-black mb-4">Usability Testing</h3>
               <p className="text-base font-thin text-gray-600 mb-4">
@@ -146,7 +151,9 @@ const BehavioralAnalysisPage = () => {
 
             <div className="bg-gray-50 rounded-2xl p-8">
               <div className="w-16 h-16 bg-black rounded-2xl mb-6 flex items-center justify-center">
-                <span className="text-white text-2xl">🔮</span>
+                <div className="w-6 h-6 border-2 border-white rounded-full flex items-center justify-center">
+                  <div className="w-3 h-3 border border-white rounded-full"></div>
+                </div>
               </div>
               <h3 className="text-xl font-thin text-black mb-4">Predictive Modeling</h3>
               <p className="text-base font-thin text-gray-600 mb-4">
@@ -163,7 +170,7 @@ const BehavioralAnalysisPage = () => {
 
             <div className="bg-gray-50 rounded-2xl p-8">
               <div className="w-16 h-16 bg-black rounded-2xl mb-6 flex items-center justify-center">
-                <span className="text-white text-2xl">🔄</span>
+                <RefreshCw size={24} className="text-white" />
               </div>
               <h3 className="text-xl font-thin text-black mb-4">Continuous Monitoring</h3>
               <p className="text-base font-thin text-gray-600 mb-4">
@@ -303,33 +310,33 @@ const BehavioralAnalysisPage = () => {
         </div>
       </section>
 
-      {/* Impact Metrics */}
+      {/* Expected Impact */}
       <section className="relative w-full bg-white py-16 md:py-24">
         <div className="max-w-7xl mx-auto px-6 md:px-12">
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-5xl font-thin text-black mb-6">Measurable Impact</h2>
+            <h2 className="text-3xl md:text-5xl font-thin text-black mb-6">Expected Impact</h2>
             <p className="text-lg font-thin text-gray-600 max-w-3xl mx-auto">
-              Our behavioral analysis delivers quantifiable improvements in user engagement 
+              Our behavioral analysis approach is designed to deliver improvements in user engagement 
               and system effectiveness.
             </p>
           </div>
 
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
             <div className="text-center">
-              <div className="text-4xl md:text-6xl font-thin text-black mb-2">45%</div>
-              <div className="text-base font-thin text-gray-600">Increased Engagement</div>
+              <div className="text-lg font-thin text-black mb-2">Higher</div>
+              <div className="text-base font-thin text-gray-600">User Engagement</div>
             </div>
             <div className="text-center">
-              <div className="text-4xl md:text-6xl font-thin text-black mb-2">65%</div>
-              <div className="text-base font-thin text-gray-600">Better Task Completion</div>
+              <div className="text-lg font-thin text-black mb-2">Improved</div>
+              <div className="text-base font-thin text-gray-600">Task Completion</div>
             </div>
             <div className="text-center">
-              <div className="text-4xl md:text-6xl font-thin text-black mb-2">80%</div>
-              <div className="text-base font-thin text-gray-600">Faster User Adoption</div>
+              <div className="text-lg font-thin text-black mb-2">Faster</div>
+              <div className="text-base font-thin text-gray-600">User Adoption</div>
             </div>
             <div className="text-center">
-              <div className="text-4xl md:text-6xl font-thin text-black mb-2">90%</div>
-              <div className="text-base font-thin text-gray-600">User Satisfaction</div>
+              <div className="text-lg font-thin text-black mb-2">Enhanced</div>
+              <div className="text-base font-thin text-gray-600">User Experience</div>
             </div>
           </div>
         </div>

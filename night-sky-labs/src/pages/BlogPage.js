@@ -1,6 +1,7 @@
 import React from 'react';
 import Navigation from '../components/shared/Navigation';
 import Footer from '../components/shared/Footer';
+import { LuChartBar as BarChart3, LuRocket as Rocket, LuFileText as FileText, LuBot as Bot } from 'react-icons/lu';
 
 const BlogPage = () => {
   const blogPost = {
@@ -36,7 +37,7 @@ const BlogPage = () => {
           <div className="bg-white rounded-2xl shadow-lg overflow-hidden">
             {/* Blog Post Header */}
             <div className="h-64 md:h-80 bg-gradient-to-br from-gray-100 to-gray-200 flex items-center justify-center">
-              <div className="text-gray-400 text-6xl">📝</div>
+              <FileText size={64} className="text-gray-400" />
             </div>
             
             {/* Blog Post Content */}
@@ -155,7 +156,7 @@ const BlogPage = () => {
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               <div className="bg-gray-50 rounded-2xl p-8 text-center">
                 <div className="w-16 h-16 bg-gray-200 rounded-2xl mx-auto mb-4 flex items-center justify-center">
-                  <span className="text-gray-400 text-2xl">🤖</span>
+                  <Bot size={24} className="text-gray-400" />
                 </div>
                 <h3 className="text-lg font-thin text-black mb-2">AI Ethics in Practice</h3>
                 <p className="text-sm font-thin text-gray-600">Coming Soon</p>
@@ -163,7 +164,7 @@ const BlogPage = () => {
               
               <div className="bg-gray-50 rounded-2xl p-8 text-center">
                 <div className="w-16 h-16 bg-gray-200 rounded-2xl mx-auto mb-4 flex items-center justify-center">
-                  <span className="text-gray-400 text-2xl">📊</span>
+                  <BarChart3 size={24} className="text-gray-400" />
                 </div>
                 <h3 className="text-lg font-thin text-black mb-2">AI Market Trends 2025</h3>
                 <p className="text-sm font-thin text-gray-600">Coming Soon</p>
@@ -171,7 +172,7 @@ const BlogPage = () => {
               
               <div className="bg-gray-50 rounded-2xl p-8 text-center">
                 <div className="w-16 h-16 bg-gray-200 rounded-2xl mx-auto mb-4 flex items-center justify-center">
-                  <span className="text-gray-400 text-2xl">🚀</span>
+                  <Rocket size={24} className="text-gray-400" />
                 </div>
                 <h3 className="text-lg font-thin text-black mb-2">Building AI Products</h3>
                 <p className="text-sm font-thin text-gray-600">Coming Soon</p>

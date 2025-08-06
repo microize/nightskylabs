@@ -163,37 +163,37 @@ const DeploymentOptimizationPage = () => {
       <section className="relative w-full bg-gray-50 py-16 md:py-24">
         <div className="max-w-7xl mx-auto px-6 md:px-12">
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-5xl font-thin text-black mb-6">Deployment Excellence</h2>
+            <h2 className="text-3xl md:text-5xl font-thin text-black mb-6">Expected Benefits</h2>
             <p className="text-lg font-thin text-gray-600 max-w-3xl mx-auto">
-              Professional deployment and optimization services deliver superior reliability, 
+              Professional deployment and optimization services are designed to deliver superior reliability, 
               performance, and cost efficiency for production AI systems.
             </p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             <div className="bg-white rounded-2xl p-8 text-center shadow-sm">
-              <div className="text-4xl font-thin text-black mb-4">99.9%</div>
+              <div className="text-4xl font-thin text-black mb-4">High</div>
               <h3 className="text-xl font-thin text-black mb-4">System Availability</h3>
               <p className="text-base font-thin text-gray-600">
-                Enterprise-grade deployment practices ensure maximum uptime 
+                Enterprise-grade deployment practices are designed to ensure maximum uptime 
                 and reliability for mission-critical AI applications.
               </p>
             </div>
 
             <div className="bg-white rounded-2xl p-8 text-center shadow-sm">
-              <div className="text-4xl font-thin text-black mb-4">75%</div>
-              <h3 className="text-xl font-thin text-black mb-4">Performance Improvement</h3>
+              <div className="text-4xl font-thin text-black mb-4">Better</div>
+              <h3 className="text-xl font-thin text-black mb-4">Performance</h3>
               <p className="text-base font-thin text-gray-600">
-                Advanced optimization techniques and monitoring deliver 
-                significant performance gains over standard deployments.
+                Advanced optimization techniques and monitoring can deliver 
+                significant performance improvements over standard deployments.
               </p>
             </div>
 
             <div className="bg-white rounded-2xl p-8 text-center shadow-sm">
-              <div className="text-4xl font-thin text-black mb-4">40%</div>
-              <h3 className="text-xl font-thin text-black mb-4">Cost Reduction</h3>
+              <div className="text-4xl font-thin text-black mb-4">Lower</div>
+              <h3 className="text-xl font-thin text-black mb-4">Costs</h3>
               <p className="text-base font-thin text-gray-600">
-                Intelligent scaling and resource optimization reduce 
+                Intelligent scaling and resource optimization can help reduce 
                 infrastructure costs while maintaining optimal performance.
               </p>
             </div>
@@ -205,10 +205,10 @@ const DeploymentOptimizationPage = () => {
       <section className="relative w-full bg-white py-16 md:py-24">
         <div className="max-w-7xl mx-auto px-6 md:px-12">
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-5xl font-thin text-black mb-6">Deployment Excellence</h2>
+            <h2 className="text-3xl md:text-5xl font-thin text-black mb-6">Our Approach</h2>
             <p className="text-lg font-thin text-gray-600 max-w-3xl mx-auto">
-              How we deployed a real-time fraud detection system processing 50,000 transactions 
-              per second with 99.99% uptime and sub-millisecond response times.
+              Our systematic deployment methodology focuses on building scalable, reliable systems 
+              that can handle high-performance requirements for enterprise applications.
             </p>
           </div>
 
@@ -217,9 +217,8 @@ const DeploymentOptimizationPage = () => {
               <div>
                 <h3 className="text-2xl font-thin text-black mb-6">The Challenge</h3>
                 <p className="text-base font-thin text-gray-600 mb-6">
-                  A major payment processor needed to deploy an AI-powered fraud detection system 
-                  capable of analyzing 50,000+ transactions per second in real-time, with strict 
-                  requirements for sub-millisecond response times and 99.99% availability.
+                  Enterprise applications require deployment systems capable of handling high transaction 
+                  volumes in real-time, with strict requirements for fast response times and high availability.
                 </p>
                 <div className="space-y-3">
                   <div className="flex items-center space-x-3">
@@ -239,9 +238,9 @@ const DeploymentOptimizationPage = () => {
               <div>
                 <h3 className="text-2xl font-thin text-black mb-6">The Solution</h3>
                 <p className="text-base font-thin text-gray-600 mb-6">
-                  We implemented a multi-region, containerized deployment with intelligent 
+                  We implement multi-region, containerized deployments with intelligent 
                   load balancing, predictive scaling, and comprehensive monitoring that 
-                  automatically adapts to transaction volume patterns.
+                  can automatically adapt to changing demand patterns.
                 </p>
                 <div className="space-y-3">
                   <div className="flex items-center space-x-3">
@@ -261,16 +260,16 @@ const DeploymentOptimizationPage = () => {
             </div>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-12 pt-12 border-t border-gray-200">
               <div className="text-center">
-                <div className="text-3xl font-thin text-black mb-2">0.3ms</div>
-                <div className="text-base font-thin text-gray-600">Average Response Time</div>
+                <div className="text-3xl font-thin text-black mb-2">Fast</div>
+                <div className="text-base font-thin text-gray-600">Response Times</div>
               </div>
               <div className="text-center">
-                <div className="text-3xl font-thin text-black mb-2">99.997%</div>
+                <div className="text-3xl font-thin text-black mb-2">High</div>
                 <div className="text-base font-thin text-gray-600">System Uptime</div>
               </div>
               <div className="text-center">
-                <div className="text-3xl font-thin text-black mb-2">75K</div>
-                <div className="text-base font-thin text-gray-600">Peak TPS Handled</div>
+                <div className="text-3xl font-thin text-black mb-2">Scalable</div>
+                <div className="text-base font-thin text-gray-600">Transaction Handling</div>
               </div>
             </div>
           </div>
