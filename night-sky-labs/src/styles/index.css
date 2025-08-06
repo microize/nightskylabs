@@ -282,6 +282,23 @@ body {
   animation: marquee 20s linear infinite;
 }
 
+/* Infinite Marquee Animation */
+@keyframes marquee-infinite {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.animate-marquee-infinite {
+  animation: marquee-infinite 60s linear infinite;
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+}
+
 /* Hero Section Animations - Reference Style */
 @keyframes heroTextSlideUp {
   0% {

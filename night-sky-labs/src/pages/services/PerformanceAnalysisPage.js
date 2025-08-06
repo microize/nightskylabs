@@ -223,15 +223,15 @@ const PerformanceAnalysisPage = () => {
                 </p>
                 <div className="space-y-3">
                   <div className="flex items-center space-x-3">
-                    <div className="w-2 h-2 bg-red-500 rounded-full"></div>
+                    <div className="w-2 h-2 border border-black rounded-full"></div>
                     <span className="text-sm font-thin text-gray-600">Unclear ROI and business impact from AI investment</span>
                   </div>
                   <div className="flex items-center space-x-3">
-                    <div className="w-2 h-2 bg-red-500 rounded-full"></div>
+                    <div className="w-2 h-2 border border-black rounded-full"></div>
                     <span className="text-sm font-thin text-gray-600">Inconsistent performance across store locations</span>
                   </div>
                   <div className="flex items-center space-x-3">
-                    <div className="w-2 h-2 bg-red-500 rounded-full"></div>
+                    <div className="w-2 h-2 border border-black rounded-full"></div>
                     <span className="text-sm font-thin text-gray-600">No systematic approach to performance optimization</span>
                   </div>
                 </div>
@@ -245,15 +245,15 @@ const PerformanceAnalysisPage = () => {
                 </p>
                 <div className="space-y-3">
                   <div className="flex items-center space-x-3">
-                    <div className="w-2 h-2 bg-green-500 rounded-full"></div>
+                    <div className="w-2 h-2 border border-black rounded-full"></div>
                     <span className="text-sm font-thin text-gray-600">Multi-dimensional KPI tracking and ROI measurement</span>
                   </div>
                   <div className="flex items-center space-x-3">
-                    <div className="w-2 h-2 bg-green-500 rounded-full"></div>
+                    <div className="w-2 h-2 border border-black rounded-full"></div>
                     <span className="text-sm font-thin text-gray-600">Predictive analysis for demand forecasting optimization</span>
                   </div>
                   <div className="flex items-center space-x-3">
-                    <div className="w-2 h-2 bg-green-500 rounded-full"></div>
+                    <div className="w-2 h-2 border border-black rounded-full"></div>
                     <span className="text-sm font-thin text-gray-600">Automated insights and optimization recommendations</span>
                   </div>
                 </div>

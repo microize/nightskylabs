@@ -223,15 +223,15 @@ const TechnicalIntegrationPage = () => {
                 </p>
                 <div className="space-y-3">
                   <div className="flex items-center space-x-3">
-                    <div className="w-2 h-2 bg-red-500 rounded-full"></div>
+                    <div className="w-2 h-2 border border-black rounded-full"></div>
                     <span className="text-sm font-thin text-gray-600">25-year-old mainframe system with proprietary protocols</span>
                   </div>
                   <div className="flex items-center space-x-3">
-                    <div className="w-2 h-2 bg-red-500 rounded-full"></div>
+                    <div className="w-2 h-2 border border-black rounded-full"></div>
                     <span className="text-sm font-thin text-gray-600">Real-time data requirements across disparate systems</span>
                   </div>
                   <div className="flex items-center space-x-3">
-                    <div className="w-2 h-2 bg-red-500 rounded-full"></div>
+                    <div className="w-2 h-2 border border-black rounded-full"></div>
                     <span className="text-sm font-thin text-gray-600">Strict financial compliance and security requirements</span>
                   </div>
                 </div>
@@ -245,15 +245,15 @@ const TechnicalIntegrationPage = () => {
                 </p>
                 <div className="space-y-3">
                   <div className="flex items-center space-x-3">
-                    <div className="w-2 h-2 bg-green-500 rounded-full"></div>
+                    <div className="w-2 h-2 border border-black rounded-full"></div>
                     <span className="text-sm font-thin text-gray-600">Non-invasive integration preserving legacy system integrity</span>
                   </div>
                   <div className="flex items-center space-x-3">
-                    <div className="w-2 h-2 bg-green-500 rounded-full"></div>
+                    <div className="w-2 h-2 border border-black rounded-full"></div>
                     <span className="text-sm font-thin text-gray-600">Real-time bidirectional data synchronization</span>
                   </div>
                   <div className="flex items-center space-x-3">
-                    <div className="w-2 h-2 bg-green-500 rounded-full"></div>
+                    <div className="w-2 h-2 border border-black rounded-full"></div>
                     <span className="text-sm font-thin text-gray-600">End-to-end encryption and compliance monitoring</span>
                   </div>
                 </div>

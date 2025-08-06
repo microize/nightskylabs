@@ -18,6 +18,7 @@ const HomeView = () => {
         subtitle="Dominate Your Market"
         description="We build intelligent systems that don't just automate—they revolutionize. From predictive analytics to autonomous workflows, we transform how businesses compete and win in the AI-first economy."
         videoSrc="/frog_breathing.mp4"
+        videoFilter="grayscale(100%)"
         showOverlay={true}
       />
 
@@ -26,6 +27,7 @@ const HomeView = () => {
         title="Unleash GenAI"
         subtitle="Dominate Your Market"
         description="We build intelligent systems that don't just automate—they revolutionize. From predictive analytics to autonomous workflows, we transform how businesses compete and win in the AI-first economy."
+        videoSrc="/frog_breathing.mp4"
       />
       
       <HeroLayout />

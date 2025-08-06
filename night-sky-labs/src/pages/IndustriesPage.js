@@ -1,8 +1,10 @@
 import React from 'react';
+import Navigation from '../components/shared/Navigation';
 
 const IndustriesPage = () => {
   return (
     <div className="relative w-full bg-white overflow-hidden">
+      <Navigation />
       
       {/* Hero Section */}
       <section className="relative w-full bg-white py-16 md:py-32">
@@ -31,7 +33,7 @@ const IndustriesPage = () => {
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8">
                 
                 {/* Healthcare */}
-                <div className="bg-gradient-to-br from-blue-50 to-blue-100 rounded-3xl shadow-lg hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 border border-blue-100 group">
+                <div className="bg-white rounded-3xl shadow-lg hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 border border-gray-100 group">
                   <div className="p-6 md:p-8 h-full flex flex-col" style={{ minHeight: '250px' }}>
                     <div className="mb-6">
                       <h4 className="text-lg md:text-xl font-thin text-black mb-3 group-hover:text-gray-800 transition-colors">Healthcare</h4>
@@ -44,11 +46,11 @@ const IndustriesPage = () => {
                       </p>
                       <div className="space-y-2">
                         <div className="flex flex-wrap gap-2">
-                          <span className="px-3 py-1.5 bg-blue-50 text-black rounded-full text-xs font-thin hover:bg-black hover:text-white transition-all duration-300 cursor-pointer">diagnostics</span>
-                          <span className="px-3 py-1.5 bg-blue-50 text-black rounded-full text-xs font-thin hover:bg-black hover:text-white transition-all duration-300 cursor-pointer">patient care</span>
+                          <span className="px-3 py-1.5 bg-gray-50 text-black rounded-full text-xs font-thin hover:bg-black hover:text-white transition-all duration-300 cursor-pointer">diagnostics</span>
+                          <span className="px-3 py-1.5 bg-gray-50 text-black rounded-full text-xs font-thin hover:bg-black hover:text-white transition-all duration-300 cursor-pointer">patient care</span>
                         </div>
                         <div className="flex flex-wrap gap-2">
-                          <span className="px-3 py-1.5 bg-blue-50 text-black rounded-full text-xs font-thin hover:bg-black hover:text-white transition-all duration-300 cursor-pointer">medical ai</span>
+                          <span className="px-3 py-1.5 bg-gray-50 text-black rounded-full text-xs font-thin hover:bg-black hover:text-white transition-all duration-300 cursor-pointer">medical ai</span>
                         </div>
                       </div>
                     </div>
@@ -56,7 +58,7 @@ const IndustriesPage = () => {
                 </div>
 
                 {/* Financial Services */}
-                <div className="bg-gradient-to-br from-green-50 to-green-100 rounded-3xl shadow-lg hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 border border-green-100 group">
+                <div className="bg-white rounded-3xl shadow-lg hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 border border-gray-100 group">
                   <div className="p-6 md:p-8 h-full flex flex-col" style={{ minHeight: '250px' }}>
                     <div className="mb-6">
                       <h4 className="text-lg md:text-xl font-thin text-black mb-3 group-hover:text-gray-800 transition-colors">Financial Services</h4>
@@ -69,11 +71,11 @@ const IndustriesPage = () => {
                       </p>
                       <div className="space-y-2">
                         <div className="flex flex-wrap gap-2">
-                          <span className="px-3 py-1.5 bg-green-50 text-black rounded-full text-xs font-thin hover:bg-black hover:text-white transition-all duration-300 cursor-pointer">risk analysis</span>
+                          <span className="px-3 py-1.5 bg-gray-50 text-black rounded-full text-xs font-thin hover:bg-black hover:text-white transition-all duration-300 cursor-pointer">risk analysis</span>
                         </div>
                         <div className="flex flex-wrap gap-2">
-                          <span className="px-3 py-1.5 bg-green-50 text-black rounded-full text-xs font-thin hover:bg-black hover:text-white transition-all duration-300 cursor-pointer">fraud detection</span>
-                          <span className="px-3 py-1.5 bg-green-50 text-black rounded-full text-xs font-thin hover:bg-black hover:text-white transition-all duration-300 cursor-pointer">trading</span>
+                          <span className="px-3 py-1.5 bg-gray-50 text-black rounded-full text-xs font-thin hover:bg-black hover:text-white transition-all duration-300 cursor-pointer">fraud detection</span>
+                          <span className="px-3 py-1.5 bg-gray-50 text-black rounded-full text-xs font-thin hover:bg-black hover:text-white transition-all duration-300 cursor-pointer">trading</span>
                         </div>
                       </div>
                     </div>
@@ -81,7 +83,7 @@ const IndustriesPage = () => {
                 </div>
 
                 {/* Manufacturing */}
-                <div className="bg-gradient-to-br from-orange-50 to-orange-100 rounded-3xl shadow-lg hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 border border-orange-100 group">
+                <div className="bg-white rounded-3xl shadow-lg hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 border border-gray-100 group">
                   <div className="p-6 md:p-8 h-full flex flex-col" style={{ minHeight: '250px' }}>
                     <div className="mb-6">
                       <h4 className="text-lg md:text-xl font-thin text-black mb-3 group-hover:text-gray-800 transition-colors">Manufacturing</h4>
@@ -94,10 +96,10 @@ const IndustriesPage = () => {
                       </p>
                       <div className="space-y-2">
                         <div className="flex flex-wrap gap-2">
-                          <span className="px-3 py-1.5 bg-orange-50 text-black rounded-full text-xs font-thin hover:bg-black hover:text-white transition-all duration-300 cursor-pointer">quality control</span>
+                          <span className="px-3 py-1.5 bg-gray-50 text-black rounded-full text-xs font-thin hover:bg-black hover:text-white transition-all duration-300 cursor-pointer">quality control</span>
                         </div>
                         <div className="flex flex-wrap gap-2">
-                          <span className="px-3 py-1.5 bg-orange-50 text-black rounded-full text-xs font-thin hover:bg-black hover:text-white transition-all duration-300 cursor-pointer">production optimization</span>
+                          <span className="px-3 py-1.5 bg-gray-50 text-black rounded-full text-xs font-thin hover:bg-black hover:text-white transition-all duration-300 cursor-pointer">production optimization</span>
                         </div>
                       </div>
                     </div>
@@ -105,7 +107,7 @@ const IndustriesPage = () => {
                 </div>
 
                 {/* Technology */}
-                <div className="bg-gradient-to-br from-purple-50 to-purple-100 rounded-3xl shadow-lg hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 border border-purple-100 group">
+                <div className="bg-white rounded-3xl shadow-lg hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 border border-gray-100 group">
                   <div className="p-6 md:p-8 h-full flex flex-col" style={{ minHeight: '250px' }}>
                     <div className="mb-6">
                       <h4 className="text-lg md:text-xl font-thin text-black mb-3 group-hover:text-gray-800 transition-colors">Technology</h4>
@@ -118,11 +120,11 @@ const IndustriesPage = () => {
                       </p>
                       <div className="space-y-2">
                         <div className="flex flex-wrap gap-2">
-                          <span className="px-3 py-1.5 bg-purple-50 text-black rounded-full text-xs font-thin hover:bg-black hover:text-white transition-all duration-300 cursor-pointer">devops</span>
-                          <span className="px-3 py-1.5 bg-purple-50 text-black rounded-full text-xs font-thin hover:bg-black hover:text-white transition-all duration-300 cursor-pointer">automation</span>
+                          <span className="px-3 py-1.5 bg-gray-50 text-black rounded-full text-xs font-thin hover:bg-black hover:text-white transition-all duration-300 cursor-pointer">devops</span>
+                          <span className="px-3 py-1.5 bg-gray-50 text-black rounded-full text-xs font-thin hover:bg-black hover:text-white transition-all duration-300 cursor-pointer">automation</span>
                         </div>
                         <div className="flex flex-wrap gap-2">
-                          <span className="px-3 py-1.5 bg-purple-50 text-black rounded-full text-xs font-thin hover:bg-black hover:text-white transition-all duration-300 cursor-pointer">user experience</span>
+                          <span className="px-3 py-1.5 bg-gray-50 text-black rounded-full text-xs font-thin hover:bg-black hover:text-white transition-all duration-300 cursor-pointer">user experience</span>
                         </div>
                       </div>
                     </div>
@@ -138,7 +140,7 @@ const IndustriesPage = () => {
             </div>
             
             {/* Defense & Aerospace */}
-            <div className="bg-gradient-to-br from-gray-50 to-gray-100 rounded-3xl shadow-lg hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 border border-gray-100 group">
+            <div className="bg-white rounded-3xl shadow-lg hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 border border-gray-100 group">
               <div className="p-8 md:p-10 h-full flex flex-col" style={{ minHeight: '300px' }}>
                 <div className="mb-8">
                   <h3 className="text-xl md:text-2xl font-thin text-black mb-4 group-hover:text-gray-800 transition-colors">Defense & Aerospace</h3>
@@ -166,7 +168,7 @@ const IndustriesPage = () => {
             </div>
 
             {/* Energy & Infrastructure */}
-            <div className="bg-gradient-to-br from-gray-50 to-gray-100 rounded-3xl shadow-lg hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 border border-gray-100 group">
+            <div className="bg-white rounded-3xl shadow-lg hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 border border-gray-100 group">
               <div className="p-8 md:p-10 h-full flex flex-col" style={{ minHeight: '300px' }}>
                 <div className="mb-8">
                   <h3 className="text-xl md:text-2xl font-thin text-black mb-4 group-hover:text-gray-800 transition-colors">Energy & Infrastructure</h3>
@@ -194,7 +196,7 @@ const IndustriesPage = () => {
             </div>
 
             {/* Government & Public Sector */}
-            <div className="bg-gradient-to-br from-gray-50 to-gray-100 rounded-3xl shadow-lg hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 border border-gray-100 group">
+            <div className="bg-white rounded-3xl shadow-lg hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 border border-gray-100 group">
               <div className="p-8 md:p-10 h-full flex flex-col" style={{ minHeight: '300px' }}>
                 <div className="mb-8">
                   <h3 className="text-xl md:text-2xl font-thin text-black mb-4 group-hover:text-gray-800 transition-colors">Government & Public Sector</h3>
@@ -222,7 +224,7 @@ const IndustriesPage = () => {
             </div>
 
             {/* Heavy Industry & Mining */}
-            <div className="bg-gradient-to-br from-gray-50 to-gray-100 rounded-3xl shadow-lg hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 border border-gray-100 group">
+            <div className="bg-white rounded-3xl shadow-lg hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 border border-gray-100 group">
               <div className="p-8 md:p-10 h-full flex flex-col" style={{ minHeight: '300px' }}>
                 <div className="mb-8">
                   <h3 className="text-xl md:text-2xl font-thin text-black mb-4 group-hover:text-gray-800 transition-colors">Heavy Industry & Mining</h3>
@@ -250,7 +252,7 @@ const IndustriesPage = () => {
             </div>
 
             {/* Transportation & Logistics */}
-            <div className="bg-gradient-to-br from-gray-50 to-gray-100 rounded-3xl shadow-lg hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 border border-gray-100 group">
+            <div className="bg-white rounded-3xl shadow-lg hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 border border-gray-100 group">
               <div className="p-8 md:p-10 h-full flex flex-col" style={{ minHeight: '300px' }}>
                 <div className="mb-8">
                   <h3 className="text-xl md:text-2xl font-thin text-black mb-4 group-hover:text-gray-800 transition-colors">Transportation & Logistics</h3>
@@ -278,7 +280,7 @@ const IndustriesPage = () => {
             </div>
 
             {/* Agriculture & Food Production */}
-            <div className="bg-gradient-to-br from-gray-50 to-gray-100 rounded-3xl shadow-lg hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 border border-gray-100 group">
+            <div className="bg-white rounded-3xl shadow-lg hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 border border-gray-100 group">
               <div className="p-8 md:p-10 h-full flex flex-col" style={{ minHeight: '300px' }}>
                 <div className="mb-8">
                   <h3 className="text-xl md:text-2xl font-thin text-black mb-4 group-hover:text-gray-800 transition-colors">Agriculture & Food Production</h3>

@@ -223,15 +223,15 @@ const DeploymentOptimizationPage = () => {
                 </p>
                 <div className="space-y-3">
                   <div className="flex items-center space-x-3">
-                    <div className="w-2 h-2 bg-red-500 rounded-full"></div>
+                    <div className="w-2 h-2 border border-black rounded-full"></div>
                     <span className="text-sm font-thin text-gray-600">Extreme performance requirements for real-time processing</span>
                   </div>
                   <div className="flex items-center space-x-3">
-                    <div className="w-2 h-2 bg-red-500 rounded-full"></div>
+                    <div className="w-2 h-2 border border-black rounded-full"></div>
                     <span className="text-sm font-thin text-gray-600">Zero tolerance for downtime in financial transactions</span>
                   </div>
                   <div className="flex items-center space-x-3">
-                    <div className="w-2 h-2 bg-red-500 rounded-full"></div>
+                    <div className="w-2 h-2 border border-black rounded-full"></div>
                     <span className="text-sm font-thin text-gray-600">Complex scaling patterns with traffic spikes</span>
                   </div>
                 </div>
@@ -245,15 +245,15 @@ const DeploymentOptimizationPage = () => {
                 </p>
                 <div className="space-y-3">
                   <div className="flex items-center space-x-3">
-                    <div className="w-2 h-2 bg-green-500 rounded-full"></div>
+                    <div className="w-2 h-2 border border-black rounded-full"></div>
                     <span className="text-sm font-thin text-gray-600">Kubernetes orchestration with predictive auto-scaling</span>
                   </div>
                   <div className="flex items-center space-x-3">
-                    <div className="w-2 h-2 bg-green-500 rounded-full"></div>
+                    <div className="w-2 h-2 border border-black rounded-full"></div>
                     <span className="text-sm font-thin text-gray-600">Multi-region deployment with intelligent failover</span>
                   </div>
                   <div className="flex items-center space-x-3">
-                    <div className="w-2 h-2 bg-green-500 rounded-full"></div>
+                    <div className="w-2 h-2 border border-black rounded-full"></div>
                     <span className="text-sm font-thin text-gray-600">Real-time performance optimization and alerting</span>
                   </div>
                 </div>

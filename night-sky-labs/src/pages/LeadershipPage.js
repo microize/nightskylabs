@@ -8,7 +8,7 @@ const LeadershipPage = () => {
       <Navigation currentPage="about" />
 
       {/* Hero Section */}
-      <section className="relative w-full bg-white pt-32 pb-16 md:pt-40 md:pb-24">
+      {/* <section className="relative w-full bg-white pt-32 pb-16 md:pt-40 md:pb-24">
         <div className="max-w-7xl mx-auto px-6 md:px-12 text-center">
           <h1 className="text-4xl md:text-6xl font-thin text-black mb-6">Leadership Team</h1>
           <div className="w-24 h-0.5 bg-black mx-auto mb-8"></div>
@@ -16,10 +16,10 @@ const LeadershipPage = () => {
             Meet the visionary leaders driving AI innovation and building the future of intelligent technology.
           </p>
         </div>
-      </section>
+      </section> */}
 
       {/* Executive Team */}
-      <section className="relative w-full bg-gray-50 py-16 md:py-24">
+      {/* <section className="relative w-full bg-gray-50 py-16 md:py-24">
         <div className="max-w-7xl mx-auto px-6 md:px-12">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-5xl font-thin text-black mb-6">Executive Leadership</h2>
@@ -30,7 +30,6 @@ const LeadershipPage = () => {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {/* CEO */}
             <div className="bg-white rounded-2xl p-8 shadow-sm text-center">
               <div className="w-24 h-24 bg-gray-200 rounded-full mx-auto mb-6"></div>
               <h3 className="text-2xl font-thin text-black mb-2">Alex Rodriguez</h3>
@@ -46,7 +45,6 @@ const LeadershipPage = () => {
               </div>
             </div>
 
-            {/* CTO */}
             <div className="bg-white rounded-2xl p-8 shadow-sm text-center">
               <div className="w-24 h-24 bg-gray-200 rounded-full mx-auto mb-6"></div>
               <h3 className="text-2xl font-thin text-black mb-2">Dr. Maya Singh</h3>
@@ -62,7 +60,6 @@ const LeadershipPage = () => {
               </div>
             </div>
 
-            {/* CPO */}
             <div className="bg-white rounded-2xl p-8 shadow-sm text-center">
               <div className="w-24 h-24 bg-gray-200 rounded-full mx-auto mb-6"></div>
               <h3 className="text-2xl font-thin text-black mb-2">Sarah Chen</h3>
@@ -79,10 +76,10 @@ const LeadershipPage = () => {
             </div>
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* Department Heads */}
-      <section className="relative w-full bg-white py-16 md:py-24">
+      {/* <section className="relative w-full bg-white py-16 md:py-24">
         <div className="max-w-7xl mx-auto px-6 md:px-12">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-5xl font-thin text-black mb-6">Department Leaders</h2>
@@ -93,7 +90,6 @@ const LeadershipPage = () => {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {/* VP Engineering */}
             <div className="bg-gray-50 rounded-2xl p-8 flex items-start space-x-6">
               <div className="w-16 h-16 bg-gray-200 rounded-full flex-shrink-0"></div>
               <div className="flex-1">
@@ -111,7 +107,6 @@ const LeadershipPage = () => {
               </div>
             </div>
 
-            {/* Head of Design */}
             <div className="bg-gray-50 rounded-2xl p-8 flex items-start space-x-6">
               <div className="w-16 h-16 bg-gray-200 rounded-full flex-shrink-0"></div>
               <div className="flex-1">
@@ -129,7 +124,6 @@ const LeadershipPage = () => {
               </div>
             </div>
 
-            {/* VP Marketing */}
             <div className="bg-gray-50 rounded-2xl p-8 flex items-start space-x-6">
               <div className="w-16 h-16 bg-gray-200 rounded-full flex-shrink-0"></div>
               <div className="flex-1">
@@ -147,7 +141,6 @@ const LeadershipPage = () => {
               </div>
             </div>
 
-            {/* Head of Business Development */}
             <div className="bg-gray-50 rounded-2xl p-8 flex items-start space-x-6">
               <div className="w-16 h-16 bg-gray-200 rounded-full flex-shrink-0"></div>
               <div className="flex-1">
@@ -166,10 +159,10 @@ const LeadershipPage = () => {
             </div>
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* Advisory Board */}
-      <section className="relative w-full bg-gray-50 py-16 md:py-24">
+      {/* <section className="relative w-full bg-gray-50 py-16 md:py-24">
         <div className="max-w-7xl mx-auto px-6 md:px-12">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-5xl font-thin text-black mb-6">Advisory Board</h2>
@@ -241,10 +234,10 @@ const LeadershipPage = () => {
             </div>
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* Company Culture */}
-      <section className="relative w-full bg-white py-16 md:py-24">
+      {/* <section className="relative w-full bg-white py-16 md:py-24">
         <div className="max-w-7xl mx-auto px-6 md:px-12">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-5xl font-thin text-black mb-6">Leadership Philosophy</h2>
@@ -286,10 +279,10 @@ const LeadershipPage = () => {
             </div>
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* CTA Section */}
-      <section className="relative w-full bg-black py-16 md:py-24">
+      {/* <section className="relative w-full bg-black py-16 md:py-24">
         <div className="max-w-5xl mx-auto px-6 md:px-12 text-center">
           <h2 className="text-3xl md:text-5xl font-thin text-white mb-6">Join Our Leadership Journey</h2>
           <p className="text-lg font-thin text-white/80 mb-8 max-w-3xl mx-auto">
@@ -305,7 +298,7 @@ const LeadershipPage = () => {
             </button>
           </div>
         </div>
-      </section>
+      </section> */}
 
       <Footer />
     </div>

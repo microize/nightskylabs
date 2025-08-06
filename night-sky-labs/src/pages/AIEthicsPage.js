@@ -291,19 +291,19 @@ const AIEthicsPage = () => {
                 <h4 className="text-lg font-thin text-black mb-4">Monitoring Dashboard</h4>
                 <div className="space-y-3">
                   <div className="flex items-center space-x-3">
-                    <div className="w-3 h-3 bg-green-500 rounded-full"></div>
+                    <div className="w-3 h-3 border border-black rounded-full"></div>
                     <span className="text-sm font-thin text-gray-600">Bias detection systems active</span>
                   </div>
                   <div className="flex items-center space-x-3">
-                    <div className="w-3 h-3 bg-green-500 rounded-full"></div>
+                    <div className="w-3 h-3 border border-black rounded-full"></div>
                     <span className="text-sm font-thin text-gray-600">Privacy compliance verified</span>
                   </div>
                   <div className="flex items-center space-x-3">
-                    <div className="w-3 h-3 bg-green-500 rounded-full"></div>
+                    <div className="w-3 h-3 border border-black rounded-full"></div>
                     <span className="text-sm font-thin text-gray-600">Safety thresholds maintained</span>
                   </div>
                   <div className="flex items-center space-x-3">
-                    <div className="w-3 h-3 bg-green-500 rounded-full"></div>
+                    <div className="w-3 h-3 border border-black rounded-full"></div>
                     <span className="text-sm font-thin text-gray-600">User feedback processed</span>
                   </div>
                 </div>
