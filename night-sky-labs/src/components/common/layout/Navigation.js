@@ -1,10 +1,13 @@
 import React, { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
+import { useAuth } from '../../../contexts/AuthContext';
+import UserProfile from '../../auth/UserProfile';
 
 const Navigation = ({ currentPage }) => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [expandedSection, setExpandedSection] = useState(null);
   const location = useLocation();
+  const { isAuthenticated } = useAuth();
   
   // Determine current page from route if not explicitly provided
   const activePage = currentPage || (() => {
@@ -69,8 +72,8 @@ const Navigation = ({ currentPage }) => {
               </a>
               
               {/* Products Dropdown */}
-              <div className="absolute top-full left-1/2 transform -translate-x-1/2 w-screen max-w-6xl bg-white shadow-xl border border-gray-100 rounded-3xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50">
-                <div className="px-8 md:px-12 py-12 md:py-16 max-w-5xl mx-auto">
+              <div className="absolute top-full left-1/2 transform -translate-x-1/2 w-screen max-w-5xl bg-white shadow-xl border border-gray-100 rounded-3xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50">
+                <div className="px-12 py-16 max-w-5xl mx-auto">
                   <div className="grid grid-cols-3 gap-8 md:gap-12 divide-x divide-gray-200">
                     
                     {/* Soul */}
@@ -127,7 +130,7 @@ const Navigation = ({ currentPage }) => {
               </a>
               
               {/* Services Dropdown */}
-              <div className="absolute top-full left-1/2 transform -translate-x-1/2 w-screen max-w-7xl bg-white shadow-xl border border-gray-100 rounded-3xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50">
+              <div className="absolute top-full left-1/2 transform -translate-x-1/2 w-screen max-w-5xl bg-white shadow-xl border border-gray-100 rounded-3xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50">
                 <div className="px-12 py-16">
                   <div className="grid grid-cols-2 gap-16 divide-x divide-gray-200">
                     
@@ -214,7 +217,7 @@ const Navigation = ({ currentPage }) => {
               </a>
               
               {/* About Dropdown */}
-              <div className="absolute top-full left-1/2 transform -translate-x-1/2 w-screen max-w-4xl bg-white shadow-xl border border-gray-100 rounded-3xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50">
+              <div className="absolute top-full left-1/2 transform -translate-x-1/2 w-screen max-w-5xl bg-white shadow-xl border border-gray-100 rounded-3xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50">
                 <div className="px-12 py-16">
                   <div className="grid grid-cols-2 gap-12 divide-x divide-gray-200">
                     
@@ -289,7 +292,7 @@ const Navigation = ({ currentPage }) => {
               </a>
               
               {/* Resources Dropdown */}
-              <div className="absolute top-full left-1/2 transform -translate-x-1/2 w-screen max-w-4xl bg-white shadow-xl border border-gray-100 rounded-3xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50">
+              <div className="absolute top-full left-1/2 transform -translate-x-1/2 w-screen max-w-5xl bg-white shadow-xl border border-gray-100 rounded-3xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50">
                 <div className="px-12 py-16">
                   <div className="grid grid-cols-2 gap-12 divide-x divide-gray-200">
                     
@@ -349,11 +352,23 @@ const Navigation = ({ currentPage }) => {
             </div>
           </div>
           
-          {/* CTA Button - Desktop */}
-          <div className="hidden md:block">
-            <Link to="/contact" className="bg-black text-white px-4 py-2 rounded-full text-small font-thin hover:bg-gray-800 transition-colors">
-              Get In Touch
-            </Link>
+          {/* Auth/CTA Section - Desktop */}
+          <div className="hidden md:flex items-center space-x-4">
+            {isAuthenticated ? (
+              <UserProfile />
+            ) : (
+              <>
+                <Link 
+                  to="/signin"
+                  className="text-small font-thin text-black/80 hover:text-black transition-colors"
+                >
+                  Sign In
+                </Link>
+                <Link to="/contact" className="bg-black text-white px-4 py-2 rounded-full text-small font-thin hover:bg-gray-800 transition-colors">
+                  Get In Touch
+                </Link>
+              </>
+            )}
           </div>
 
           {/* Mobile Menu Button */}
@@ -603,15 +618,32 @@ const Navigation = ({ currentPage }) => {
               </div>
             </div>
 
-            {/* Mobile CTA Button */}
-            <div className="text-center">
-              <Link 
-                to="/contact"
-                className="block bg-black text-white px-8 py-4 rounded-full text-lg font-thin hover:bg-gray-800 transition-colors"
-                onClick={closeMobileMenu}
-              >
-                Get In Touch
-              </Link>
+            {/* Mobile Auth/CTA Buttons */}
+            <div className="space-y-4">
+              {isAuthenticated ? (
+                <div className="text-center">
+                  <UserProfile showDropdown={false} />
+                </div>
+              ) : (
+                <div className="text-center">
+                  <Link 
+                    to="/signin"
+                    onClick={closeMobileMenu}
+                    className="block w-full border-2 border-black text-black px-8 py-4 rounded-full text-lg font-thin hover:bg-black hover:text-white transition-colors mb-4"
+                  >
+                    Sign In
+                  </Link>
+                </div>
+              )}
+              <div className="text-center">
+                <Link 
+                  to="/contact"
+                  className="block bg-black text-white px-8 py-4 rounded-full text-lg font-thin hover:bg-gray-800 transition-colors"
+                  onClick={closeMobileMenu}
+                >
+                  Get In Touch
+                </Link>
+              </div>
             </div>
           </div>
         </div>

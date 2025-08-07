@@ -1,6 +1,9 @@
 import React, { Suspense } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { GoogleOAuthProvider } from '@react-oauth/google';
+import { AuthProvider } from './contexts/AuthContext';
 import ErrorBoundary from './components/common/layout/ErrorBoundary';
+import './utils/googleAuthTest'; // Load test utility
 
 // Lazy load components for better performance
 const HomeView = React.lazy(() => import('./views/HomeView'));
@@ -31,6 +34,8 @@ const TechnicalIntegrationPage = React.lazy(() => import('./pages/services/Techn
 const DeploymentOptimizationPage = React.lazy(() => import('./pages/services/DeploymentOptimizationPage'));
 const PerformanceAnalysisPage = React.lazy(() => import('./pages/services/PerformanceAnalysisPage'));
 const ContactPage = React.lazy(() => import('./pages/ContactPage'));
+const SignInPage = React.lazy(() => import('./pages/SignInPage'));
+const AdminPage = React.lazy(() => import('./pages/AdminPage'));
 
 // Loading component
 const LoadingSpinner = () => (
@@ -43,12 +48,18 @@ const LoadingSpinner = () => (
 );
 
 function App() {
+  // For development/demo purposes - replace with your actual Google Client ID
+  // This is a demo client ID - replace with your own from Google Cloud Console
+  const GOOGLE_CLIENT_ID = process.env.REACT_APP_GOOGLE_CLIENT_ID || "1077455645644-7qvh4pv9f8c7o6bn4p4r7l9v8t1k8z9o.apps.googleusercontent.com";
+
   return (
     <ErrorBoundary>
-      <Router>
-        <div className="min-h-screen bg-white">
-          <Suspense fallback={<LoadingSpinner />}>
-            <Routes>
+      <GoogleOAuthProvider clientId={GOOGLE_CLIENT_ID}>
+        <AuthProvider>
+          <Router>
+            <div className="min-h-screen bg-white">
+              <Suspense fallback={<LoadingSpinner />}>
+                <Routes>
               <Route path="/" element={<HomeView />} />
               <Route path="/soul" element={<SoulPage />} />
               <Route path="/voice" element={<VoicePage />} />
@@ -57,7 +68,14 @@ function App() {
               <Route path="/blog" element={<BlogPage />} />
               <Route path="/case-studies" element={<CaseStudiesPage />} />
               <Route path="/research" element={<ResearchPage />} />
+              
+              {/* Documentation Routes - Product-specific structure */}
               <Route path="/documentation" element={<DocumentationPage />} />
+              <Route path="/docs" element={<DocumentationPage />} />
+              <Route path="/docs/:productId" element={<DocumentationPage />} />
+              <Route path="/docs/:productId/:sectionId" element={<DocumentationPage />} />
+              <Route path="/docs/:productId/:sectionId/:pageId" element={<DocumentationPage />} />
+              
               <Route path="/help" element={<HelpCenterPage />} />
               <Route path="/community" element={<CommunityPage />} />
               <Route path="/services" element={<ServicesPage />} />
@@ -77,6 +95,10 @@ function App() {
               <Route path="/services/deployment-optimization" element={<DeploymentOptimizationPage />} />
               <Route path="/services/performance-analysis" element={<PerformanceAnalysisPage />} />
               <Route path="/contact" element={<ContactPage />} />
+              <Route path="/signin" element={<SignInPage />} />
+              
+              {/* Admin Routes */}
+              <Route path="/admin" element={<AdminPage />} />
               <Route path="*" element={
                 <div className="min-h-screen bg-white flex items-center justify-center px-6">
                   <div className="text-center max-w-md">
@@ -93,10 +115,12 @@ function App() {
                   </div>
                 </div>
               } />
-            </Routes>
-          </Suspense>
-        </div>
-      </Router>
+                </Routes>
+              </Suspense>
+            </div>
+          </Router>
+        </AuthProvider>
+      </GoogleOAuthProvider>
     </ErrorBoundary>
   );
 }

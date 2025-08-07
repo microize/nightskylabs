@@ -1,7 +1,8 @@
 import React from 'react';
 import Navigation from '../components/common/layout/Navigation';
 import Footer from '../components/common/layout/Footer';
-import ResearchContainer from '../components/features/research/ResearchContainer';
+import ContentContainer from '../components/features/content/ContentContainer';
+import { loadResearchPapers, generateResearchCategories } from '../utils/researchUtils';
 
 const ResearchPage = () => {
   return (
@@ -24,7 +25,11 @@ const ResearchPage = () => {
       {/* Research Content */}
       <section className="relative w-full bg-gray-50 py-16 md:py-24">
         <div className="max-w-7xl mx-auto px-6 md:px-12">
-          <ResearchContainer />
+          <ContentContainer 
+            contentType="research"
+            loadContent={loadResearchPapers}
+            generateCategories={generateResearchCategories}
+          />
         </div>
       </section>
 

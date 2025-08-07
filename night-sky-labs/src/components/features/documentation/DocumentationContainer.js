@@ -1,270 +1,263 @@
-import React, { useState, useEffect, useMemo } from 'react';
-import { loadDocumentation, generateCategories } from '../../../utils/markdownUtils';
-import { 
-  filterPostsBySearch, 
-  filterPostsByCategory, 
-  sortPostsByDate, 
-  paginatePosts 
-} from '../../../utils/blogUtils';
-import SearchBar from '../blog/SearchBar';
-import CategoryFilter from '../blog/CategoryFilter';
-import BlogPost from '../blog/BlogPost';
-import Pagination from '../blog/Pagination';
-
-// Custom Documentation Card component
-const DocumentationCard = ({ post, featured = false, onPostClick }) => {
-  const cardClass = featured 
-    ? "bg-white rounded-2xl shadow-lg overflow-hidden col-span-full lg:col-span-2 cursor-pointer hover:shadow-xl transition-shadow"
-    : "bg-white rounded-2xl shadow-lg overflow-hidden cursor-pointer hover:shadow-xl transition-shadow";
-
-  const getDifficultyColor = (difficulty) => {
-    switch(difficulty?.toLowerCase()) {
-      case 'beginner': return 'bg-green-100 text-green-700';
-      case 'intermediate': return 'bg-yellow-100 text-yellow-700';
-      case 'advanced': return 'bg-red-100 text-red-700';
-      default: return 'bg-gray-100 text-gray-700';
-    }
-  };
-
-  return (
-    <article className={cardClass} onClick={() => onPostClick && onPostClick(post)}>
-      {/* Icon Header */}
-      <div className={`${featured ? 'h-64 md:h-80' : 'h-48'} bg-gradient-to-br from-blue-50 to-indigo-100 flex items-center justify-center`}>
-        <div className="text-center">
-          <span className="text-6xl mb-4 block">📖</span>
-          {post.difficulty && (
-            <span className={`px-3 py-1 rounded-full text-xs font-thin ${getDifficultyColor(post.difficulty)}`}>
-              {post.difficulty}
-            </span>
-          )}
-        </div>
-      </div>
-      
-      {/* Content */}
-      <div className={`${featured ? 'p-8 md:p-12' : 'p-6'}`}>
-        {/* Metadata */}
-        <div className="flex flex-wrap gap-2 mb-4">
-          {post.estimatedTime && (
-            <span className="px-3 py-1 bg-blue-100 text-blue-700 rounded-full text-xs font-thin">
-              ⏱️ {post.estimatedTime}
-            </span>
-          )}
-          {post.tags.slice(0, featured ? 3 : 2).map((tag, index) => (
-            <span key={index} className="px-3 py-1 bg-gray-100 text-gray-700 rounded-full text-xs font-thin">
-              {tag}
-            </span>
-          ))}
-        </div>
-        
-        {/* Title */}
-        <h2 className={`${featured ? 'text-2xl md:text-3xl' : 'text-xl md:text-2xl'} font-thin text-black mb-4 leading-tight hover:text-gray-700 transition-colors`}>
-          {post.title}
-        </h2>
-        
-        {/* Excerpt */}
-        <p className={`${featured ? 'text-lg' : 'text-base'} font-thin text-gray-600 mb-6 leading-relaxed`}>
-          {post.excerpt}
-        </p>
-        
-        {/* Meta Information */}
-        <div className="flex items-center text-sm font-thin text-gray-500 space-x-4 mb-6">
-          <span>By {post.author}</span>
-          <span>•</span>
-          <span>{post.readTime}</span>
-          <span>•</span>
-          <span>{post.category}</span>
-        </div>
-        
-        {/* Read More Button */}
-        <div>
-          <span className="text-blue-600 font-thin hover:text-blue-800 transition-colors text-sm uppercase tracking-wide">
-            Read Guide
-          </span>
-        </div>
-      </div>
-    </article>
-  );
-};
-
-// Custom Grid for Documentation
-const DocumentationGrid = ({ posts, loading = false, onPostClick }) => {
-  if (loading) {
-    return <div>Loading...</div>;
-  }
-
-  if (!posts || posts.length === 0) {
-    return (
-      <div className="text-center py-16">
-        <div className="text-6xl text-gray-300 mb-4">📖</div>
-        <h3 className="text-xl font-thin text-gray-600 mb-2">No documentation found</h3>
-        <p className="text-gray-500 font-thin">Try adjusting your search or filter criteria</p>
-      </div>
-    );
-  }
-
-  const featuredPost = posts.find(post => post.featured);
-  const regularPosts = posts.filter(post => !post.featured);
-
-  return (
-    <div className="space-y-8">
-      {/* Featured Documentation */}
-      {featuredPost && (
-        <div className="mb-16">
-          <DocumentationCard post={featuredPost} featured={true} onPostClick={onPostClick} />
-        </div>
-      )}
-
-      {/* Regular Documentation Grid */}
-      {regularPosts.length > 0 && (
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {regularPosts.map((post) => (
-            <DocumentationCard key={post.id} post={post} onPostClick={onPostClick} />
-          ))}
-        </div>
-      )}
-    </div>
-  );
-};
+import React, { useState, useEffect } from 'react';
+import { useParams, useNavigate } from 'react-router-dom';
+import DocumentationLayout from './DocumentationLayout';
+import DocumentationContent from './DocumentationContent';
+import { PRODUCT_DOCUMENTATION, generateBreadcrumbs } from '../../../config/documentationStructure';
+import { contentService } from '../../../services/contentService';
 
 const DocumentationContainer = () => {
-  const [searchTerm, setSearchTerm] = useState('');
-  const [selectedCategory, setSelectedCategory] = useState('All');
-  const [currentPage, setCurrentPage] = useState(1);
-  const [selectedPost, setSelectedPost] = useState(null);
-  const [loading, setLoading] = useState(false);
-  const [documentationPosts, setDocumentationPosts] = useState([]);
-  const [documentationCategories, setDocumentationCategories] = useState(['All']);
+  const { productId, sectionId, pageId } = useParams();
+  const navigate = useNavigate();
   
-  const postsPerPage = 6;
+  const [currentContent, setCurrentContent] = useState(null);
+  const [loading, setLoading] = useState(true);
+  const [searchResults, setSearchResults] = useState(null);
+  const [currentProduct, setCurrentProduct] = useState(null);
 
-  // Filter and sort posts
-  const filteredPosts = useMemo(() => {
-    let posts = [...documentationPosts];
-    
-    // Apply search filter
-    if (searchTerm) {
-      posts = filterPostsBySearch(posts, searchTerm);
-    }
-    
-    // Apply category filter
-    if (selectedCategory !== 'All') {
-      posts = filterPostsByCategory(posts, selectedCategory);
-    }
-    
-    // Sort by date (newest first)
-    posts = sortPostsByDate(posts, false);
-    
-    return posts;
-  }, [searchTerm, selectedCategory]);
-
-  // Paginate filtered posts
-  const paginatedData = useMemo(() => {
-    return paginatePosts(filteredPosts, currentPage, postsPerPage);
-  }, [filteredPosts, currentPage]);
-
-  // Load content on mount
+  // Determine current product and content
   useEffect(() => {
     const loadContent = async () => {
       setLoading(true);
       try {
-        const posts = await loadDocumentation();
-        const cats = generateCategories(posts);
-        setDocumentationPosts(posts);
-        setDocumentationCategories(cats);
+        // If no product specified, default to Soul
+        const targetProductId = productId || 'soul';
+        const targetSectionId = sectionId || 'getting-started';
+        const targetPageId = pageId || 'installation';
+
+        // Get product structure
+        const product = PRODUCT_DOCUMENTATION[targetProductId];
+        if (!product) {
+          navigate('/docs/soul');
+          return;
+        }
+
+        setCurrentProduct(product);
+
+        // Load content from API
+        try {
+          const content = await contentService.getContentByProduct(
+            targetProductId, 
+            targetSectionId, 
+            targetPageId
+          );
+
+          if (content && content.length > 0) {
+            setCurrentContent(content[0]);
+          } else {
+            throw new Error('No content found');
+          }
+        } catch (apiError) {
+          // Fallback to mock content
+          setCurrentContent({
+            id: `${targetProductId}-${targetSectionId}-${targetPageId}`,
+            title: getPageTitle(targetProductId, targetSectionId, targetPageId),
+            content: generateMockContent(targetProductId, targetSectionId, targetPageId),
+            lastUpdated: new Date().toISOString(),
+            difficulty: 'Beginner',
+            estimatedTime: '10 min',
+            prerequisites: []
+          });
+        }
       } catch (error) {
-        console.error('Error loading documentation content:', error);
-        setDocumentationPosts([]);
-        setDocumentationCategories(['All']);
+        console.error('Error loading documentation:', error);
+        // Set fallback content
+        setCurrentContent({
+          title: 'Documentation Loading Error',
+          content: '<p>Unable to load documentation content. Please try again later.</p>',
+          lastUpdated: new Date().toISOString()
+        });
       } finally {
         setLoading(false);
       }
     };
     
     loadContent();
-  }, []);
+  }, [productId, sectionId, pageId, navigate]);
 
-  // Reset to first page when filters change
-  useEffect(() => {
-    setCurrentPage(1);
-  }, [searchTerm, selectedCategory]);
+  // Helper functions for mock content generation
+  const getPageTitle = (productId, sectionId, pageId) => {
+    const product = PRODUCT_DOCUMENTATION[productId];
+    if (!product) return 'Documentation';
+    
+    const section = product.sections.find(s => s.id === sectionId);
+    if (!section) return product.name;
+    
+    const page = section.pages?.find(p => p.id === pageId);
+    return page ? page.title : section.title;
+  };
+
+  const generateMockContent = (productId, sectionId, pageId) => {
+    const product = PRODUCT_DOCUMENTATION[productId];
+    const section = product?.sections.find(s => s.id === sectionId);
+    const page = section?.pages?.find(p => p.id === pageId);
+    
+    return `
+      <h1>${getPageTitle(productId, sectionId, pageId)}</h1>
+      <p class="text-lg text-gray-600 mb-6">Learn how to use ${product?.name || 'this feature'} effectively.</p>
+      
+      <h2>Overview</h2>
+      <p>This ${page ? 'page' : 'section'} covers ${page ? page.title.toLowerCase() : section?.title.toLowerCase() || 'this topic'} for ${product?.name || 'the product'}.</p>
+      
+      <h2>Getting Started</h2>
+      <p>Follow these steps to get started:</p>
+      <ol>
+        <li>Review the prerequisites</li>
+        <li>Set up your environment</li>
+        <li>Follow the implementation guide</li>
+      </ol>
+      
+      <div class="bg-blue-50 border border-blue-200 rounded-lg p-4 my-6">
+        <h3 class="text-blue-900 font-medium mb-2">📝 Note</h3>
+        <p class="text-blue-800">This is placeholder content. The actual documentation will be loaded from the CMS backend.</p>
+      </div>
+      
+      <h2>Next Steps</h2>
+      <p>After completing this section, you can:</p>
+      <ul>
+        <li>Explore advanced features</li>
+        <li>Check out related tutorials</li>
+        <li>Join our community discussions</li>
+      </ul>
+    `;
+  };
+
+  // Get current documentation content
+  const getCurrentContent = () => {
+    if (searchResults) {
+      return {
+        title: `Search Results for "${searchResults.query}"`,
+        content: generateSearchResultsHTML(searchResults.results),
+        lastUpdated: new Date().toISOString()
+      };
+    }
+    
+    return currentContent || {
+      title: 'Loading...',
+      content: '<p>Loading documentation content...</p>',
+      lastUpdated: new Date().toISOString()
+    };
+  };
+
+  // Generate breadcrumb path
+  const getBreadcrumbPath = () => {
+    const targetProductId = productId || 'soul';
+    const targetSectionId = sectionId || 'getting-started';
+    const targetPageId = pageId || 'installation';
+    
+    return generateBreadcrumbs(targetProductId, targetSectionId, targetPageId);
+  };
 
   // Handle search
-  const handleSearchChange = (term) => {
-    setLoading(true);
-    setSearchTerm(term);
-    setTimeout(() => setLoading(false), 300);
+  const handleSearch = async (query) => {
+    if (!query.trim()) {
+      setSearchResults(null);
+      return;
+    }
+    
+    try {
+      const results = await contentService.searchContent(query, 'documentation', productId);
+      setSearchResults({ query, results: results.data || [] });
+    } catch (error) {
+      console.error('Search error:', error);
+      // Fallback to mock search results
+      setSearchResults({ 
+        query, 
+        results: [
+          {
+            title: `Search results for "${query}"`,
+            excerpt: 'Mock search results will be replaced with actual content from the CMS.',
+            category: 'Documentation',
+            estimatedReadTime: '5 min'
+          }
+        ]
+      });
+    }
   };
 
-  // Handle category change
-  const handleCategoryChange = (category) => {
-    setLoading(true);
-    setSelectedCategory(category);
-    setTimeout(() => setLoading(false), 200);
+  // Generate search results HTML
+  const generateSearchResultsHTML = (results) => {
+    if (results.length === 0) {
+      return '<p>No results found. Try adjusting your search terms.</p>';
+    }
+    
+    return results.map(post => `
+      <div class="border-b border-gray-200 pb-6 mb-6">
+        <h3 class="text-xl font-thin text-black mb-2">
+          <a href="${post.fullPath || '#'}" class="hover:underline">${post.title}</a>
+        </h3>
+        <p class="text-gray-600 font-thin mb-2">${post.excerpt}</p>
+        <div class="text-sm text-gray-500">
+          <span>${post.category}</span> • <span>${post.estimatedReadTime || '5 min'}</span>
+        </div>
+      </div>
+    `).join('');
   };
 
-  // Handle page change
-  const handlePageChange = (page) => {
-    setCurrentPage(page);
-    window.scrollTo({ top: 0, behavior: 'smooth' });
+  // Extract headings from content
+  const extractHeadings = (content) => {
+    if (!content) return [];
+    
+    const tempDiv = document.createElement('div');
+    tempDiv.innerHTML = content;
+    const headings = [];
+    
+    tempDiv.querySelectorAll('h1, h2, h3, h4, h5, h6').forEach((heading, index) => {
+      const id = heading.textContent.toLowerCase()
+        .replace(/[^a-z0-9]+/g, '-')
+        .replace(/(^-|-$)/g, '');
+      
+      headings.push({
+        id,
+        text: heading.textContent,
+        level: parseInt(heading.tagName.charAt(1))
+      });
+    });
+    
+    return headings;
   };
 
-  // Handle post selection
-  const handlePostSelect = (post) => {
-    setSelectedPost(post);
+  // Handle navigation
+  const handleSectionChange = (productId, sectionId, pageId) => {
+    const path = `/docs/${productId}${sectionId ? `/${sectionId}` : ''}${pageId ? `/${pageId}` : ''}`;
+    navigate(path);
+    setSearchResults(null);
   };
 
-  // Handle back to list
-  const handleBackToList = () => {
-    setSelectedPost(null);
-  };
-
-  // If viewing individual documentation
-  if (selectedPost) {
-    return <BlogPost post={selectedPost} onBack={handleBackToList} />;
+  if (loading) {
+    return (
+      <div className="min-h-screen bg-white flex items-center justify-center">
+        <div className="text-center">
+          <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-black mx-auto mb-4"></div>
+          <p className="text-gray-600 font-thin">Loading documentation...</p>
+        </div>
+      </div>
+    );
   }
 
+  const currentContentData = getCurrentContent();
+  const headings = extractHeadings(currentContentData.content);
+  const breadcrumbPath = getBreadcrumbPath();
+
   return (
-    <div className="space-y-12">
-      {/* Search and Filter Controls */}
-      <div className="space-y-6">
-        {/* Search Bar */}
-        <SearchBar 
-          searchTerm={searchTerm}
-          onSearchChange={handleSearchChange}
-          placeholder="Search guides, API references, and tutorials..."
-        />
-        
-        {/* Category Filter */}
-        <CategoryFilter 
-          categories={documentationCategories}
-          selectedCategory={selectedCategory}
-          onCategoryChange={handleCategoryChange}
-        />
-      </div>
-
-      {/* Results Summary */}
-      <div className="text-center">
-        <p className="text-sm font-thin text-gray-600">
-          {loading ? 'Searching...' : `Showing ${paginatedData.posts.length} of ${filteredPosts.length} guides`}
-          {searchTerm && ` for "${searchTerm}"`}
-          {selectedCategory !== 'All' && ` in ${selectedCategory}`}
-        </p>
-      </div>
-
-      {/* Documentation Grid */}
-      <DocumentationGrid 
-        posts={paginatedData.posts}
-        loading={loading}
-        onPostClick={handlePostSelect}
+    <DocumentationLayout
+      currentProduct={currentProduct}
+      productId={productId || 'soul'}
+      sectionId={sectionId || 'getting-started'}
+      pageId={pageId || 'installation'}
+      onSectionChange={handleSectionChange}
+      headings={headings}
+      breadcrumbPath={breadcrumbPath}
+      onSearch={handleSearch}
+    >
+      <DocumentationContent
+        title={currentContentData.title}
+        content={currentContentData.content}
+        lastUpdated={currentContentData.lastUpdated}
+        difficulty={currentContentData.difficulty}
+        estimatedTime={currentContentData.estimatedTime || currentContentData.estimatedReadTime}
+        prerequisites={currentContentData.prerequisites}
       />
-
-      {/* Pagination */}
-      <Pagination 
-        currentPage={paginatedData.currentPage}
-        totalPages={paginatedData.totalPages}
-        onPageChange={handlePageChange}
-      />
-    </div>
+    </DocumentationLayout>
   );
 };
 

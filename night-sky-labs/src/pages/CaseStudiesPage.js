@@ -1,7 +1,8 @@
 import React from 'react';
 import Navigation from '../components/common/layout/Navigation';
 import Footer from '../components/common/layout/Footer';
-import CaseStudiesContainer from '../components/features/case-studies/CaseStudiesContainer';
+import ContentContainer from '../components/features/content/ContentContainer';
+import { loadCaseStudies, generateCaseStudyCategories } from '../utils/caseStudyUtils';
 
 const CaseStudiesPage = () => {
   return (
@@ -24,7 +25,11 @@ const CaseStudiesPage = () => {
       {/* Case Studies Content */}
       <section className="relative w-full bg-gray-50 py-16 md:py-24">
         <div className="max-w-7xl mx-auto px-6 md:px-12">
-          <CaseStudiesContainer />
+          <ContentContainer 
+            contentType="case-studies"
+            loadContent={loadCaseStudies}
+            generateCategories={generateCaseStudyCategories}
+          />
         </div>
       </section>
 

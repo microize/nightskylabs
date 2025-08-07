@@ -1,7 +1,8 @@
 import React from 'react';
 import Navigation from '../components/common/layout/Navigation';
 import Footer from '../components/common/layout/Footer';
-import BlogContainer from '../components/features/blog/BlogContainer';
+import ContentContainer from '../components/features/content/ContentContainer';
+import { loadBlogPosts, generateCategories } from '../utils/markdownUtils';
 
 const BlogPage = () => {
   return (
@@ -24,7 +25,11 @@ const BlogPage = () => {
       {/* Blog Content */}
       <section className="relative w-full bg-gray-50 py-16 md:py-24">
         <div className="max-w-7xl mx-auto px-6 md:px-12">
-          <BlogContainer />
+          <ContentContainer 
+            contentType="blog"
+            loadContent={loadBlogPosts}
+            generateCategories={(items) => generateCategories(items)}
+          />
         </div>
       </section>
 
