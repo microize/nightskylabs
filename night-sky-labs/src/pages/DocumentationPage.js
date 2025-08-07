@@ -1,6 +1,7 @@
 import React from 'react';
-import Navigation from '../components/shared/Navigation';
-import Footer from '../components/shared/Footer';
+import Navigation from '../components/common/layout/Navigation';
+import Footer from '../components/common/layout/Footer';
+import DocumentationContainer from '../components/features/documentation/DocumentationContainer';
 
 const DocumentationPage = () => {
   return (
@@ -9,31 +10,21 @@ const DocumentationPage = () => {
 
       {/* Hero Section */}
       <section className="relative w-full bg-white pt-32 pb-16 md:pt-40 md:pb-24">
-        <div className="max-w-7xl mx-auto px-6 md:px-12 text-center">
-          <h1 className="text-4xl md:text-6xl font-thin text-black mb-6">Documentation</h1>
-          <div className="w-24 h-0.5 bg-black mx-auto mb-8"></div>
-          <p className="text-lg md:text-xl font-thin text-gray-600 max-w-4xl mx-auto">
-            Technical guides, API references, and comprehensive documentation for all NightSkyLabs products.
-          </p>
+        <div className="max-w-7xl mx-auto px-6 md:px-12">
+          <div className="text-center mb-16">
+            <h1 className="text-4xl md:text-6xl font-thin text-black mb-6">Documentation</h1>
+            <div className="w-24 h-0.5 bg-black mx-auto mb-8"></div>
+            <p className="text-lg md:text-xl font-thin text-gray-600 max-w-4xl mx-auto">
+              Technical guides, API references, and comprehensive tutorials for NightSkyLabs AI products.
+            </p>
+          </div>
         </div>
       </section>
 
-      {/* Coming Soon Section */}
+      {/* Documentation Content */}
       <section className="relative w-full bg-gray-50 py-16 md:py-24">
-        <div className="max-w-5xl mx-auto px-6 md:px-12 text-center">
-          <div className="bg-white rounded-2xl p-8 md:p-12 shadow-lg">
-            <div className="w-24 h-24 bg-gray-100 rounded-2xl mx-auto mb-8 flex items-center justify-center">
-              <span className="text-gray-400 text-4xl">📚</span>
-            </div>
-            <h2 className="text-2xl md:text-4xl font-thin text-black mb-6">Comprehensive Documentation Coming Soon</h2>
-            <p className="text-lg font-thin text-gray-600 mb-8 max-w-3xl mx-auto">
-              We're building detailed technical documentation, API references, and implementation guides for Soul, Voice, 
-              and Qurious. Complete with code examples, best practices, and troubleshooting guides.
-            </p>
-            <button className="bg-black text-white px-8 py-4 rounded-full text-lg font-thin hover:bg-gray-800 transition-colors">
-              Early Access Request
-            </button>
-          </div>
+        <div className="max-w-7xl mx-auto px-6 md:px-12">
+          <DocumentationContainer />
         </div>
       </section>
 

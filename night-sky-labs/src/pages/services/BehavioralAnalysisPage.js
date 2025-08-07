@@ -1,7 +1,7 @@
 import React from 'react';
 import { LuUsers as Users, LuBrain as Brain, LuTarget as Target, LuRefreshCw as RefreshCw } from 'react-icons/lu';
-import Navigation from '../../components/shared/Navigation';
-import Footer from '../../components/shared/Footer';
+import Navigation from '../../components/common/layout/Navigation';
+import Footer from '../../components/common/layout/Footer';
 
 const BehavioralAnalysisPage = () => {
   return (

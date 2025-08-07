@@ -1,6 +1,6 @@
 import React from 'react';
-import Navigation from '../components/shared/Navigation';
-import Footer from '../components/shared/Footer';
+import Navigation from '../components/common/layout/Navigation';
+import Footer from '../components/common/layout/Footer';
 import { LuTarget as Target, LuMicroscope as Microscope, LuTrendingUp as TrendingUp, LuUsers as Users, LuZap as Zap, LuGlobe as Globe } from 'react-icons/lu';
 
 const OurStoryPage = () => {

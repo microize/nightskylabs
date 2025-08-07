@@ -1,7 +1,7 @@
 import React from 'react';
 import { LuTarget as Target, LuLock as Lock, LuZap as Zap, LuHandshake as Handshake } from 'react-icons/lu';
-import Navigation from '../components/shared/Navigation';
-import Footer from '../components/shared/Footer';
+import Navigation from '../components/common/layout/Navigation';
+import Footer from '../components/common/layout/Footer';
 
 const AboutPage = () => {
   return (

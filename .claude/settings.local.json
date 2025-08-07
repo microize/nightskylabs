@@ -19,7 +19,13 @@
       "Bash(npm start)",
       "Bash(node:*)",
       "WebFetch(domain:sripathim.com)",
-      "WebFetch(domain:www.linkedin.com)"
+      "WebFetch(domain:www.linkedin.com)",
+      "Bash(pkill:*)",
+      "Bash(find:*)",
+      "Bash(npm test:*)",
+      "Bash(curl:*)",
+      "Bash(timeout 30s npm run build:*)",
+      "Bash(timeout 30s npm start:*)"
     ],
     "deny": []
   }

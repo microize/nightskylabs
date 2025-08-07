@@ -1,5 +1,5 @@
 import React from 'react';
-import Navigation from '../components/shared/Navigation';
+import Navigation from '../components/common/layout/Navigation';
 
 const IndustriesPage = () => {
   return (

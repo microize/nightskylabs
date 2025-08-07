@@ -1,9 +1,9 @@
 import React from 'react';
 import { LuClock } from 'react-icons/lu';
-import Navigation from '../components/shared/Navigation';
-import HeroSection from '../components/shared/HeroSection';
-import MobileHeroSection from '../components/shared/MobileHeroSection';
-import Footer from '../components/shared/Footer';
+import Navigation from '../components/common/layout/Navigation';
+import HeroSection from '../components/common/layout/HeroSection';
+import MobileHeroSection from '../components/common/layout/MobileHeroSection';
+import Footer from '../components/common/layout/Footer';
 import { useReadingAnimation } from '../hooks/useReadingAnimation';
 
 const VoicePage = () => {

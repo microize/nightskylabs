@@ -1,6 +1,6 @@
 import React from 'react';
-import Navigation from '../components/shared/Navigation';
-import Footer from '../components/shared/Footer';
+import Navigation from '../components/common/layout/Navigation';
+import Footer from '../components/common/layout/Footer';
 import { LuRocket as Rocket, LuTarget as Target, LuTrendingUp as TrendingUp } from 'react-icons/lu';
 
 const CareersPage = () => {

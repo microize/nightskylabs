@@ -1,6 +1,6 @@
 import React, { Suspense } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import ErrorBoundary from './components/shared/ErrorBoundary';
+import ErrorBoundary from './components/common/layout/ErrorBoundary';
 
 // Lazy load components for better performance
 const HomeView = React.lazy(() => import('./views/HomeView'));

@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
-import Navigation from '../components/shared/Navigation';
-import Footer from '../components/shared/Footer';
+import Navigation from '../components/common/layout/Navigation';
+import Footer from '../components/common/layout/Footer';
 
 const ContactPage = () => {
   const [formData, setFormData] = useState({

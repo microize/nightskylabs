@@ -1,6 +1,6 @@
 import React from 'react';
-import Navigation from '../components/shared/Navigation';
-import Footer from '../components/shared/Footer';
+import Navigation from '../components/common/layout/Navigation';
+import Footer from '../components/common/layout/Footer';
 import { LuScale as Scale, LuSearch as Search, LuLock as Lock, LuUsers as Users, LuShield as Shield, LuBookOpen as BookOpen, LuClipboardList as ClipboardList, LuMessageCircle as MessageCircle, LuUsers as UserGroup } from 'react-icons/lu';
 
 const AIEthicsPage = () => {
