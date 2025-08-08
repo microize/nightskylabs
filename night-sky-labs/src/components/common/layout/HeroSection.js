@@ -47,13 +47,10 @@ const HeroSection = ({
             {/* Mobile Scroll Indicator - Between video and overlay */}
             {showScrollIndicator && (
               <div className="md:hidden absolute bottom-16 left-1/2 transform -translate-x-1/2 z-10">
-                <div className="flex flex-col items-center space-y-2">
-                  <span className="text-sm bg-gradient-to-r from-[#998664] to-[#aa9678] bg-clip-text text-transparent font-thin micro-pulse">SCROLL</span>
-                  <div>
-                    <svg className="w-4 h-4 text-[#998664]" fill="currentColor" viewBox="0 0 24 24">
-                      <path d="M12 16l-6-6h12l-6 6z"/>
-                    </svg>
-                  </div>
+                <div className="flex flex-col items-center">
+                  <svg className="w-6 h-6 text-[#998664] animate-bounce" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M19 14l-7 7m0 0l-7-7m7 7V3"/>
+                  </svg>
                 </div>
               </div>
             )}
@@ -62,19 +59,19 @@ const HeroSection = ({
       )}
       
       {/* Content Container - Desktop Layout */}
-      <div className="hidden md:flex relative z-10 h-full flex-col items-start px-12" style={{ paddingTop: '12%' }}>
+      <div className="hidden md:flex relative z-10 h-full flex-col items-start px-12" style={{ paddingTop: '10%' }}>
         
         {/* Hero Text Section - Desktop */}
-        <div className="flex flex-col items-start text-left w-full max-w-4xl ml-[35%]">
+        <div className="flex flex-col items-start text-left w-full ml-[32%] pr-8">
           <div className="hero-text-creating animate-hero-text-1 mb-0 md:mb-0">
-            <h1 className="font-thin bg-gradient-to-r from-[#998664] to-[#aa9678] bg-clip-text text-transparent leading-tight md:leading-relaxed" style={{ fontSize: '12vh' }}>
+            <h1 className="font-medium bg-gradient-to-r from-[#998664] to-[#aa9678] bg-clip-text text-transparent leading-tight md:leading-relaxed" style={{ fontSize: '12vh' }}>
               {title}
             </h1>
           </div>
 
           {subtitle && (
             <div className="hero-text-users animate-hero-text-2 mb-8 md:mb-10">
-              <h2 className="font-thin bg-gradient-to-r from-[#998664] to-[#aa9678] bg-clip-text text-transparent leading-tight md:leading-relaxed" style={{ fontSize: '6vh' }}>
+              <h2 className="font-medium bg-gradient-to-r from-[#998664] to-[#aa9678] bg-clip-text text-transparent leading-tight md:leading-relaxed" style={{ fontSize: '6vh' }}>
                 {subtitle}
               </h2>
             </div>
@@ -83,8 +80,8 @@ const HeroSection = ({
 
         {/* Description Text - Desktop Position */}
         {description && (
-          <div className="hero-description animate-hero-fade-in absolute right-12" style={{ bottom: '5%', width: '25%' }}>
-            <p className="text-justify font-light text-gray-600 leading-relaxed" style={{ fontSize: '2.5vh' }}>
+          <div className="hero-description animate-hero-fade-in absolute right-10" style={{ bottom: '10%', width: '30%' }}>
+            <p className="text-left font-light text-black leading-relaxed" style={{ fontSize: '2vh', fontFamily: 'Inter Tight', fontWeight: 300, color: 'rgb(34, 34, 34)' }}>
               {description}
             </p>
           </div>
@@ -93,13 +90,10 @@ const HeroSection = ({
         {/* Scroll Indicator - Desktop */}
         {showScrollIndicator && (
           <div className="hidden md:block hero-scroll animate-hero-scroll absolute left-1/2 transform -translate-x-1/2" style={{ bottom: '2%' }}>
-            <div className="flex flex-col items-center space-y-2">
-              <span className="bg-gradient-to-r from-[#998664] to-[#aa9678] bg-clip-text text-transparent font-thin micro-pulse" style={{ fontSize: '1.8vh' }}>SCROLL</span>
-              <div>
-                <svg className="w-4 h-4 text-[#998664]" fill="currentColor" viewBox="0 0 24 24">
-                  <path d="M12 16l-6-6h12l-6 6z"/>
-                </svg>
-              </div>
+            <div className="flex flex-col items-center">
+              <svg className="w-6 h-6 text-[#998664] animate-bounce" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" d="M19 14l-7 7m0 0l-7-7m7 7V3"/>
+              </svg>
             </div>
           </div>
         )}
