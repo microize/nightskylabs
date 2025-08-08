@@ -47,7 +47,7 @@ const HeroLayout = () => {
               const finalDelay = Math.max(120, baseDelay + randomVariation);
               
               setTimeout(() => {
-                word.classList.remove('text-gray-400');
+                word.classList.remove('text-black');
                 word.classList.add('text-black');
               }, cumulativeDelay);
               
@@ -78,103 +78,103 @@ const HeroLayout = () => {
         <div className="w-full mx-auto px-6 md:px-12">
           <div className="w-full text-center md:text-left">
             <h2 className="text-xl md:text-2xl lg:text-3xl xl:text-4xl font-thin mb-8" id="reading-text" style={{ lineHeight: '2' }}>
-              <span className="reading-word text-gray-400">Generative</span> <span className="reading-word text-gray-400">AI</span> <span className="reading-word text-gray-400">has</span> <span className="reading-word text-gray-400">huge</span> <span className="reading-word text-gray-400">potential</span> <span className="reading-word text-gray-400">and</span> <span className="reading-word text-gray-400">is</span> <span className="reading-word text-gray-400">rapidly</span> <span className="reading-word text-gray-400">changing.</span> <span className="reading-word text-gray-400">Organizations</span> <span className="reading-word text-gray-400">struggle</span> <span className="reading-word text-gray-400">to</span> <span className="reading-word text-gray-400">keep</span> <span className="reading-word text-gray-400">up</span> <span className="reading-word text-gray-400">with</span> <span className="reading-word text-gray-400">this</span> <span className="reading-word text-gray-400">pace</span> <span className="reading-word text-gray-400">of</span> <span className="reading-word text-gray-400">innovation.</span> <span className="reading-word text-gray-400">We</span> <span className="reading-word text-gray-400">are</span> <span className="reading-word text-gray-400">here</span> <span className="reading-word text-gray-400">to</span> <span className="reading-word text-gray-400">help</span> <span className="reading-word text-gray-400">them</span> <span className="reading-word text-gray-400">navigate</span> <span className="reading-word text-gray-400">this</span> <span className="reading-word text-gray-400">transformation.</span> <span className="reading-word text-gray-400">From</span> <span className="reading-word text-gray-400">strategic</span> <span className="reading-word text-gray-400">planning</span> <span className="reading-word text-gray-400">to</span> <span className="reading-word text-gray-400">custom</span> <span className="reading-word text-gray-400">development,</span> <span className="reading-word text-gray-400">we</span> <span className="reading-word text-gray-400">guide</span> <span className="reading-word text-gray-400">organizations</span> <span className="reading-word text-gray-400">through</span> <span className="reading-word text-gray-400">successful</span> <span className="reading-word text-gray-400">AI</span> <span className="reading-word text-gray-400">adoption</span> <span className="reading-word text-gray-400">and</span> <span className="reading-word text-gray-400">integration.</span> <span className="reading-word text-gray-400">This</span> <span className="reading-word text-gray-400">is</span> <span className="reading-word text-gray-400">transformation</span> <span className="reading-word text-gray-400">made</span> <span className="reading-word text-gray-400">accessible.</span>
+              <span className="reading-word text-black">Generative</span> <span className="reading-word text-black">AI</span> <span className="reading-word text-black">has</span> <span className="reading-word text-black">huge</span> <span className="reading-word text-black">potential</span> <span className="reading-word text-black">and</span> <span className="reading-word text-black">is</span> <span className="reading-word text-black">rapidly</span> <span className="reading-word text-black">changing.</span> <span className="reading-word text-black">Organizations</span> <span className="reading-word text-black">struggle</span> <span className="reading-word text-black">to</span> <span className="reading-word text-black">keep</span> <span className="reading-word text-black">up</span> <span className="reading-word text-black">with</span> <span className="reading-word text-black">this</span> <span className="reading-word text-black">pace</span> <span className="reading-word text-black">of</span> <span className="reading-word text-black">innovation.</span> <span className="reading-word text-black">We</span> <span className="reading-word text-black">are</span> <span className="reading-word text-black">here</span> <span className="reading-word text-black">to</span> <span className="reading-word text-black">help</span> <span className="reading-word text-black">them</span> <span className="reading-word text-black">navigate</span> <span className="reading-word text-black">this</span> <span className="reading-word text-black">transformation.</span> <span className="reading-word text-black">From</span> <span className="reading-word text-black">strategic</span> <span className="reading-word text-black">planning</span> <span className="reading-word text-black">to</span> <span className="reading-word text-black">custom</span> <span className="reading-word text-black">development,</span> <span className="reading-word text-black">we</span> <span className="reading-word text-black">guide</span> <span className="reading-word text-black">organizations</span> <span className="reading-word text-black">through</span> <span className="reading-word text-black">successful</span> <span className="reading-word text-black">AI</span> <span className="reading-word text-black">adoption</span> <span className="reading-word text-black">and</span> <span className="reading-word text-black">integration.</span> <span className="reading-word text-black">This</span> <span className="reading-word text-black">is</span> <span className="reading-word text-black">transformation</span> <span className="reading-word text-black">made</span> <span className="reading-word text-black">accessible.</span>
             </h2>
           </div>
         </div>
       </section>
 
       {/* Rolling Technology Terms Section */}
-      <section className="rolling-tech-section relative w-full bg-white border-t border-b border-gray-100 py-8 md:py-12 overflow-hidden">
+      <section className="rolling-tech-section relative w-full bg-gradient-to-r from-[#998664] to-[#aa9678] py-8 md:py-12 overflow-hidden">
         <div className="marquee-container">
           <div className="animate-marquee-infinite flex items-center space-x-6 md:space-x-12 whitespace-nowrap">
             {/* First Set */}
-            <span className="text-2xl md:text-3xl lg:text-3xl font-thin text-gray-400">generative ai</span>
-            <span className="text-2xl md:text-3xl lg:text-3xl font-thin text-gray-400">•</span>
-            <span className="text-2xl md:text-3xl lg:text-3xl font-thin text-gray-400">large language models</span>
-            <span className="text-2xl md:text-3xl lg:text-3xl font-thin text-gray-400">•</span>
-            <span className="text-2xl md:text-3xl lg:text-3xl font-thin text-gray-400">agentic ai</span>
-            <span className="text-2xl md:text-3xl lg:text-3xl font-thin text-gray-400">•</span>
-            <span className="text-2xl md:text-3xl lg:text-3xl font-thin text-gray-400">retrieval augmented generation</span>
-            <span className="text-2xl md:text-3xl lg:text-3xl font-thin text-gray-400">•</span>
-            <span className="text-2xl md:text-3xl lg:text-3xl font-thin text-gray-400">computer vision</span>
-            <span className="text-2xl md:text-3xl lg:text-3xl font-thin text-gray-400">•</span>
-            <span className="text-2xl md:text-3xl lg:text-3xl font-thin text-gray-400">natural language processing</span>
-            <span className="text-2xl md:text-3xl lg:text-3xl font-thin text-gray-400">•</span>
-            <span className="text-2xl md:text-3xl lg:text-3xl font-thin text-gray-400">model fine-tuning</span>
-            <span className="text-2xl md:text-3xl lg:text-3xl font-thin text-gray-400">•</span>
-            <span className="text-2xl md:text-3xl lg:text-3xl font-thin text-gray-400">vector databases</span>
-            <span className="text-2xl md:text-3xl lg:text-3xl font-thin text-gray-400">•</span>
-            <span className="text-2xl md:text-3xl lg:text-3xl font-thin text-gray-400">semantic search</span>
-            <span className="text-2xl md:text-3xl lg:text-3xl font-thin text-gray-400">•</span>
-            <span className="text-2xl md:text-3xl lg:text-3xl font-thin text-gray-400">workflow automation</span>
-            <span className="text-2xl md:text-3xl lg:text-3xl font-thin text-gray-400">•</span>
-            <span className="text-2xl md:text-3xl lg:text-3xl font-thin text-gray-400">ai agents</span>
-            <span className="text-2xl md:text-3xl lg:text-3xl font-thin text-gray-400">•</span>
-            <span className="text-2xl md:text-3xl lg:text-3xl font-thin text-gray-400">prompt engineering</span>
-            <span className="text-2xl md:text-3xl lg:text-3xl font-thin text-gray-400">•</span>
-            <span className="text-2xl md:text-3xl lg:text-3xl font-thin text-gray-400">multi-agent systems</span>
-            <span className="text-2xl md:text-3xl lg:text-3xl font-thin text-gray-400">•</span>
-            <span className="text-2xl md:text-3xl lg:text-3xl font-thin text-gray-400">reinforcement learning</span>
-            <span className="text-2xl md:text-3xl lg:text-3xl font-thin text-gray-400">•</span>
-            <span className="text-2xl md:text-3xl lg:text-3xl font-thin text-gray-400">neural networks</span>
-            <span className="text-2xl md:text-3xl lg:text-3xl font-thin text-gray-400">•</span>
-            <span className="text-2xl md:text-3xl lg:text-3xl font-thin text-gray-400">transformer models</span>
-            <span className="text-2xl md:text-3xl lg:text-3xl font-thin text-gray-400">•</span>
-            <span className="text-2xl md:text-3xl lg:text-3xl font-thin text-gray-400">foundation models</span>
-            <span className="text-2xl md:text-3xl lg:text-3xl font-thin text-gray-400">•</span>
-            <span className="text-2xl md:text-3xl lg:text-3xl font-thin text-gray-400">intelligent automation</span>
-            <span className="text-2xl md:text-3xl lg:text-3xl font-thin text-gray-400">•</span>
-            <span className="text-2xl md:text-3xl lg:text-3xl font-thin text-gray-400">machine learning ops</span>
-            <span className="text-2xl md:text-3xl lg:text-3xl font-thin text-gray-400">•</span>
-            <span className="text-2xl md:text-3xl lg:text-3xl font-thin text-gray-400">edge computing</span>
-            <span className="text-2xl md:text-3xl lg:text-3xl font-thin text-gray-400">•</span>
-            <span className="text-2xl md:text-3xl lg:text-3xl font-thin text-gray-400">federated learning</span>
-            <span className="text-2xl md:text-3xl lg:text-3xl font-thin text-gray-400">•</span>
+            <span className="text-2xl md:text-3xl lg:text-3xl font-thin text-white">generative ai</span>
+            <span className="text-2xl md:text-3xl lg:text-3xl font-thin text-white">•</span>
+            <span className="text-2xl md:text-3xl lg:text-3xl font-thin text-white">large language models</span>
+            <span className="text-2xl md:text-3xl lg:text-3xl font-thin text-white">•</span>
+            <span className="text-2xl md:text-3xl lg:text-3xl font-thin text-white">agentic ai</span>
+            <span className="text-2xl md:text-3xl lg:text-3xl font-thin text-white">•</span>
+            <span className="text-2xl md:text-3xl lg:text-3xl font-thin text-white">retrieval augmented generation</span>
+            <span className="text-2xl md:text-3xl lg:text-3xl font-thin text-white">•</span>
+            <span className="text-2xl md:text-3xl lg:text-3xl font-thin text-white">computer vision</span>
+            <span className="text-2xl md:text-3xl lg:text-3xl font-thin text-white">•</span>
+            <span className="text-2xl md:text-3xl lg:text-3xl font-thin text-white">natural language processing</span>
+            <span className="text-2xl md:text-3xl lg:text-3xl font-thin text-white">•</span>
+            <span className="text-2xl md:text-3xl lg:text-3xl font-thin text-white">model fine-tuning</span>
+            <span className="text-2xl md:text-3xl lg:text-3xl font-thin text-white">•</span>
+            <span className="text-2xl md:text-3xl lg:text-3xl font-thin text-white">vector databases</span>
+            <span className="text-2xl md:text-3xl lg:text-3xl font-thin text-white">•</span>
+            <span className="text-2xl md:text-3xl lg:text-3xl font-thin text-white">semantic search</span>
+            <span className="text-2xl md:text-3xl lg:text-3xl font-thin text-white">•</span>
+            <span className="text-2xl md:text-3xl lg:text-3xl font-thin text-white">workflow automation</span>
+            <span className="text-2xl md:text-3xl lg:text-3xl font-thin text-white">•</span>
+            <span className="text-2xl md:text-3xl lg:text-3xl font-thin text-white">ai agents</span>
+            <span className="text-2xl md:text-3xl lg:text-3xl font-thin text-white">•</span>
+            <span className="text-2xl md:text-3xl lg:text-3xl font-thin text-white">prompt engineering</span>
+            <span className="text-2xl md:text-3xl lg:text-3xl font-thin text-white">•</span>
+            <span className="text-2xl md:text-3xl lg:text-3xl font-thin text-white">multi-agent systems</span>
+            <span className="text-2xl md:text-3xl lg:text-3xl font-thin text-white">•</span>
+            <span className="text-2xl md:text-3xl lg:text-3xl font-thin text-white">reinforcement learning</span>
+            <span className="text-2xl md:text-3xl lg:text-3xl font-thin text-white">•</span>
+            <span className="text-2xl md:text-3xl lg:text-3xl font-thin text-white">neural networks</span>
+            <span className="text-2xl md:text-3xl lg:text-3xl font-thin text-white">•</span>
+            <span className="text-2xl md:text-3xl lg:text-3xl font-thin text-white">transformer models</span>
+            <span className="text-2xl md:text-3xl lg:text-3xl font-thin text-white">•</span>
+            <span className="text-2xl md:text-3xl lg:text-3xl font-thin text-white">foundation models</span>
+            <span className="text-2xl md:text-3xl lg:text-3xl font-thin text-white">•</span>
+            <span className="text-2xl md:text-3xl lg:text-3xl font-thin text-white">intelligent automation</span>
+            <span className="text-2xl md:text-3xl lg:text-3xl font-thin text-white">•</span>
+            <span className="text-2xl md:text-3xl lg:text-3xl font-thin text-white">machine learning ops</span>
+            <span className="text-2xl md:text-3xl lg:text-3xl font-thin text-white">•</span>
+            <span className="text-2xl md:text-3xl lg:text-3xl font-thin text-white">edge computing</span>
+            <span className="text-2xl md:text-3xl lg:text-3xl font-thin text-white">•</span>
+            <span className="text-2xl md:text-3xl lg:text-3xl font-thin text-white">federated learning</span>
+            <span className="text-2xl md:text-3xl lg:text-3xl font-thin text-white">•</span>
             
             {/* Duplicate Set for Infinite Loop */}
-            <span className="text-2xl md:text-3xl lg:text-3xl font-thin text-gray-400">generative ai</span>
-            <span className="text-2xl md:text-3xl lg:text-3xl font-thin text-gray-400">•</span>
-            <span className="text-2xl md:text-3xl lg:text-3xl font-thin text-gray-400">large language models</span>
-            <span className="text-2xl md:text-3xl lg:text-3xl font-thin text-gray-400">•</span>
-            <span className="text-2xl md:text-3xl lg:text-3xl font-thin text-gray-400">agentic ai</span>
-            <span className="text-2xl md:text-3xl lg:text-3xl font-thin text-gray-400">•</span>
-            <span className="text-2xl md:text-3xl lg:text-3xl font-thin text-gray-400">retrieval augmented generation</span>
-            <span className="text-2xl md:text-3xl lg:text-3xl font-thin text-gray-400">•</span>
-            <span className="text-2xl md:text-3xl lg:text-3xl font-thin text-gray-400">computer vision</span>
-            <span className="text-2xl md:text-3xl lg:text-3xl font-thin text-gray-400">•</span>
-            <span className="text-2xl md:text-3xl lg:text-3xl font-thin text-gray-400">natural language processing</span>
-            <span className="text-2xl md:text-3xl lg:text-3xl font-thin text-gray-400">•</span>
-            <span className="text-2xl md:text-3xl lg:text-3xl font-thin text-gray-400">model fine-tuning</span>
-            <span className="text-2xl md:text-3xl lg:text-3xl font-thin text-gray-400">•</span>
-            <span className="text-2xl md:text-3xl lg:text-3xl font-thin text-gray-400">vector databases</span>
-            <span className="text-2xl md:text-3xl lg:text-3xl font-thin text-gray-400">•</span>
-            <span className="text-2xl md:text-3xl lg:text-3xl font-thin text-gray-400">semantic search</span>
-            <span className="text-2xl md:text-3xl lg:text-3xl font-thin text-gray-400">•</span>
-            <span className="text-2xl md:text-3xl lg:text-3xl font-thin text-gray-400">workflow automation</span>
-            <span className="text-2xl md:text-3xl lg:text-3xl font-thin text-gray-400">•</span>
-            <span className="text-2xl md:text-3xl lg:text-3xl font-thin text-gray-400">ai agents</span>
-            <span className="text-2xl md:text-3xl lg:text-3xl font-thin text-gray-400">•</span>
-            <span className="text-2xl md:text-3xl lg:text-3xl font-thin text-gray-400">prompt engineering</span>
-            <span className="text-2xl md:text-3xl lg:text-3xl font-thin text-gray-400">•</span>
-            <span className="text-2xl md:text-3xl lg:text-3xl font-thin text-gray-400">multi-agent systems</span>
-            <span className="text-2xl md:text-3xl lg:text-3xl font-thin text-gray-400">•</span>
-            <span className="text-2xl md:text-3xl lg:text-3xl font-thin text-gray-400">reinforcement learning</span>
-            <span className="text-2xl md:text-3xl lg:text-3xl font-thin text-gray-400">•</span>
-            <span className="text-2xl md:text-3xl lg:text-3xl font-thin text-gray-400">neural networks</span>
-            <span className="text-2xl md:text-3xl lg:text-3xl font-thin text-gray-400">•</span>
-            <span className="text-2xl md:text-3xl lg:text-3xl font-thin text-gray-400">transformer models</span>
-            <span className="text-2xl md:text-3xl lg:text-3xl font-thin text-gray-400">•</span>
-            <span className="text-2xl md:text-3xl lg:text-3xl font-thin text-gray-400">foundation models</span>
-            <span className="text-2xl md:text-3xl lg:text-3xl font-thin text-gray-400">•</span>
-            <span className="text-2xl md:text-3xl lg:text-3xl font-thin text-gray-400">intelligent automation</span>
-            <span className="text-2xl md:text-3xl lg:text-3xl font-thin text-gray-400">•</span>
-            <span className="text-2xl md:text-3xl lg:text-3xl font-thin text-gray-400">machine learning ops</span>
-            <span className="text-2xl md:text-3xl lg:text-3xl font-thin text-gray-400">•</span>
-            <span className="text-2xl md:text-3xl lg:text-3xl font-thin text-gray-400">edge computing</span>
-            <span className="text-2xl md:text-3xl lg:text-3xl font-thin text-gray-400">•</span>
-            <span className="text-2xl md:text-3xl lg:text-3xl font-thin text-gray-400">federated learning</span>
-            <span className="text-2xl md:text-3xl lg:text-3xl font-thin text-gray-400">•</span>
+            <span className="text-2xl md:text-3xl lg:text-3xl font-thin text-white">generative ai</span>
+            <span className="text-2xl md:text-3xl lg:text-3xl font-thin text-white">•</span>
+            <span className="text-2xl md:text-3xl lg:text-3xl font-thin text-white">large language models</span>
+            <span className="text-2xl md:text-3xl lg:text-3xl font-thin text-white">•</span>
+            <span className="text-2xl md:text-3xl lg:text-3xl font-thin text-white">agentic ai</span>
+            <span className="text-2xl md:text-3xl lg:text-3xl font-thin text-white">•</span>
+            <span className="text-2xl md:text-3xl lg:text-3xl font-thin text-white">retrieval augmented generation</span>
+            <span className="text-2xl md:text-3xl lg:text-3xl font-thin text-white">•</span>
+            <span className="text-2xl md:text-3xl lg:text-3xl font-thin text-white">computer vision</span>
+            <span className="text-2xl md:text-3xl lg:text-3xl font-thin text-white">•</span>
+            <span className="text-2xl md:text-3xl lg:text-3xl font-thin text-white">natural language processing</span>
+            <span className="text-2xl md:text-3xl lg:text-3xl font-thin text-white">•</span>
+            <span className="text-2xl md:text-3xl lg:text-3xl font-thin text-white">model fine-tuning</span>
+            <span className="text-2xl md:text-3xl lg:text-3xl font-thin text-white">•</span>
+            <span className="text-2xl md:text-3xl lg:text-3xl font-thin text-white">vector databases</span>
+            <span className="text-2xl md:text-3xl lg:text-3xl font-thin text-white">•</span>
+            <span className="text-2xl md:text-3xl lg:text-3xl font-thin text-white">semantic search</span>
+            <span className="text-2xl md:text-3xl lg:text-3xl font-thin text-white">•</span>
+            <span className="text-2xl md:text-3xl lg:text-3xl font-thin text-white">workflow automation</span>
+            <span className="text-2xl md:text-3xl lg:text-3xl font-thin text-white">•</span>
+            <span className="text-2xl md:text-3xl lg:text-3xl font-thin text-white">ai agents</span>
+            <span className="text-2xl md:text-3xl lg:text-3xl font-thin text-white">•</span>
+            <span className="text-2xl md:text-3xl lg:text-3xl font-thin text-white">prompt engineering</span>
+            <span className="text-2xl md:text-3xl lg:text-3xl font-thin text-white">•</span>
+            <span className="text-2xl md:text-3xl lg:text-3xl font-thin text-white">multi-agent systems</span>
+            <span className="text-2xl md:text-3xl lg:text-3xl font-thin text-white">•</span>
+            <span className="text-2xl md:text-3xl lg:text-3xl font-thin text-white">reinforcement learning</span>
+            <span className="text-2xl md:text-3xl lg:text-3xl font-thin text-white">•</span>
+            <span className="text-2xl md:text-3xl lg:text-3xl font-thin text-white">neural networks</span>
+            <span className="text-2xl md:text-3xl lg:text-3xl font-thin text-white">•</span>
+            <span className="text-2xl md:text-3xl lg:text-3xl font-thin text-white">transformer models</span>
+            <span className="text-2xl md:text-3xl lg:text-3xl font-thin text-white">•</span>
+            <span className="text-2xl md:text-3xl lg:text-3xl font-thin text-white">foundation models</span>
+            <span className="text-2xl md:text-3xl lg:text-3xl font-thin text-white">•</span>
+            <span className="text-2xl md:text-3xl lg:text-3xl font-thin text-white">intelligent automation</span>
+            <span className="text-2xl md:text-3xl lg:text-3xl font-thin text-white">•</span>
+            <span className="text-2xl md:text-3xl lg:text-3xl font-thin text-white">machine learning ops</span>
+            <span className="text-2xl md:text-3xl lg:text-3xl font-thin text-white">•</span>
+            <span className="text-2xl md:text-3xl lg:text-3xl font-thin text-white">edge computing</span>
+            <span className="text-2xl md:text-3xl lg:text-3xl font-thin text-white">•</span>
+            <span className="text-2xl md:text-3xl lg:text-3xl font-thin text-white">federated learning</span>
+            <span className="text-2xl md:text-3xl lg:text-3xl font-thin text-white">•</span>
           </div>
         </div>
       </section>
@@ -185,7 +185,7 @@ const HeroLayout = () => {
           
           {/* Section Header */}
           <div className="text-center mb-16 md:mb-20">
-            <h2 className="text-4xl md:text-6xl font-thin text-black mb-4 leading-tight">How We Accelerate Your Success</h2>
+            <h2 className="text-4xl md:text-6xl font-thin text-[#998664] mb-4 leading-tight">How We Accelerate Your Success</h2>
           </div>
           
           {/* Mixed Square Grid Layout */}
@@ -196,8 +196,7 @@ const HeroLayout = () => {
             <div className="col-span-1 aspect-square bg-white rounded-2xl shadow-lg hover:shadow-xl transition-all duration-500 hover:-translate-y-1 border border-gray-100 group">
               <div className="p-2 md:p-3 h-full flex flex-col justify-start items-start text-left">
                 <div className="mb-3">
-                  <h3 className="text-base md:text-lg lg:text-xl font-thin text-black mb-2 group-hover:text-gray-800 transition-colors">Agentic AI Systems</h3>
-                  <div className="w-8 h-0.5 bg-black transition-all duration-300 group-hover:w-12"></div>
+                  <h3 className="text-base md:text-lg lg:text-xl font-thin text-[#998664] mb-2 group-hover:text-gray-800 transition-colors">Agentic AI Systems</h3>
                 </div>
                 
                 <div className="space-y-2">
@@ -220,8 +219,7 @@ const HeroLayout = () => {
             <div className="col-span-1 aspect-square bg-white rounded-2xl shadow-lg hover:shadow-xl transition-all duration-500 hover:-translate-y-1 border border-gray-100 group">
               <div className="p-2 md:p-3 h-full flex flex-col justify-start items-start text-left">
                 <div className="mb-3">
-                  <h3 className="text-base md:text-lg lg:text-xl font-thin text-black mb-2 group-hover:text-gray-800 transition-colors">Computer Use Automation</h3>
-                  <div className="w-8 h-0.5 bg-black transition-all duration-300 group-hover:w-12"></div>
+                  <h3 className="text-base md:text-lg lg:text-xl font-thin text-[#998664] mb-2 group-hover:text-gray-800 transition-colors">Computer Use Automation</h3>
                 </div>
                 
                 <div className="space-y-2">
@@ -251,8 +249,7 @@ const HeroLayout = () => {
               </video>
               <div className="relative p-3 md:p-4 lg:p-6 h-full flex flex-col justify-end items-start text-left">
                 <div className="mb-4">
-                  <h3 className="text-base md:text-lg lg:text-xl font-thin text-black mb-2 md:mb-3 group-hover:text-gray-800 transition-colors">Strategic Design Solutions</h3>
-                  <div className="w-12 h-0.5 bg-black transition-all duration-300 group-hover:w-16"></div>
+                  <h3 className="text-base md:text-lg lg:text-xl font-thin text-[#998664] mb-2 md:mb-3 group-hover:text-gray-800 transition-colors">Strategic Design Solutions</h3>
                 </div>
                 
                 <div className="space-y-1 md:space-y-2">
@@ -275,8 +272,7 @@ const HeroLayout = () => {
             <div className="hidden lg:block col-span-1 aspect-square bg-white rounded-2xl shadow-lg hover:shadow-xl transition-all duration-500 hover:-translate-y-1 border border-gray-100 group">
               <div className="p-2 md:p-3 h-full flex flex-col justify-start items-start text-left">
                 <div className="mb-3">
-                  <h3 className="text-base md:text-lg lg:text-xl font-thin text-black mb-2 group-hover:text-gray-800 transition-colors">LLM Fine-Tuning</h3>
-                  <div className="w-8 h-0.5 bg-black transition-all duration-300 group-hover:w-12"></div>
+                  <h3 className="text-base md:text-lg lg:text-xl font-thin text-[#998664] mb-2 group-hover:text-gray-800 transition-colors">LLM Fine-Tuning</h3>
                 </div>
                 
                 <div className="space-y-2">
@@ -297,8 +293,7 @@ const HeroLayout = () => {
             <div className="hidden lg:block col-span-1 aspect-square bg-white rounded-2xl shadow-lg hover:shadow-xl transition-all duration-500 hover:-translate-y-1 border border-gray-100 group">
               <div className="p-2 md:p-3 h-full flex flex-col justify-start items-start text-left">
                 <div className="mb-3">
-                  <h3 className="text-base md:text-lg lg:text-xl font-thin text-black mb-2 group-hover:text-gray-800 transition-colors">Model Fine-Tuning</h3>
-                  <div className="w-8 h-0.5 bg-black transition-all duration-300 group-hover:w-12"></div>
+                  <h3 className="text-base md:text-lg lg:text-xl font-thin text-[#998664] mb-2 group-hover:text-gray-800 transition-colors">Model Fine-Tuning</h3>
                 </div>
                 
                 <div className="space-y-2">
@@ -320,8 +315,7 @@ const HeroLayout = () => {
             <div className="col-span-1 aspect-square bg-white rounded-2xl shadow-lg hover:shadow-xl transition-all duration-500 hover:-translate-y-1 border border-gray-100 group">
               <div className="p-2 md:p-3 h-full flex flex-col justify-start items-start text-left">
                 <div className="mb-3">
-                  <h3 className="text-base md:text-lg lg:text-xl font-thin text-black mb-2 group-hover:text-gray-800 transition-colors">GenAI Consulting</h3>
-                  <div className="w-8 h-0.5 bg-black transition-all duration-300 group-hover:w-12"></div>
+                  <h3 className="text-base md:text-lg lg:text-xl font-thin text-[#998664] mb-2 group-hover:text-gray-800 transition-colors">GenAI Consulting</h3>
                 </div>
                 
                 <div className="space-y-2">
@@ -339,8 +333,7 @@ const HeroLayout = () => {
             <div className="col-span-1 aspect-square bg-white rounded-2xl shadow-lg hover:shadow-xl transition-all duration-500 hover:-translate-y-1 border border-gray-100 group">
               <div className="p-2 md:p-3 h-full flex flex-col justify-start items-start text-left">
                 <div className="mb-3">
-                  <h3 className="text-base md:text-lg lg:text-xl font-thin text-black mb-2 group-hover:text-gray-800 transition-colors">AI-Powered Analytics</h3>
-                  <div className="w-8 h-0.5 bg-black transition-all duration-300 group-hover:w-12"></div>
+                  <h3 className="text-base md:text-lg lg:text-xl font-thin text-[#998664] mb-2 group-hover:text-gray-800 transition-colors">AI-Powered Analytics</h3>
                 </div>
                 
                 <div className="space-y-2">
@@ -378,8 +371,7 @@ const HeroLayout = () => {
             <div className="col-span-1 aspect-square bg-white rounded-2xl shadow-lg hover:shadow-xl transition-all duration-500 hover:-translate-y-1 border border-gray-100 group">
               <div className="p-2 md:p-3 h-full flex flex-col justify-start items-start text-left">
                 <div className="mb-3">
-                  <h3 className="text-base md:text-lg lg:text-xl font-thin text-black mb-2 group-hover:text-gray-800 transition-colors">GenAI Tool Development</h3>
-                  <div className="w-8 h-0.5 bg-black transition-all duration-300 group-hover:w-12"></div>
+                  <h3 className="text-base md:text-lg lg:text-xl font-thin text-[#998664] mb-2 group-hover:text-gray-800 transition-colors">GenAI Tool Development</h3>
                 </div>
                 
                 <div className="space-y-2">
@@ -400,8 +392,7 @@ const HeroLayout = () => {
             <div className="col-span-1 aspect-square bg-white rounded-2xl shadow-lg hover:shadow-xl transition-all duration-500 hover:-translate-y-1 border border-gray-100 group">
               <div className="p-2 md:p-3 h-full flex flex-col justify-start items-start text-left">
                 <div className="mb-3">
-                  <h3 className="text-base md:text-lg lg:text-xl font-thin text-black mb-2 group-hover:text-gray-800 transition-colors">GenAI Implementation</h3>
-                  <div className="w-8 h-0.5 bg-black transition-all duration-300 group-hover:w-12"></div>
+                  <h3 className="text-base md:text-lg lg:text-xl font-thin text-[#998664] mb-2 group-hover:text-gray-800 transition-colors">GenAI Implementation</h3>
                 </div>
                 
                 <div className="space-y-2">
@@ -422,8 +413,7 @@ const HeroLayout = () => {
             <div className="col-span-1 aspect-square bg-white rounded-2xl shadow-lg hover:shadow-xl transition-all duration-500 hover:-translate-y-1 border border-gray-100 group">
               <div className="p-2 md:p-3 h-full flex flex-col justify-start items-start text-left">
                 <div className="mb-3">
-                  <h3 className="text-base md:text-lg lg:text-xl font-thin text-black mb-2 group-hover:text-gray-800 transition-colors">Workflow Automation</h3>
-                  <div className="w-8 h-0.5 bg-black transition-all duration-300 group-hover:w-12"></div>
+                  <h3 className="text-base md:text-lg lg:text-xl font-thin text-[#998664] mb-2 group-hover:text-gray-800 transition-colors">Workflow Automation</h3>
                 </div>
                 
                 <div className="space-y-2">
@@ -452,7 +442,7 @@ const HeroLayout = () => {
                     From enterprise software and financial services to healthcare systems and legal intelligence, we provide AI solutions that improve efficiency, decision-making, and competitive positioning across strategic sectors.
                   </p>
                   <div className="ml-4 flex-shrink-0">
-                    <svg className="w-5 h-5 md:w-6 md:h-6 text-gray-400 group-hover:text-white transition-all duration-300 group-hover:rotate-12" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <svg className="w-5 h-5 md:w-6 md:h-6 text-black group-hover:text-white transition-all duration-300 group-hover:rotate-12" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6" />
                     </svg>
                   </div>
@@ -494,14 +484,14 @@ const HeroLayout = () => {
                 compete with giants and revolutionize their industries.
               </p>
               <div className="space-y-2">
-                <p className="text-body font-thin text-gray-400">hello@nightskylabs.com</p>
+                <p className="text-body font-thin text-black">hello@nightskylabs.com</p>
                 <p className="text-small font-thin text-gray-500">Chennai, India • Remote First</p>
               </div>
             </div>
             
             <div>
               <h4 className="text-body font-thin mb-6 text-white">We Provide Service In</h4>
-              <div className="space-y-3 text-gray-400">
+              <div className="space-y-3 text-black">
                 <a href="#" className="block text-small font-thin hover:text-white transition-colors">Artificial Intelligence</a>
                 <a href="#" className="block text-small font-thin hover:text-white transition-colors">Developer Infrastructure</a>
                 <a href="#" className="block text-small font-thin hover:text-white transition-colors">Enterprise Software</a>
@@ -511,7 +501,7 @@ const HeroLayout = () => {
             
             <div>
               <h4 className="text-body font-thin mb-6 text-white">Our Products</h4>
-              <div className="space-y-3 text-gray-400">
+              <div className="space-y-3 text-black">
                 <a href="#" className="block text-small font-thin hover:text-white transition-colors">Soul - Developer Tools</a>
                 <a href="#" className="block text-small font-thin hover:text-white transition-colors">Voice - AI Recruitment</a>
                 <a href="#" className="block text-small font-thin hover:text-white transition-colors">Qurious - Learning Platform</a>
@@ -521,13 +511,13 @@ const HeroLayout = () => {
           </div>
           
           <div className="border-t border-gray-800 pt-12 flex flex-col md:flex-row justify-between items-center">
-            <p className="text-small font-thin text-gray-400">© 2025 NightSkyLabs Holdings. All rights reserved.</p>
+            <p className="text-small font-thin text-black">© 2025 NightSkyLabs Holdings. All rights reserved.</p>
             <div className="flex space-x-8 mt-4 md:mt-0">
-              <a href="#" className="text-small font-thin text-gray-400 hover:text-white transition-colors">LinkedIn</a>
-              <a href="#" className="text-small font-thin text-gray-400 hover:text-white transition-colors">Twitter</a>
-              <a href="#" className="text-small font-thin text-gray-400 hover:text-white transition-colors">Portfolio</a>
-              <a href="#" className="text-small font-thin text-gray-400 hover:text-white transition-colors">Investors</a>
-              <a href="#" className="text-small font-thin text-gray-400 hover:text-white transition-colors">Privacy</a>
+              <a href="#" className="text-small font-thin text-black hover:text-white transition-colors">LinkedIn</a>
+              <a href="#" className="text-small font-thin text-black hover:text-white transition-colors">Twitter</a>
+              <a href="#" className="text-small font-thin text-black hover:text-white transition-colors">Portfolio</a>
+              <a href="#" className="text-small font-thin text-black hover:text-white transition-colors">Investors</a>
+              <a href="#" className="text-small font-thin text-black hover:text-white transition-colors">Privacy</a>
             </div>
           </div>
         </div>

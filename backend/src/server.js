@@ -12,10 +12,12 @@ const contentRoutes = require('./routes/content');
 const userRoutes = require('./routes/users');
 const analyticsRoutes = require('./routes/analytics');
 const uploadRoutes = require('./routes/upload');
+const monitoringRoutes = require('./routes/monitoring');
 
 // Import middleware
 const errorHandler = require('./middleware/errorHandler');
 const logger = require('./middleware/logger');
+const queryMonitor = require('./middleware/queryMonitor');
 
 // Create Express app
 const app = express();
@@ -98,6 +100,7 @@ app.use('/api/content', contentRoutes);
 app.use('/api/users', userRoutes);
 app.use('/api/analytics', analyticsRoutes);
 app.use('/api/upload', uploadRoutes);
+app.use('/api/monitoring', monitoringRoutes);
 
 // API documentation endpoint
 app.get('/api', (req, res) => {
@@ -109,7 +112,8 @@ app.get('/api', (req, res) => {
       content: '/api/content',
       users: '/api/users', 
       analytics: '/api/analytics',
-      upload: '/api/upload'
+      upload: '/api/upload',
+      monitoring: '/api/monitoring'
     },
     documentation: '/api/docs'
   });

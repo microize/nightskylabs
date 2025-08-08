@@ -3,6 +3,7 @@ const { body } = require('express-validator');
 const contentController = require('../controllers/contentController');
 const auth = require('../middleware/auth');
 const permissions = require('../middleware/permissions');
+const { cache, cacheConfigs, invalidateCache } = require('../middleware/cache');
 
 const router = express.Router();
 
@@ -58,13 +59,13 @@ const validateContent = [
     .withMessage('Meta description must be less than 160 characters')
 ];
 
-// Public routes
-router.get('/', contentController.getAllContent);
-router.get('/search', contentController.searchContent);
-router.get('/slug/:slug', contentController.getContentBySlug);
-router.get('/product/:productId', contentController.getContentByProduct);
-router.get('/product/:productId/:sectionId', contentController.getContentByProduct);
-router.get('/product/:productId/:sectionId/:pageId', contentController.getContentByProduct);
+// Public routes with caching
+router.get('/', cache(cacheConfigs.public), contentController.getAllContent);
+router.get('/search', cache(cacheConfigs.short), contentController.searchContent);
+router.get('/slug/:slug', cache(cacheConfigs.content), contentController.getContentBySlug);
+router.get('/product/:productId', cache(cacheConfigs.content), contentController.getContentByProduct);
+router.get('/product/:productId/:sectionId', cache(cacheConfigs.content), contentController.getContentByProduct);
+router.get('/product/:productId/:sectionId/:pageId', cache(cacheConfigs.content), contentController.getContentByProduct);
 
 // Protected routes - require authentication
 router.use(auth);
@@ -73,17 +74,22 @@ router.use(auth);
 router.post('/', 
   permissions.requireRole(['author', 'editor', 'admin']),
   validateContent,
-  contentController.createContent
+  contentController.createContent,
+  invalidateCache(['content:*', 'public:*', 'short:*', 'medium:*'])
 );
 
 // Update content - content owner or editors/admins
 router.put('/:id',
   validateContent,
-  contentController.updateContent
+  contentController.updateContent,
+  invalidateCache(['content:*', 'public:*', 'short:*', 'medium:*'])
 );
 
 // Delete content - content owner or admins
-router.delete('/:id', contentController.deleteContent);
+router.delete('/:id', 
+  contentController.deleteContent,
+  invalidateCache(['content:*', 'public:*', 'short:*', 'medium:*'])
+);
 
 // Publish content - editors and admins only
 router.patch('/:id/publish',

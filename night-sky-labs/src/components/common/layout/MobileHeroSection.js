@@ -6,14 +6,14 @@ const MobileHeroSection = ({ title, subtitle, description }) => {
       <div className="max-w-2xl mx-auto text-center">
         {/* Mobile Hero Text */}
         <div className="mb-0">
-          <h1 className="text-6xl sm:text-7xl md:text-8xl font-thin text-black leading-tight">
+          <h1 className="text-6xl sm:text-7xl md:text-8xl font-thin bg-gradient-to-r from-[#998664] to-[#aa9678] bg-clip-text text-transparent leading-tight">
             {title}
           </h1>
         </div>
 
         {subtitle && (
           <div className="mb-4">
-            <h2 className="text-4xl sm:text-5xl md:text-6xl font-thin text-gray-600 leading-tight">
+            <h2 className="text-4xl sm:text-5xl md:text-6xl font-thin bg-gradient-to-r from-[#998664] to-[#aa9678] bg-clip-text text-transparent leading-tight">
               {subtitle}
             </h2>
           </div>

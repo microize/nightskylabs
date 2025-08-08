@@ -48,9 +48,9 @@ const HeroSection = ({
             {showScrollIndicator && (
               <div className="md:hidden absolute bottom-16 left-1/2 transform -translate-x-1/2 z-10">
                 <div className="flex flex-col items-center space-y-2">
-                  <span className="text-sm text-black font-thin micro-pulse">SCROLL</span>
+                  <span className="text-sm bg-gradient-to-r from-[#998664] to-[#aa9678] bg-clip-text text-transparent font-thin micro-pulse">SCROLL</span>
                   <div>
-                    <svg className="w-4 h-4 text-black" fill="currentColor" viewBox="0 0 24 24">
+                    <svg className="w-4 h-4 text-[#998664]" fill="currentColor" viewBox="0 0 24 24">
                       <path d="M12 16l-6-6h12l-6 6z"/>
                     </svg>
                   </div>
@@ -67,14 +67,14 @@ const HeroSection = ({
         {/* Hero Text Section - Desktop */}
         <div className="flex flex-col items-start text-left w-full max-w-4xl ml-[35%]">
           <div className="hero-text-creating animate-hero-text-1 mb-0 md:mb-0">
-            <h1 className="font-thin text-black leading-tight md:leading-relaxed" style={{ fontSize: '12vh' }}>
+            <h1 className="font-thin bg-gradient-to-r from-[#998664] to-[#aa9678] bg-clip-text text-transparent leading-tight md:leading-relaxed" style={{ fontSize: '12vh' }}>
               {title}
             </h1>
           </div>
 
           {subtitle && (
             <div className="hero-text-users animate-hero-text-2 mb-8 md:mb-10">
-              <h2 className="font-thin text-gray-600 leading-tight md:leading-relaxed" style={{ fontSize: '6vh' }}>
+              <h2 className="font-thin bg-gradient-to-r from-[#998664] to-[#aa9678] bg-clip-text text-transparent leading-tight md:leading-relaxed" style={{ fontSize: '6vh' }}>
                 {subtitle}
               </h2>
             </div>
@@ -94,9 +94,9 @@ const HeroSection = ({
         {showScrollIndicator && (
           <div className="hidden md:block hero-scroll animate-hero-scroll absolute left-1/2 transform -translate-x-1/2" style={{ bottom: '2%' }}>
             <div className="flex flex-col items-center space-y-2">
-              <span className="text-black font-thin micro-pulse" style={{ fontSize: '1.8vh' }}>SCROLL</span>
+              <span className="bg-gradient-to-r from-[#998664] to-[#aa9678] bg-clip-text text-transparent font-thin micro-pulse" style={{ fontSize: '1.8vh' }}>SCROLL</span>
               <div>
-                <svg className="w-4 h-4 text-black" fill="currentColor" viewBox="0 0 24 24">
+                <svg className="w-4 h-4 text-[#998664]" fill="currentColor" viewBox="0 0 24 24">
                   <path d="M12 16l-6-6h12l-6 6z"/>
                 </svg>
               </div>
