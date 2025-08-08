@@ -26,7 +26,9 @@
       "Bash(curl:*)",
       "Bash(timeout 30s npm run build:*)",
       "Bash(timeout 30s npm start:*)",
-      "Bash(timeout 60s npm run build)"
+      "Bash(timeout 60s npm run build)",
+      "Bash(npm audit:*)",
+      "Bash(npm update)"
     ],
     "deny": []
   }

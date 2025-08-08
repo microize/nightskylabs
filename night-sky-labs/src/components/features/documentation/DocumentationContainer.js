@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
+import DOMPurify from 'dompurify';
 import DocumentationLayout from './DocumentationLayout';
 import DocumentationContent from './DocumentationContent';
 import { PRODUCT_DOCUMENTATION, generateBreadcrumbs } from '../../../config/documentationStructure';
@@ -198,7 +199,7 @@ const DocumentationContainer = () => {
     if (!content) return [];
     
     const tempDiv = document.createElement('div');
-    tempDiv.innerHTML = content;
+    tempDiv.innerHTML = DOMPurify.sanitize(content);
     const headings = [];
     
     tempDiv.querySelectorAll('h1, h2, h3, h4, h5, h6').forEach((heading, index) => {

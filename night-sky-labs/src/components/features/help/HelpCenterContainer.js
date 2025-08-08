@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import DOMPurify from 'dompurify';
 import HelpCenterLayout from './HelpCenterLayout';
 import { loadHelpPosts } from '../../../utils/markdownUtils';
 
@@ -106,7 +107,7 @@ const HelpArticleCard = ({ article, onArticleClick }) => {
 
 const HelpArticleContent = ({ article, onBack }) => {
   const createMarkup = (htmlContent) => {
-    return { __html: htmlContent };
+    return { __html: DOMPurify.sanitize(htmlContent) };
   };
 
   return (

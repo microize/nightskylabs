@@ -13,8 +13,8 @@ const LeadershipPage = () => {
           <h1 className="text-4xl md:text-6xl font-thin text-black mb-6">Founder</h1>
           <div className="w-24 h-0.5 bg-black mx-auto mb-8"></div>
           <p className="text-lg md:text-xl font-thin text-gray-600 max-w-4xl mx-auto">
-            The visionary making Generative AI accessible to every organization, helping them compete 
-            with big tech giants and transform their operations at unprecedented speed.
+            The visionary democratizing Generative AI to help organizations worldwide unlock transformative capabilities 
+            and compete with big tech giants, transforming their operations at unprecedented speed.
           </p>
         </div>
       </section>
@@ -23,11 +23,7 @@ const LeadershipPage = () => {
       <section className="relative w-full bg-gray-50 py-16 md:py-24">
         <div className="max-w-7xl mx-auto px-6 md:px-12">
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-5xl font-thin text-black mb-6">Founder & CEO</h2>
-            <p className="text-lg font-thin text-gray-600 max-w-3xl mx-auto">
-              Democratizing Generative AI to help organizations worldwide unlock transformative capabilities 
-              and compete in the AI-first economy.
-            </p>
+            <h2 className="text-3xl md:text-5xl font-thin text-black mb-6">Leadership</h2>
           </div>
 
           <div className="max-w-4xl mx-auto">

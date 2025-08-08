@@ -24,10 +24,6 @@ const AIEthicsPage = () => {
         <div className="max-w-7xl mx-auto px-6 md:px-12">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-5xl font-thin text-black mb-6">Our Ethical Principles</h2>
-            <p className="text-lg font-thin text-gray-600 max-w-3xl mx-auto">
-              These fundamental principles guide every AI system we develop and every decision we make 
-              as we build the future of intelligent technology.
-            </p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -416,9 +412,9 @@ const AIEthicsPage = () => {
                 Direct channel for reporting ethical concerns or suggestions about 
                 our AI systems and practices.
               </p>
-              <button className="bg-black text-white px-6 py-3 rounded-full text-sm font-thin hover:bg-gray-800 transition-colors">
+              <a href="/community" className="bg-black text-white px-6 py-3 rounded-full text-sm font-thin hover:bg-gray-800 transition-colors inline-block">
                 Submit Feedback
-              </button>
+              </a>
             </div>
 
             <div className="bg-gray-50 rounded-2xl p-8 text-center">
@@ -430,9 +426,9 @@ const AIEthicsPage = () => {
                 Regular participation in industry forums, academic conferences, 
                 and public discussions about AI ethics.
               </p>
-              <button className="bg-black text-white px-6 py-3 rounded-full text-sm font-thin hover:bg-gray-800 transition-colors">
+              <a href="/community" className="bg-black text-white px-6 py-3 rounded-full text-sm font-thin hover:bg-gray-800 transition-colors inline-block">
                 Join Discussions
-              </button>
+              </a>
             </div>
           </div>
         </div>

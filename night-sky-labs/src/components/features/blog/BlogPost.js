@@ -1,4 +1,5 @@
 import React from 'react';
+import DOMPurify from 'dompurify';
 import { LuCalendar, LuClock, LuUser, LuFileText, LuArrowLeft } from 'react-icons/lu';
 import { formatDate } from '../../../utils/blogUtils';
 import { BlogHeroImage } from './BlogImage';
@@ -81,7 +82,7 @@ const BlogPost = ({ post, onBack }) => {
       {/* Article Content */}
       <div 
         className="prose prose-lg max-w-none font-thin text-gray-700 leading-relaxed"
-        dangerouslySetInnerHTML={{ __html: post.content }}
+        dangerouslySetInnerHTML={{ __html: DOMPurify.sanitize(post.content) }}
       />
 
       {/* Author Section */}

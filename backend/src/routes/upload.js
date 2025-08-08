@@ -3,8 +3,21 @@ const multer = require('multer');
 const sharp = require('sharp');
 const path = require('path');
 const fs = require('fs').promises;
+const rateLimit = require('express-rate-limit');
 const auth = require('../middleware/auth');
 const permissions = require('../middleware/permissions');
+
+// Rate limiting for file uploads
+const uploadLimiter = rateLimit({
+  windowMs: 15 * 60 * 1000, // 15 minutes
+  max: 10, // 10 uploads per window
+  message: {
+    success: false,
+    message: 'Too many upload attempts, please try again later.'
+  },
+  standardHeaders: true,
+  legacyHeaders: false
+});
 
 const router = express.Router();
 
@@ -12,15 +25,42 @@ const router = express.Router();
 const storage = multer.memoryStorage();
 
 const fileFilter = (req, file, cb) => {
-  // Allow images, PDFs, and some document types
-  const allowedTypes = /jpeg|jpg|png|gif|svg|pdf|doc|docx|txt|md/;
-  const extname = allowedTypes.test(path.extname(file.originalname).toLowerCase());
-  const mimetype = allowedTypes.test(file.mimetype);
-
-  if (mimetype && extname) {
+  // Comprehensive MIME type and extension validation
+  const allowedMimeTypes = [
+    'image/jpeg',
+    'image/jpg', 
+    'image/png',
+    'image/gif',
+    'image/svg+xml',
+    'application/pdf',
+    'application/msword',
+    'application/vnd.openxmlformats-officedocument.wordprocessingml.document',
+    'text/plain',
+    'text/markdown'
+  ];
+  
+  const allowedExtensions = /\.(jpeg|jpg|png|gif|svg|pdf|doc|docx|txt|md)$/i;
+  
+  // Check file extension
+  const extname = allowedExtensions.test(path.extname(file.originalname).toLowerCase());
+  // Check MIME type
+  const mimetype = allowedMimeTypes.includes(file.mimetype);
+  
+  // Security: Check for double extensions (e.g., file.jpg.exe)
+  const filename = file.originalname.toLowerCase();
+  const hasDoubleExtension = /\.(exe|bat|cmd|scr|pif|js|jar|com|vbs|ws|wsf)\./.test(filename);
+  
+  // Reject suspicious filenames
+  const suspiciousPatterns = /[<>:"|?*]/;
+  const hasSuspiciousChars = suspiciousPatterns.test(file.originalname);
+  
+  if (mimetype && extname && !hasDoubleExtension && !hasSuspiciousChars) {
     return cb(null, true);
   } else {
-    cb(new Error('Invalid file type. Only images, PDFs, and documents are allowed.'));
+    const reason = !mimetype || !extname ? 'Invalid file type' :
+                  hasDoubleExtension ? 'Double extension detected' :
+                  'Suspicious filename characters';
+    cb(new Error(`File rejected: ${reason}. Only safe images, PDFs, and documents are allowed.`));
   }
 };
 
@@ -63,7 +103,7 @@ const generateFileName = (originalName) => {
 };
 
 // Single file upload
-router.post('/single', auth, permissions.requireRole(['author', 'editor', 'admin']), upload.single('file'), async (req, res) => {
+router.post('/single', uploadLimiter, auth, permissions.requireRole(['author', 'editor', 'admin']), upload.single('file'), async (req, res) => {
   try {
     if (!req.file) {
       return res.status(400).json({
@@ -124,7 +164,7 @@ router.post('/single', auth, permissions.requireRole(['author', 'editor', 'admin
 });
 
 // Multiple files upload
-router.post('/multiple', auth, permissions.requireRole(['author', 'editor', 'admin']), upload.array('files', 5), async (req, res) => {
+router.post('/multiple', uploadLimiter, auth, permissions.requireRole(['author', 'editor', 'admin']), upload.array('files', 5), async (req, res) => {
   try {
     if (!req.files || req.files.length === 0) {
       return res.status(400).json({
@@ -196,7 +236,7 @@ router.post('/multiple', auth, permissions.requireRole(['author', 'editor', 'adm
 });
 
 // Generate different image sizes (thumbnails, etc.)
-router.post('/image/resize', auth, permissions.requireRole(['author', 'editor', 'admin']), upload.single('image'), async (req, res) => {
+router.post('/image/resize', uploadLimiter, auth, permissions.requireRole(['author', 'editor', 'admin']), upload.single('image'), async (req, res) => {
   try {
     if (!req.file) {
       return res.status(400).json({

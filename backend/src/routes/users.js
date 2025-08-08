@@ -1,15 +1,40 @@
 const express = require('express');
 const bcrypt = require('bcryptjs');
 const jwt = require('jsonwebtoken');
+const rateLimit = require('express-rate-limit');
 const { body, validationResult } = require('express-validator');
 const User = require('../models/User');
 const auth = require('../middleware/auth');
 const permissions = require('../middleware/permissions');
 
+// Stricter rate limiting for auth endpoints
+const authLimiter = rateLimit({
+  windowMs: 15 * 60 * 1000, // 15 minutes
+  max: 5, // 5 attempts per window
+  message: {
+    success: false,
+    message: 'Too many authentication attempts, please try again later.'
+  },
+  standardHeaders: true,
+  legacyHeaders: false
+});
+
+// Rate limiting for password-related endpoints
+const passwordLimiter = rateLimit({
+  windowMs: 60 * 60 * 1000, // 1 hour
+  max: 3, // 3 attempts per hour
+  message: {
+    success: false,
+    message: 'Too many password reset attempts, please try again later.'
+  },
+  standardHeaders: true,
+  legacyHeaders: false
+});
+
 const router = express.Router();
 
 // Register user
-router.post('/register', [
+router.post('/register', authLimiter, [
   body('name')
     .notEmpty()
     .withMessage('Name is required')
@@ -59,9 +84,17 @@ router.post('/register', [
     await user.save();
 
     // Generate token
+    if (!process.env.JWT_SECRET) {
+      console.error('CRITICAL: JWT_SECRET environment variable not set');
+      return res.status(500).json({
+        success: false,
+        message: 'Server configuration error'
+      });
+    }
+
     const token = jwt.sign(
       { id: user._id },
-      process.env.JWT_SECRET || 'fallback_secret',
+      process.env.JWT_SECRET,
       { expiresIn: '7d' }
     );
 
@@ -84,7 +117,7 @@ router.post('/register', [
 });
 
 // Login user
-router.post('/login', [
+router.post('/login', authLimiter, [
   body('email')
     .isEmail()
     .withMessage('Valid email is required')
@@ -137,9 +170,17 @@ router.post('/login', [
     await user.save();
 
     // Generate token
+    if (!process.env.JWT_SECRET) {
+      console.error('CRITICAL: JWT_SECRET environment variable not set');
+      return res.status(500).json({
+        success: false,
+        message: 'Server configuration error'
+      });
+    }
+
     const token = jwt.sign(
       { id: user._id },
-      process.env.JWT_SECRET || 'fallback_secret',
+      process.env.JWT_SECRET,
       { expiresIn: '7d' }
     );
 

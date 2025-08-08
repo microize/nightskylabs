@@ -17,7 +17,15 @@ const auth = async (req, res, next) => {
     }
 
     // Verify token
-    const decoded = jwt.verify(token, process.env.JWT_SECRET || 'fallback_secret');
+    if (!process.env.JWT_SECRET) {
+      console.error('CRITICAL: JWT_SECRET environment variable not set');
+      return res.status(500).json({
+        success: false,
+        message: 'Server configuration error'
+      });
+    }
+    
+    const decoded = jwt.verify(token, process.env.JWT_SECRET);
 
     // Get user from database
     const user = await User.findById(decoded.id).select('-password');

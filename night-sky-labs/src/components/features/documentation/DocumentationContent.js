@@ -1,14 +1,15 @@
 import React from 'react';
+import DOMPurify from 'dompurify';
 
 const DocumentationContent = ({ content, title, lastUpdated, difficulty, estimatedTime, prerequisites = [] }) => {
   const createMarkup = (htmlContent) => {
-    return { __html: htmlContent };
+    return { __html: DOMPurify.sanitize(htmlContent) };
   };
 
   // Extract headings from content for TOC
   const extractHeadings = (htmlContent) => {
     const tempDiv = document.createElement('div');
-    tempDiv.innerHTML = htmlContent;
+    tempDiv.innerHTML = DOMPurify.sanitize(htmlContent);
     const headings = [];
     
     const headingElements = tempDiv.querySelectorAll('h1, h2, h3, h4, h5, h6');
@@ -25,7 +26,7 @@ const DocumentationContent = ({ content, title, lastUpdated, difficulty, estimat
       });
     });
     
-    return { headings, content: tempDiv.innerHTML };
+    return { headings, content: DOMPurify.sanitize(tempDiv.innerHTML) };
   };
 
   const { headings, content: processedContent } = content ? extractHeadings(content) : { headings: [], content: '' };
