@@ -1,5 +1,6 @@
 import React, { useState, useEffect, useMemo } from 'react';
-import { loadCaseStudies, generateCategories } from '../../../utils/markdownUtils';
+import { useNavigate } from 'react-router-dom';
+import { loadCaseStudiesFromFiles, generateCaseStudyIndustries } from '../../../utils/caseStudyLoader';
 import { 
   filterPostsBySearch, 
   filterPostsByCategory, 
@@ -35,7 +36,7 @@ const CaseStudyCard = ({ post, featured = false, onPostClick }) => {
         {/* Case Study Metadata */}
         {post.client && (
           <div className="mb-4">
-            <span className="px-3 py-1 bg-blue-100 text-blue-700 rounded-full text-xs font-thin">
+            <span className="px-3 py-1 bg-[#998664] bg-opacity-20 text-[#998664] rounded-full text-xs font-thin">
               {post.industry}
             </span>
           </div>
@@ -51,7 +52,7 @@ const CaseStudyCard = ({ post, featured = false, onPostClick }) => {
         </div>
         
         {/* Title */}
-        <h2 className={`${featured ? 'text-2xl md:text-3xl' : 'text-xl md:text-2xl'} font-thin text-black mb-4 leading-tight hover:text-gray-700 transition-colors`}>
+        <h2 className={`${featured ? 'text-2xl md:text-3xl' : 'text-xl md:text-2xl'} font-thin text-[#998664] mb-4 leading-tight hover:text-[#aa9678] transition-colors`}>
           {post.title}
         </h2>
         
@@ -63,11 +64,11 @@ const CaseStudyCard = ({ post, featured = false, onPostClick }) => {
         {/* Results Preview */}
         {post.results && (
           <div className="mb-6">
-            <h4 className="text-sm font-medium text-gray-800 mb-2">Key Results:</h4>
+            <h4 className="text-sm font-medium text-[#998664] mb-2">Key Results:</h4>
             <ul className="text-sm text-gray-600 space-y-1">
               {post.results.slice(0, 2).map((result, index) => (
                 <li key={index} className="flex items-center">
-                  <span className="w-2 h-2 bg-green-500 rounded-full mr-2"></span>
+                  <span className="w-2 h-2 bg-[#998664] rounded-full mr-2"></span>
                   {result}
                 </li>
               ))}
@@ -86,7 +87,7 @@ const CaseStudyCard = ({ post, featured = false, onPostClick }) => {
         
         {/* Read More Button */}
         <div>
-          <span className="text-black font-thin hover:text-gray-600 transition-colors text-sm uppercase tracking-wide">
+          <span className="text-[#998664] font-thin hover:text-[#aa9678] transition-colors text-sm uppercase tracking-wide">
             View Case Study
           </span>
         </div>
@@ -136,10 +137,10 @@ const CaseStudyGrid = ({ posts, loading = false, onPostClick }) => {
 };
 
 const CaseStudiesContainer = () => {
+  const navigate = useNavigate();
   const [searchTerm, setSearchTerm] = useState('');
   const [selectedCategory, setSelectedCategory] = useState('All');
   const [currentPage, setCurrentPage] = useState(1);
-  const [selectedPost, setSelectedPost] = useState(null);
   const [loading, setLoading] = useState(false);
   const [caseStudyPosts, setCaseStudyPosts] = useState([]);
   const [caseStudyCategories, setCaseStudyCategories] = useState(['All']);
@@ -176,8 +177,8 @@ const CaseStudiesContainer = () => {
     const loadContent = async () => {
       setLoading(true);
       try {
-        const posts = await loadCaseStudies();
-        const cats = generateCategories(posts);
+        const posts = await loadCaseStudiesFromFiles();
+        const cats = generateCaseStudyIndustries(posts);
         setCaseStudyPosts(posts);
         setCaseStudyCategories(cats);
       } catch (error) {
@@ -217,20 +218,10 @@ const CaseStudiesContainer = () => {
     window.scrollTo({ top: 0, behavior: 'smooth' });
   };
 
-  // Handle post selection
+  // Handle post selection - navigate to individual case study page
   const handlePostSelect = (post) => {
-    setSelectedPost(post);
+    navigate(`/case-studies/${post.slug}`);
   };
-
-  // Handle back to list
-  const handleBackToList = () => {
-    setSelectedPost(null);
-  };
-
-  // If viewing individual case study
-  if (selectedPost) {
-    return <BlogPost post={selectedPost} onBack={handleBackToList} />;
-  }
 
   return (
     <div className="space-y-12">

@@ -1198,7 +1198,9 @@ export const loadContent = async (contentType) => {
  * @returns {Promise<Array>} Array of parsed blog post objects
  */
 export const loadBlogPosts = async () => {
-  return loadContent('blog');
+  // Import the dynamic blog loader
+  const { loadBlogPostsFromFiles } = await import('./blogLoader');
+  return loadBlogPostsFromFiles();
 };
 
 /**

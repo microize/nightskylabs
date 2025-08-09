@@ -10,8 +10,8 @@ const PerformanceAnalysisPage = () => {
       {/* Hero Section */}
       <section className="relative w-full bg-white pt-32 pb-16 md:pt-40 md:pb-24">
         <div className="max-w-7xl mx-auto px-6 md:px-12 text-center">
-          <h1 className="text-4xl md:text-6xl font-thin text-black mb-6">Performance Analysis</h1>
-          <div className="w-24 h-0.5 bg-black mx-auto mb-8"></div>
+          <h1 className="text-4xl md:text-6xl font-thin text-[#998664] mb-6">Performance Analysis</h1>
+          <div className="w-24 h-0.5 bg-[#998664] mx-auto mb-8"></div>
           <p className="text-lg md:text-xl font-thin text-gray-600 max-w-4xl mx-auto">
             Comprehensive ROI measurement, KPI tracking, and intelligent optimization recommendations that maximize the business value of your AI investments.
           </p>
@@ -19,18 +19,18 @@ const PerformanceAnalysisPage = () => {
       </section>
 
       {/* Overview */}
-      <section className="relative w-full bg-gray-50 py-16 md:py-24">
+      <section className="relative w-full bg-gradient-to-r from-[#998664] to-[#aa9678] py-16 md:py-24">
         <div className="max-w-7xl mx-auto px-6 md:px-12">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div>
-              <h2 className="text-3xl md:text-5xl font-thin text-black mb-8">Performance Insights</h2>
+              <h2 className="text-3xl md:text-5xl font-thin text-white mb-8">Performance Insights</h2>
               <div className="space-y-6">
-                <p className="text-lg font-thin text-gray-600">
+                <p className="text-lg font-thin text-white/90">
                   Our Performance Analysis service provides deep insights into the business impact 
                   and operational effectiveness of your AI initiatives. We measure what matters most 
                   and identify opportunities for continuous improvement and optimization.
                 </p>
-                <p className="text-lg font-thin text-gray-600">
+                <p className="text-lg font-thin text-white/90">
                   Through comprehensive data analysis and intelligent reporting, we help you understand 
                   the true value of your AI investments and make data-driven decisions for future 
                   enhancements and strategic direction.
@@ -41,23 +41,23 @@ const PerformanceAnalysisPage = () => {
               <h3 className="text-2xl font-thin text-black mb-6">Analysis Capabilities</h3>
               <div className="space-y-4">
                 <div className="flex items-start space-x-3">
-                  <div className="w-2 h-2 bg-black rounded-full mt-2"></div>
+                  <div className="w-2 h-2 bg-white rounded-full mt-2"></div>
                   <span className="text-base font-thin text-gray-600">ROI measurement and financial impact analysis</span>
                 </div>
                 <div className="flex items-start space-x-3">
-                  <div className="w-2 h-2 bg-black rounded-full mt-2"></div>
+                  <div className="w-2 h-2 bg-white rounded-full mt-2"></div>
                   <span className="text-base font-thin text-gray-600">KPI tracking and performance benchmarking</span>
                 </div>
                 <div className="flex items-start space-x-3">
-                  <div className="w-2 h-2 bg-black rounded-full mt-2"></div>
+                  <div className="w-2 h-2 bg-white rounded-full mt-2"></div>
                   <span className="text-base font-thin text-gray-600">Operational efficiency and productivity metrics</span>
                 </div>
                 <div className="flex items-start space-x-3">
-                  <div className="w-2 h-2 bg-black rounded-full mt-2"></div>
+                  <div className="w-2 h-2 bg-white rounded-full mt-2"></div>
                   <span className="text-base font-thin text-gray-600">User adoption and satisfaction analysis</span>
                 </div>
                 <div className="flex items-start space-x-3">
-                  <div className="w-2 h-2 bg-black rounded-full mt-2"></div>
+                  <div className="w-2 h-2 bg-white rounded-full mt-2"></div>
                   <span className="text-base font-thin text-gray-600">Predictive optimization recommendations</span>
                 </div>
               </div>
@@ -70,7 +70,7 @@ const PerformanceAnalysisPage = () => {
       <section className="relative w-full bg-white py-16 md:py-24">
         <div className="max-w-7xl mx-auto px-6 md:px-12">
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-5xl font-thin text-black mb-6">Analysis Framework</h2>
+            <h2 className="text-3xl md:text-5xl font-thin text-[#998664] mb-6">Analysis Framework</h2>
             <p className="text-lg font-thin text-gray-600 max-w-3xl mx-auto">
               A systematic approach to performance measurement that transforms raw data into 
               actionable insights and strategic recommendations for continuous improvement.
@@ -80,13 +80,13 @@ const PerformanceAnalysisPage = () => {
           <div className="space-y-12">
             <div className="flex flex-col md:flex-row items-start gap-8">
               <div className="w-full md:w-1/4">
-                <div className="bg-black text-white rounded-2xl p-6 text-center">
+                <div className="bg-gradient-to-r from-[#998664] to-[#aa9678] text-white rounded-2xl p-6 text-center">
                   <div className="text-3xl font-thin mb-2">01</div>
                   <div className="text-lg font-thin">Baseline</div>
                 </div>
               </div>
               <div className="w-full md:w-3/4">
-                <h3 className="text-2xl font-thin text-black mb-4">Performance Baseline Establishment</h3>
+                <h3 className="text-2xl font-thin text-[#998664] mb-4">Performance Baseline Establishment</h3>
                 <p className="text-base font-thin text-gray-600 mb-4">
                   Comprehensive measurement of current performance metrics across all relevant 
                   dimensions to establish clear baselines for future comparison and improvement tracking.
@@ -106,13 +106,13 @@ const PerformanceAnalysisPage = () => {
 
             <div className="flex flex-col md:flex-row items-start gap-8">
               <div className="w-full md:w-1/4">
-                <div className="bg-black text-white rounded-2xl p-6 text-center">
+                <div className="bg-gradient-to-r from-[#998664] to-[#aa9678] text-white rounded-2xl p-6 text-center">
                   <div className="text-3xl font-thin mb-2">02</div>
                   <div className="text-lg font-thin">Monitoring</div>
                 </div>
               </div>
               <div className="w-full md:w-3/4">
-                <h3 className="text-2xl font-thin text-black mb-4">Continuous Performance Tracking</h3>
+                <h3 className="text-2xl font-thin text-[#998664] mb-4">Continuous Performance Tracking</h3>
                 <p className="text-base font-thin text-gray-600 mb-4">
                   Real-time monitoring and analysis of key performance indicators with automated 
                   reporting and alert systems to identify trends and anomalies as they occur.
@@ -132,13 +132,13 @@ const PerformanceAnalysisPage = () => {
 
             <div className="flex flex-col md:flex-row items-start gap-8">
               <div className="w-full md:w-1/4">
-                <div className="bg-black text-white rounded-2xl p-6 text-center">
+                <div className="bg-gradient-to-r from-[#998664] to-[#aa9678] text-white rounded-2xl p-6 text-center">
                   <div className="text-3xl font-thin mb-2">03</div>
                   <div className="text-lg font-thin">Optimization</div>
                 </div>
               </div>
               <div className="w-full md:w-3/4">
-                <h3 className="text-2xl font-thin text-black mb-4">Intelligent Recommendations</h3>
+                <h3 className="text-2xl font-thin text-[#998664] mb-4">Intelligent Recommendations</h3>
                 <p className="text-base font-thin text-gray-600 mb-4">
                   Advanced analytics and machine learning to identify optimization opportunities, 
                   predict future performance trends, and provide actionable recommendations for improvement.
@@ -163,7 +163,7 @@ const PerformanceAnalysisPage = () => {
       <section className="relative w-full bg-gray-50 py-16 md:py-24">
         <div className="max-w-7xl mx-auto px-6 md:px-12">
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-5xl font-thin text-black mb-6">Expected Benefits</h2>
+            <h2 className="text-3xl md:text-5xl font-thin text-[#998664] mb-6">Expected Benefits</h2>
             <p className="text-lg font-thin text-gray-600 max-w-3xl mx-auto">
               Comprehensive performance analysis is designed to drive improvements in AI ROI 
               and operational effectiveness through data-driven optimization.
@@ -205,7 +205,7 @@ const PerformanceAnalysisPage = () => {
       <section className="relative w-full bg-white py-16 md:py-24">
         <div className="max-w-7xl mx-auto px-6 md:px-12">
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-5xl font-thin text-black mb-6">Our Methodology</h2>
+            <h2 className="text-3xl md:text-5xl font-thin text-[#998664] mb-6">Our Methodology</h2>
             <p className="text-lg font-thin text-gray-600 max-w-3xl mx-auto">
               Our performance analysis approach helps organizations understand and optimize their AI systems 
               through systematic measurement and data-driven insights.
@@ -223,15 +223,15 @@ const PerformanceAnalysisPage = () => {
                 </p>
                 <div className="space-y-3">
                   <div className="flex items-center space-x-3">
-                    <div className="w-2 h-2 border border-black rounded-full"></div>
+                    <div className="w-2 h-2 border border-[#998664] rounded-full"></div>
                     <span className="text-sm font-thin text-gray-600">Limited visibility into ROI and business impact</span>
                   </div>
                   <div className="flex items-center space-x-3">
-                    <div className="w-2 h-2 border border-black rounded-full"></div>
+                    <div className="w-2 h-2 border border-[#998664] rounded-full"></div>
                     <span className="text-sm font-thin text-gray-600">Inconsistent performance across different locations</span>
                   </div>
                   <div className="flex items-center space-x-3">
-                    <div className="w-2 h-2 border border-black rounded-full"></div>
+                    <div className="w-2 h-2 border border-[#998664] rounded-full"></div>
                     <span className="text-sm font-thin text-gray-600">No systematic approach to performance optimization</span>
                   </div>
                 </div>
@@ -245,15 +245,15 @@ const PerformanceAnalysisPage = () => {
                 </p>
                 <div className="space-y-3">
                   <div className="flex items-center space-x-3">
-                    <div className="w-2 h-2 border border-black rounded-full"></div>
+                    <div className="w-2 h-2 border border-[#998664] rounded-full"></div>
                     <span className="text-sm font-thin text-gray-600">Multi-dimensional KPI tracking and measurement frameworks</span>
                   </div>
                   <div className="flex items-center space-x-3">
-                    <div className="w-2 h-2 border border-black rounded-full"></div>
+                    <div className="w-2 h-2 border border-[#998664] rounded-full"></div>
                     <span className="text-sm font-thin text-gray-600">Predictive analysis for operational optimization</span>
                   </div>
                   <div className="flex items-center space-x-3">
-                    <div className="w-2 h-2 border border-black rounded-full"></div>
+                    <div className="w-2 h-2 border border-[#998664] rounded-full"></div>
                     <span className="text-sm font-thin text-gray-600">Automated insights and optimization recommendations</span>
                   </div>
                 </div>
@@ -278,7 +278,7 @@ const PerformanceAnalysisPage = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="relative w-full bg-black py-16 md:py-24">
+      <section className="relative w-full bg-gradient-to-r from-[#998664] to-[#aa9678] py-16 md:py-24">
         <div className="max-w-5xl mx-auto px-6 md:px-12 text-center">
           <h2 className="text-3xl md:text-5xl font-thin text-white mb-6">Ready to Optimize Your AI Performance?</h2>
           <p className="text-lg font-thin text-white/80 mb-8 max-w-3xl mx-auto">
@@ -286,10 +286,10 @@ const PerformanceAnalysisPage = () => {
             and drive continuous improvement across your organization.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <button className="bg-white text-black px-8 py-4 rounded-full text-lg font-thin hover:bg-gray-100 transition-colors">
+            <button className="bg-white text-[#998664] px-8 py-4 rounded-full text-lg font-thin hover:bg-gray-100 hover:text-[#998664] transition-colors">
               Start Performance Analysis
             </button>
-            <button className="border border-white text-white px-8 py-4 rounded-full text-lg font-thin hover:bg-white hover:text-black transition-colors">
+            <button className="border border-white text-white px-8 py-4 rounded-full text-lg font-thin hover:bg-white hover:text-[#998664] transition-colors">
               ROI Assessment
             </button>
           </div>

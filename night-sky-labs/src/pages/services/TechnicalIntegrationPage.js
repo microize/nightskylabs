@@ -10,8 +10,8 @@ const TechnicalIntegrationPage = () => {
       {/* Hero Section */}
       <section className="relative w-full bg-white pt-32 pb-16 md:pt-40 md:pb-24">
         <div className="max-w-7xl mx-auto px-6 md:px-12 text-center">
-          <h1 className="text-4xl md:text-6xl font-thin text-black mb-6">Technical Integration</h1>
-          <div className="w-24 h-0.5 bg-black mx-auto mb-8"></div>
+          <h1 className="text-4xl md:text-6xl font-thin text-[#998664] mb-6">Technical Integration</h1>
+          <div className="w-24 h-0.5 bg-[#998664] mx-auto mb-8"></div>
           <p className="text-lg md:text-xl font-thin text-gray-600 max-w-4xl mx-auto">
             Seamless enterprise system connectivity, legacy modernization, and robust API development that bridges traditional and intelligent technologies.
           </p>
@@ -19,18 +19,18 @@ const TechnicalIntegrationPage = () => {
       </section>
 
       {/* Overview */}
-      <section className="relative w-full bg-gray-50 py-16 md:py-24">
+      <section className="relative w-full bg-gradient-to-r from-[#998664] to-[#aa9678] py-16 md:py-24">
         <div className="max-w-7xl mx-auto px-6 md:px-12">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div>
-              <h2 className="text-3xl md:text-5xl font-thin text-black mb-8">Enterprise Connectivity</h2>
+              <h2 className="text-3xl md:text-5xl font-thin text-white mb-8">Enterprise Connectivity</h2>
               <div className="space-y-6">
-                <p className="text-lg font-thin text-gray-600">
+                <p className="text-lg font-thin text-white/90">
                   Our Technical Integration service connects AI solutions with your existing enterprise 
                   infrastructure, ensuring seamless data flow and operational continuity while 
                   modernizing legacy systems for the intelligent age.
                 </p>
-                <p className="text-lg font-thin text-gray-600">
+                <p className="text-lg font-thin text-white/90">
                   From API development to complex system orchestration, we create robust integration 
                   architectures that enable your organization to leverage AI without disrupting 
                   critical business operations.
@@ -41,23 +41,23 @@ const TechnicalIntegrationPage = () => {
               <h3 className="text-2xl font-thin text-black mb-6">Integration Services</h3>
               <div className="space-y-4">
                 <div className="flex items-start space-x-3">
-                  <div className="w-2 h-2 bg-black rounded-full mt-2"></div>
+                  <div className="w-2 h-2 bg-white rounded-full mt-2"></div>
                   <span className="text-base font-thin text-gray-600">Enterprise system connectivity and data synchronization</span>
                 </div>
                 <div className="flex items-start space-x-3">
-                  <div className="w-2 h-2 bg-black rounded-full mt-2"></div>
+                  <div className="w-2 h-2 bg-white rounded-full mt-2"></div>
                   <span className="text-base font-thin text-gray-600">Legacy system modernization and API wrapping</span>
                 </div>
                 <div className="flex items-start space-x-3">
-                  <div className="w-2 h-2 bg-black rounded-full mt-2"></div>
+                  <div className="w-2 h-2 bg-white rounded-full mt-2"></div>
                   <span className="text-base font-thin text-gray-600">Real-time data pipeline development</span>
                 </div>
                 <div className="flex items-start space-x-3">
-                  <div className="w-2 h-2 bg-black rounded-full mt-2"></div>
+                  <div className="w-2 h-2 bg-white rounded-full mt-2"></div>
                   <span className="text-base font-thin text-gray-600">Cloud migration and hybrid architecture design</span>
                 </div>
                 <div className="flex items-start space-x-3">
-                  <div className="w-2 h-2 bg-black rounded-full mt-2"></div>
+                  <div className="w-2 h-2 bg-white rounded-full mt-2"></div>
                   <span className="text-base font-thin text-gray-600">Security and compliance framework implementation</span>
                 </div>
               </div>
@@ -70,7 +70,7 @@ const TechnicalIntegrationPage = () => {
       <section className="relative w-full bg-white py-16 md:py-24">
         <div className="max-w-7xl mx-auto px-6 md:px-12">
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-5xl font-thin text-black mb-6">Integration Methodology</h2>
+            <h2 className="text-3xl md:text-5xl font-thin text-[#998664] mb-6">Integration Methodology</h2>
             <p className="text-lg font-thin text-gray-600 max-w-3xl mx-auto">
               A systematic approach to enterprise integration that minimizes disruption while 
               maximizing connectivity and enabling intelligent automation across your technology stack.
@@ -80,13 +80,13 @@ const TechnicalIntegrationPage = () => {
           <div className="space-y-12">
             <div className="flex flex-col md:flex-row items-start gap-8">
               <div className="w-full md:w-1/4">
-                <div className="bg-black text-white rounded-2xl p-6 text-center">
+                <div className="bg-gradient-to-r from-[#998664] to-[#aa9678] text-white rounded-2xl p-6 text-center">
                   <div className="text-3xl font-thin mb-2">01</div>
                   <div className="text-lg font-thin">Discovery</div>
                 </div>
               </div>
               <div className="w-full md:w-3/4">
-                <h3 className="text-2xl font-thin text-black mb-4">System Architecture Analysis</h3>
+                <h3 className="text-2xl font-thin text-[#998664] mb-4">System Architecture Analysis</h3>
                 <p className="text-base font-thin text-gray-600 mb-4">
                   Comprehensive mapping of your existing technology landscape, identifying integration 
                   points, data flows, and potential bottlenecks in your current infrastructure.
@@ -106,13 +106,13 @@ const TechnicalIntegrationPage = () => {
 
             <div className="flex flex-col md:flex-row items-start gap-8">
               <div className="w-full md:w-1/4">
-                <div className="bg-black text-white rounded-2xl p-6 text-center">
+                <div className="bg-gradient-to-r from-[#998664] to-[#aa9678] text-white rounded-2xl p-6 text-center">
                   <div className="text-3xl font-thin mb-2">02</div>
                   <div className="text-lg font-thin">Planning</div>
                 </div>
               </div>
               <div className="w-full md:w-3/4">
-                <h3 className="text-2xl font-thin text-black mb-4">Integration Architecture Design</h3>
+                <h3 className="text-2xl font-thin text-[#998664] mb-4">Integration Architecture Design</h3>
                 <p className="text-base font-thin text-gray-600 mb-4">
                   Design scalable integration architecture that accommodates current needs while 
                   providing flexibility for future AI enhancements and system evolution.
@@ -132,13 +132,13 @@ const TechnicalIntegrationPage = () => {
 
             <div className="flex flex-col md:flex-row items-start gap-8">
               <div className="w-full md:w-1/4">
-                <div className="bg-black text-white rounded-2xl p-6 text-center">
+                <div className="bg-gradient-to-r from-[#998664] to-[#aa9678] text-white rounded-2xl p-6 text-center">
                   <div className="text-3xl font-thin mb-2">03</div>
                   <div className="text-lg font-thin">Implementation</div>
                 </div>
               </div>
               <div className="w-full md:w-3/4">
-                <h3 className="text-2xl font-thin text-black mb-4">Phased Integration Deployment</h3>
+                <h3 className="text-2xl font-thin text-[#998664] mb-4">Phased Integration Deployment</h3>
                 <p className="text-base font-thin text-gray-600 mb-4">
                   Gradual implementation with continuous testing and validation to ensure system 
                   stability and business continuity throughout the integration process.
@@ -163,7 +163,7 @@ const TechnicalIntegrationPage = () => {
       <section className="relative w-full bg-gray-50 py-16 md:py-24">
         <div className="max-w-7xl mx-auto px-6 md:px-12">
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-5xl font-thin text-black mb-6">Expected Benefits</h2>
+            <h2 className="text-3xl md:text-5xl font-thin text-[#998664] mb-6">Expected Benefits</h2>
             <p className="text-lg font-thin text-gray-600 max-w-3xl mx-auto">
               Professional integration services are designed to ensure seamless AI adoption while maintaining 
               operational stability and maximizing existing technology investments.
@@ -205,7 +205,7 @@ const TechnicalIntegrationPage = () => {
       <section className="relative w-full bg-white py-16 md:py-24">
         <div className="max-w-7xl mx-auto px-6 md:px-12">
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-5xl font-thin text-black mb-6">Our Approach</h2>
+            <h2 className="text-3xl md:text-5xl font-thin text-[#998664] mb-6">Our Approach</h2>
             <p className="text-lg font-thin text-gray-600 max-w-3xl mx-auto">
               Our integration methodology focuses on connecting AI-powered solutions with existing 
               legacy systems and modern cloud infrastructure.
@@ -223,15 +223,15 @@ const TechnicalIntegrationPage = () => {
                 </p>
                 <div className="space-y-3">
                   <div className="flex items-center space-x-3">
-                    <div className="w-2 h-2 border border-black rounded-full"></div>
+                    <div className="w-2 h-2 border border-[#998664] rounded-full"></div>
                     <span className="text-sm font-thin text-gray-600">Legacy systems with proprietary protocols</span>
                   </div>
                   <div className="flex items-center space-x-3">
-                    <div className="w-2 h-2 border border-black rounded-full"></div>
+                    <div className="w-2 h-2 border border-[#998664] rounded-full"></div>
                     <span className="text-sm font-thin text-gray-600">Real-time data requirements across disparate systems</span>
                   </div>
                   <div className="flex items-center space-x-3">
-                    <div className="w-2 h-2 border border-black rounded-full"></div>
+                    <div className="w-2 h-2 border border-[#998664] rounded-full"></div>
                     <span className="text-sm font-thin text-gray-600">Strict compliance and security requirements</span>
                   </div>
                 </div>
@@ -245,15 +245,15 @@ const TechnicalIntegrationPage = () => {
                 </p>
                 <div className="space-y-3">
                   <div className="flex items-center space-x-3">
-                    <div className="w-2 h-2 border border-black rounded-full"></div>
+                    <div className="w-2 h-2 border border-[#998664] rounded-full"></div>
                     <span className="text-sm font-thin text-gray-600">Non-invasive integration preserving legacy system integrity</span>
                   </div>
                   <div className="flex items-center space-x-3">
-                    <div className="w-2 h-2 border border-black rounded-full"></div>
+                    <div className="w-2 h-2 border border-[#998664] rounded-full"></div>
                     <span className="text-sm font-thin text-gray-600">Real-time bidirectional data synchronization</span>
                   </div>
                   <div className="flex items-center space-x-3">
-                    <div className="w-2 h-2 border border-black rounded-full"></div>
+                    <div className="w-2 h-2 border border-[#998664] rounded-full"></div>
                     <span className="text-sm font-thin text-gray-600">End-to-end encryption and compliance monitoring</span>
                   </div>
                 </div>
@@ -278,7 +278,7 @@ const TechnicalIntegrationPage = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="relative w-full bg-black py-16 md:py-24">
+      <section className="relative w-full bg-gradient-to-r from-[#998664] to-[#aa9678] py-16 md:py-24">
         <div className="max-w-5xl mx-auto px-6 md:px-12 text-center">
           <h2 className="text-3xl md:text-5xl font-thin text-white mb-6">Ready to Integrate AI into Your Systems?</h2>
           <p className="text-lg font-thin text-white/80 mb-8 max-w-3xl mx-auto">
@@ -286,10 +286,10 @@ const TechnicalIntegrationPage = () => {
             intelligent technologies without disrupting critical operations.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <button className="bg-white text-black px-8 py-4 rounded-full text-lg font-thin hover:bg-gray-100 transition-colors">
+            <button className="bg-white text-[#998664] px-8 py-4 rounded-full text-lg font-thin hover:bg-gray-100 hover:text-[#998664] transition-colors">
               Plan Integration
             </button>
-            <button className="border border-white text-white px-8 py-4 rounded-full text-lg font-thin hover:bg-white hover:text-black transition-colors">
+            <button className="border border-white text-white px-8 py-4 rounded-full text-lg font-thin hover:bg-white hover:text-[#998664] transition-colors">
               Architecture Review
             </button>
           </div>

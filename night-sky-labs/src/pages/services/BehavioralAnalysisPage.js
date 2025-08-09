@@ -11,8 +11,8 @@ const BehavioralAnalysisPage = () => {
       {/* Hero Section */}
       <section className="relative w-full bg-white pt-32 pb-16 md:pt-40 md:pb-24">
         <div className="max-w-7xl mx-auto px-6 md:px-12 text-center">
-          <h1 className="text-4xl md:text-6xl font-thin text-black mb-6">Behavioral Analysis</h1>
-          <div className="w-24 h-0.5 bg-black mx-auto mb-8"></div>
+          <h1 className="text-4xl md:text-6xl font-thin text-[#998664] mb-6">Behavioral Analysis</h1>
+          <div className="w-24 h-0.5 bg-[#998664] mx-auto mb-8"></div>
           <p className="text-lg md:text-xl font-thin text-gray-600 max-w-4xl mx-auto">
             Human-centered AI system design that understands user behavior and creates intuitive interfaces for optimal adoption.
           </p>
@@ -20,43 +20,43 @@ const BehavioralAnalysisPage = () => {
       </section>
 
       {/* Overview */}
-      <section className="relative w-full bg-gray-50 py-16 md:py-24">
+      <section className="relative w-full bg-gradient-to-r from-[#998664] to-[#aa9678] py-16 md:py-24">
         <div className="max-w-7xl mx-auto px-6 md:px-12">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div>
-              <h2 className="text-3xl md:text-5xl font-thin text-black mb-8">Understanding Human Behavior</h2>
+              <h2 className="text-3xl md:text-5xl font-thin text-white mb-8">Understanding Human Behavior</h2>
               <div className="space-y-6">
-                <p className="text-lg font-thin text-gray-600">
+                <p className="text-lg font-thin text-white/90">
                   Our Behavioral Analysis service combines data science with human psychology to design 
                   AI systems that truly understand and respond to user needs, preferences, and behavioral patterns.
                 </p>
-                <p className="text-lg font-thin text-gray-600">
+                <p className="text-lg font-thin text-white/90">
                   We analyze how users interact with technology, identify pain points and opportunities, 
                   then design solutions that feel natural and intuitive while driving desired outcomes.
                 </p>
               </div>
             </div>
             <div className="bg-white rounded-2xl p-8 shadow-sm">
-              <h3 className="text-2xl font-thin text-black mb-6">Analysis Dimensions</h3>
+              <h3 className="text-2xl font-thin text-[#998664] mb-6">Analysis Dimensions</h3>
               <div className="space-y-4">
                 <div className="flex items-start space-x-3">
-                  <div className="w-2 h-2 bg-black rounded-full mt-2"></div>
+                  <div className="w-2 h-2 bg-[#998664] rounded-full mt-2"></div>
                   <span className="text-base font-thin text-gray-600">User journey mapping and interaction patterns</span>
                 </div>
                 <div className="flex items-start space-x-3">
-                  <div className="w-2 h-2 bg-black rounded-full mt-2"></div>
+                  <div className="w-2 h-2 bg-[#998664] rounded-full mt-2"></div>
                   <span className="text-base font-thin text-gray-600">Cognitive load assessment and optimization</span>
                 </div>
                 <div className="flex items-start space-x-3">
-                  <div className="w-2 h-2 bg-black rounded-full mt-2"></div>
+                  <div className="w-2 h-2 bg-[#998664] rounded-full mt-2"></div>
                   <span className="text-base font-thin text-gray-600">Behavioral segmentation and personalization</span>
                 </div>
                 <div className="flex items-start space-x-3">
-                  <div className="w-2 h-2 bg-black rounded-full mt-2"></div>
+                  <div className="w-2 h-2 bg-[#998664] rounded-full mt-2"></div>
                   <span className="text-base font-thin text-gray-600">Predictive modeling for user actions</span>
                 </div>
                 <div className="flex items-start space-x-3">
-                  <div className="w-2 h-2 bg-black rounded-full mt-2"></div>
+                  <div className="w-2 h-2 bg-[#998664] rounded-full mt-2"></div>
                   <span className="text-base font-thin text-gray-600">Interface design and usability testing</span>
                 </div>
               </div>
@@ -69,7 +69,7 @@ const BehavioralAnalysisPage = () => {
       <section className="relative w-full bg-white py-16 md:py-24">
         <div className="max-w-7xl mx-auto px-6 md:px-12">
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-5xl font-thin text-black mb-6">Research Methods</h2>
+            <h2 className="text-3xl md:text-5xl font-thin text-[#998664] mb-6">Research Methods</h2>
             <p className="text-lg font-thin text-gray-600 max-w-3xl mx-auto">
               We employ diverse research methodologies to gain deep insights into user behavior 
               and inform AI system design decisions.
@@ -78,7 +78,7 @@ const BehavioralAnalysisPage = () => {
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             <div className="bg-gray-50 rounded-2xl p-8">
-              <div className="w-16 h-16 bg-black rounded-2xl mb-6 flex items-center justify-center">
+              <div className="w-16 h-16 bg-gradient-to-r from-[#998664] to-[#aa9678] rounded-2xl mb-6 flex items-center justify-center">
                 <Users size={24} className="text-white" />
               </div>
               <h3 className="text-xl font-thin text-black mb-4">User Research</h3>
@@ -95,7 +95,7 @@ const BehavioralAnalysisPage = () => {
             </div>
 
             <div className="bg-gray-50 rounded-2xl p-8">
-              <div className="w-16 h-16 bg-black rounded-2xl mb-6 flex items-center justify-center">
+              <div className="w-16 h-16 bg-gradient-to-r from-[#998664] to-[#aa9678] rounded-2xl mb-6 flex items-center justify-center">
                 <div className="w-6 h-6 border-2 border-white rounded flex items-end justify-between">
                   <div className="w-1 h-3 bg-white"></div>
                   <div className="w-1 h-5 bg-white"></div>
@@ -116,7 +116,7 @@ const BehavioralAnalysisPage = () => {
             </div>
 
             <div className="bg-gray-50 rounded-2xl p-8">
-              <div className="w-16 h-16 bg-black rounded-2xl mb-6 flex items-center justify-center">
+              <div className="w-16 h-16 bg-gradient-to-r from-[#998664] to-[#aa9678] rounded-2xl mb-6 flex items-center justify-center">
                 <Brain size={24} className="text-white" />
               </div>
               <h3 className="text-xl font-thin text-black mb-4">Cognitive Assessment</h3>
@@ -133,7 +133,7 @@ const BehavioralAnalysisPage = () => {
             </div>
 
             <div className="bg-gray-50 rounded-2xl p-8">
-              <div className="w-16 h-16 bg-black rounded-2xl mb-6 flex items-center justify-center">
+              <div className="w-16 h-16 bg-gradient-to-r from-[#998664] to-[#aa9678] rounded-2xl mb-6 flex items-center justify-center">
                 <Target size={24} className="text-white" />
               </div>
               <h3 className="text-xl font-thin text-black mb-4">Usability Testing</h3>
@@ -150,7 +150,7 @@ const BehavioralAnalysisPage = () => {
             </div>
 
             <div className="bg-gray-50 rounded-2xl p-8">
-              <div className="w-16 h-16 bg-black rounded-2xl mb-6 flex items-center justify-center">
+              <div className="w-16 h-16 bg-gradient-to-r from-[#998664] to-[#aa9678] rounded-2xl mb-6 flex items-center justify-center">
                 <div className="w-6 h-6 border-2 border-white rounded-full flex items-center justify-center">
                   <div className="w-3 h-3 border border-white rounded-full"></div>
                 </div>
@@ -169,7 +169,7 @@ const BehavioralAnalysisPage = () => {
             </div>
 
             <div className="bg-gray-50 rounded-2xl p-8">
-              <div className="w-16 h-16 bg-black rounded-2xl mb-6 flex items-center justify-center">
+              <div className="w-16 h-16 bg-gradient-to-r from-[#998664] to-[#aa9678] rounded-2xl mb-6 flex items-center justify-center">
                 <RefreshCw size={24} className="text-white" />
               </div>
               <h3 className="text-xl font-thin text-black mb-4">Continuous Monitoring</h3>
@@ -189,18 +189,18 @@ const BehavioralAnalysisPage = () => {
       </section>
 
       {/* Application Areas */}
-      <section className="relative w-full bg-gray-50 py-16 md:py-24">
+      <section className="relative w-full bg-gradient-to-r from-[#998664] to-[#aa9678] py-16 md:py-24">
         <div className="max-w-7xl mx-auto px-6 md:px-12">
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-5xl font-thin text-black mb-6">Application Areas</h2>
-            <p className="text-lg font-thin text-gray-600 max-w-3xl mx-auto">
+            <h2 className="text-3xl md:text-5xl font-thin text-white mb-6">Application Areas</h2>
+            <p className="text-lg font-thin text-white/90 max-w-3xl mx-auto">
               Behavioral analysis enhances AI systems across diverse domains and use cases.
             </p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             <div className="bg-white rounded-2xl p-8 shadow-sm">
-              <h3 className="text-2xl font-thin text-black mb-6">Product Development</h3>
+              <h3 className="text-2xl font-thin text-[#998664] mb-6">Product Development</h3>
               <div className="space-y-4">
                 <div>
                   <h4 className="text-base font-thin text-black mb-2">User Experience Optimization</h4>
@@ -227,7 +227,7 @@ const BehavioralAnalysisPage = () => {
             </div>
 
             <div className="bg-white rounded-2xl p-8 shadow-sm">
-              <h3 className="text-2xl font-thin text-black mb-6">Customer Experience</h3>
+              <h3 className="text-2xl font-thin text-[#998664] mb-6">Customer Experience</h3>
               <div className="space-y-4">
                 <div>
                   <h4 className="text-base font-thin text-black mb-2">Journey Optimization</h4>
@@ -254,7 +254,7 @@ const BehavioralAnalysisPage = () => {
             </div>
 
             <div className="bg-white rounded-2xl p-8 shadow-sm">
-              <h3 className="text-2xl font-thin text-black mb-6">Workplace Optimization</h3>
+              <h3 className="text-2xl font-thin text-[#998664] mb-6">Workplace Optimization</h3>
               <div className="space-y-4">
                 <div>
                   <h4 className="text-base font-thin text-black mb-2">Employee Productivity</h4>
@@ -281,7 +281,7 @@ const BehavioralAnalysisPage = () => {
             </div>
 
             <div className="bg-white rounded-2xl p-8 shadow-sm">
-              <h3 className="text-2xl font-thin text-black mb-6">Healthcare & Wellness</h3>
+              <h3 className="text-2xl font-thin text-[#998664] mb-6">Healthcare & Wellness</h3>
               <div className="space-y-4">
                 <div>
                   <h4 className="text-base font-thin text-black mb-2">Patient Engagement</h4>
@@ -314,7 +314,7 @@ const BehavioralAnalysisPage = () => {
       <section className="relative w-full bg-white py-16 md:py-24">
         <div className="max-w-7xl mx-auto px-6 md:px-12">
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-5xl font-thin text-black mb-6">Expected Impact</h2>
+            <h2 className="text-3xl md:text-5xl font-thin text-[#998664] mb-6">Expected Impact</h2>
             <p className="text-lg font-thin text-gray-600 max-w-3xl mx-auto">
               Our behavioral analysis approach is designed to deliver improvements in user engagement 
               and system effectiveness.
@@ -323,19 +323,19 @@ const BehavioralAnalysisPage = () => {
 
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
             <div className="text-center">
-              <div className="text-lg font-thin text-black mb-2">Higher</div>
+              <div className="text-lg font-thin text-[#998664] mb-2">Higher</div>
               <div className="text-base font-thin text-gray-600">User Engagement</div>
             </div>
             <div className="text-center">
-              <div className="text-lg font-thin text-black mb-2">Improved</div>
+              <div className="text-lg font-thin text-[#998664] mb-2">Improved</div>
               <div className="text-base font-thin text-gray-600">Task Completion</div>
             </div>
             <div className="text-center">
-              <div className="text-lg font-thin text-black mb-2">Faster</div>
+              <div className="text-lg font-thin text-[#998664] mb-2">Faster</div>
               <div className="text-base font-thin text-gray-600">User Adoption</div>
             </div>
             <div className="text-center">
-              <div className="text-lg font-thin text-black mb-2">Enhanced</div>
+              <div className="text-lg font-thin text-[#998664] mb-2">Enhanced</div>
               <div className="text-base font-thin text-gray-600">User Experience</div>
             </div>
           </div>
@@ -343,7 +343,7 @@ const BehavioralAnalysisPage = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="relative w-full bg-black py-16 md:py-24">
+      <section className="relative w-full bg-gradient-to-r from-[#998664] to-[#aa9678] py-16 md:py-24">
         <div className="max-w-5xl mx-auto px-6 md:px-12 text-center">
           <h2 className="text-3xl md:text-5xl font-thin text-white mb-6">Understand Your Users Better</h2>
           <p className="text-lg font-thin text-white/80 mb-8 max-w-3xl mx-auto">
@@ -351,10 +351,10 @@ const BehavioralAnalysisPage = () => {
             and perfectly aligned with human needs.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <button className="bg-white text-black px-8 py-4 rounded-full text-lg font-thin hover:bg-gray-100 transition-colors">
+            <button className="bg-white text-[#998664] px-8 py-4 rounded-full text-lg font-thin hover:bg-gray-100 transition-colors">
               Start Behavioral Analysis
             </button>
-            <button className="border border-white text-white px-8 py-4 rounded-full text-lg font-thin hover:bg-white hover:text-black transition-colors">
+            <button className="border border-white text-white px-8 py-4 rounded-full text-lg font-thin hover:bg-white hover:text-[#998664] transition-colors">
               View Research Methods
             </button>
           </div>

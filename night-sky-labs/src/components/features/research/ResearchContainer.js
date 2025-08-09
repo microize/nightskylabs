@@ -1,5 +1,6 @@
 import React, { useState, useEffect, useMemo } from 'react';
-import { loadResearchPosts, generateCategories } from '../../../utils/markdownUtils';
+import { useNavigate } from 'react-router-dom';
+import { loadResearchFromFiles, generateResearchFields } from '../../../utils/researchLoader';
 import { 
   filterPostsBySearch, 
   filterPostsByCategory, 
@@ -13,10 +14,10 @@ import BlogPost from '../blog/BlogPost';
 import Pagination from '../blog/Pagination';
 
 const ResearchContainer = () => {
+  const navigate = useNavigate();
   const [searchTerm, setSearchTerm] = useState('');
   const [selectedCategory, setSelectedCategory] = useState('All');
   const [currentPage, setCurrentPage] = useState(1);
-  const [selectedPost, setSelectedPost] = useState(null);
   const [loading, setLoading] = useState(false);
   const [researchPosts, setResearchPosts] = useState([]);
   const [researchCategories, setResearchCategories] = useState(['All']);
@@ -28,8 +29,8 @@ const ResearchContainer = () => {
     const loadContent = async () => {
       setLoading(true);
       try {
-        const posts = await loadResearchPosts();
-        const cats = generateCategories(posts);
+        const posts = await loadResearchFromFiles();
+        const cats = generateResearchFields(posts);
         setResearchPosts(posts);
         setResearchCategories(cats);
       } catch (error) {
@@ -94,20 +95,10 @@ const ResearchContainer = () => {
     window.scrollTo({ top: 0, behavior: 'smooth' });
   };
 
-  // Handle post selection
+  // Handle post selection - navigate to individual research page
   const handlePostSelect = (post) => {
-    setSelectedPost(post);
+    navigate(`/research/${post.slug}`);
   };
-
-  // Handle back to list
-  const handleBackToList = () => {
-    setSelectedPost(null);
-  };
-
-  // If viewing individual post
-  if (selectedPost) {
-    return <BlogPost post={selectedPost} onBack={handleBackToList} />;
-  }
 
   return (
     <div className="space-y-12">

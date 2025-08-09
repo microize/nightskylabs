@@ -20,7 +20,7 @@ const BlogPost = ({ post, onBack }) => {
       {/* Back Button */}
       <button
         onClick={onBack}
-        className="flex items-center text-gray-600 hover:text-black transition-colors mb-8 font-thin"
+        className="flex items-center text-gray-600 hover:text-[#998664] transition-colors mb-8 font-thin"
       >
         <LuArrowLeft className="h-4 w-4 mr-2" />
         Back to Articles
@@ -53,7 +53,7 @@ const BlogPost = ({ post, onBack }) => {
         </div>
 
         {/* Title */}
-        <h1 className="text-3xl md:text-5xl font-thin text-black mb-6 leading-tight">
+        <h1 className="text-3xl md:text-5xl font-thin text-[#998664] mb-6 leading-tight">
           {post.title}
         </h1>
 
@@ -74,7 +74,7 @@ const BlogPost = ({ post, onBack }) => {
         </div>
 
         {/* Excerpt */}
-        <p className="text-xl font-thin text-gray-600 leading-relaxed border-l-4 border-gray-200 pl-6">
+        <p className="text-xl font-thin text-gray-600 leading-relaxed border-l-4 border-[#998664] pl-6">
           {post.excerpt}
         </p>
       </header>
@@ -93,15 +93,15 @@ const BlogPost = ({ post, onBack }) => {
               <LuUser size={24} className="text-gray-400" />
             </div>
             <div>
-              <div className="font-thin text-black text-lg">{post.author}</div>
+              <div className="font-thin text-[#998664] text-lg">{post.author}</div>
               <div className="text-sm font-thin text-gray-500">Author at NightSkyLabs</div>
             </div>
           </div>
           <div className="flex space-x-4">
-            <button className="text-sm font-thin text-gray-500 hover:text-black transition-colors">
+            <button className="text-sm font-thin text-gray-500 hover:text-[#998664] transition-colors">
               Share
             </button>
-            <button className="text-sm font-thin text-gray-500 hover:text-black transition-colors">
+            <button className="text-sm font-thin text-gray-500 hover:text-[#998664] transition-colors">
               Save
             </button>
           </div>

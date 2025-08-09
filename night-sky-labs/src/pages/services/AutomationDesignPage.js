@@ -11,8 +11,8 @@ const AutomationDesignPage = () => {
       {/* Hero Section */}
       <section className="relative w-full bg-white pt-32 pb-16 md:pt-40 md:pb-24">
         <div className="max-w-7xl mx-auto px-6 md:px-12 text-center">
-          <h1 className="text-4xl md:text-6xl font-thin text-black mb-6">Automation Design</h1>
-          <div className="w-24 h-0.5 bg-black mx-auto mb-8"></div>
+          <h1 className="text-4xl md:text-6xl font-thin text-[#998664] mb-6">Automation Design</h1>
+          <div className="w-24 h-0.5 bg-[#998664] mx-auto mb-8"></div>
           <p className="text-lg md:text-xl font-thin text-gray-600 max-w-4xl mx-auto">
             Intelligent workflow optimization that transforms manual processes into efficient, AI-powered automation systems.
           </p>
@@ -20,44 +20,44 @@ const AutomationDesignPage = () => {
       </section>
 
       {/* Overview */}
-      <section className="relative w-full bg-gray-50 py-16 md:py-24">
+      <section className="relative w-full bg-gradient-to-r from-[#998664] to-[#aa9678] py-16 md:py-24">
         <div className="max-w-7xl mx-auto px-6 md:px-12">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div>
-              <h2 className="text-3xl md:text-5xl font-thin text-black mb-8">Workflow Intelligence</h2>
+              <h2 className="text-3xl md:text-5xl font-thin text-white mb-8">Workflow Intelligence</h2>
               <div className="space-y-6">
-                <p className="text-lg font-thin text-gray-600">
+                <p className="text-lg font-thin text-white/90">
                   Our Automation Design service transforms how your organization operates by identifying 
                   repetitive tasks, optimizing workflows, and implementing intelligent automation that 
                   enhances productivity while reducing human error.
                 </p>
-                <p className="text-lg font-thin text-gray-600">
+                <p className="text-lg font-thin text-white/90">
                   We design automation systems that learn from patterns, adapt to changing conditions, 
                   and integrate seamlessly with your existing processes to deliver measurable efficiency gains.
                 </p>
               </div>
             </div>
             <div className="bg-white rounded-2xl p-8 shadow-sm">
-              <h3 className="text-2xl font-thin text-black mb-6">Automation Focus Areas</h3>
+              <h3 className="text-2xl font-thin text-[#998664] mb-6">Automation Focus Areas</h3>
               <div className="space-y-4">
                 <div className="flex items-start space-x-3">
-                  <div className="w-2 h-2 bg-black rounded-full mt-2"></div>
+                  <div className="w-2 h-2 bg-[#998664] rounded-full mt-2"></div>
                   <span className="text-base font-thin text-gray-600">Process mapping and workflow analysis</span>
                 </div>
                 <div className="flex items-start space-x-3">
-                  <div className="w-2 h-2 bg-black rounded-full mt-2"></div>
+                  <div className="w-2 h-2 bg-[#998664] rounded-full mt-2"></div>
                   <span className="text-base font-thin text-gray-600">Intelligent decision-making automation</span>
                 </div>
                 <div className="flex items-start space-x-3">
-                  <div className="w-2 h-2 bg-black rounded-full mt-2"></div>
+                  <div className="w-2 h-2 bg-[#998664] rounded-full mt-2"></div>
                   <span className="text-base font-thin text-gray-600">Data processing and transformation</span>
                 </div>
                 <div className="flex items-start space-x-3">
-                  <div className="w-2 h-2 bg-black rounded-full mt-2"></div>
+                  <div className="w-2 h-2 bg-[#998664] rounded-full mt-2"></div>
                   <span className="text-base font-thin text-gray-600">Communication and notification systems</span>
                 </div>
                 <div className="flex items-start space-x-3">
-                  <div className="w-2 h-2 bg-black rounded-full mt-2"></div>
+                  <div className="w-2 h-2 bg-[#998664] rounded-full mt-2"></div>
                   <span className="text-base font-thin text-gray-600">Quality assurance and monitoring</span>
                 </div>
               </div>
@@ -70,7 +70,7 @@ const AutomationDesignPage = () => {
       <section className="relative w-full bg-white py-16 md:py-24">
         <div className="max-w-7xl mx-auto px-6 md:px-12">
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-5xl font-thin text-black mb-6">Automation Solutions</h2>
+            <h2 className="text-3xl md:text-5xl font-thin text-[#998664] mb-6">Automation Solutions</h2>
             <p className="text-lg font-thin text-gray-600 max-w-3xl mx-auto">
               Comprehensive automation capabilities across different business functions and operational areas.
             </p>
@@ -78,7 +78,7 @@ const AutomationDesignPage = () => {
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             <div className="bg-gray-50 rounded-2xl p-8">
-              <div className="w-16 h-16 bg-black rounded-2xl mb-6 flex items-center justify-center">
+              <div className="w-16 h-16 bg-gradient-to-r from-[#998664] to-[#aa9678] rounded-2xl mb-6 flex items-center justify-center">
                 <div className="w-6 h-6 border-2 border-white rounded flex items-end justify-between">
                   <div className="w-1 h-3 bg-white"></div>
                   <div className="w-1 h-5 bg-white"></div>
@@ -99,7 +99,7 @@ const AutomationDesignPage = () => {
             </div>
 
             <div className="bg-gray-50 rounded-2xl p-8">
-              <div className="w-16 h-16 bg-black rounded-2xl mb-6 flex items-center justify-center">
+              <div className="w-16 h-16 bg-gradient-to-r from-[#998664] to-[#aa9678] rounded-2xl mb-6 flex items-center justify-center">
                 <Settings size={24} className="text-white" />
               </div>
               <h3 className="text-xl font-thin text-black mb-4">Process Automation</h3>
@@ -116,7 +116,7 @@ const AutomationDesignPage = () => {
             </div>
 
             <div className="bg-gray-50 rounded-2xl p-8">
-              <div className="w-16 h-16 bg-black rounded-2xl mb-6 flex items-center justify-center">
+              <div className="w-16 h-16 bg-gradient-to-r from-[#998664] to-[#aa9678] rounded-2xl mb-6 flex items-center justify-center">
                 <Bot size={24} className="text-white" />
               </div>
               <h3 className="text-xl font-thin text-black mb-4">Intelligent Automation</h3>
@@ -133,7 +133,7 @@ const AutomationDesignPage = () => {
             </div>
 
             <div className="bg-gray-50 rounded-2xl p-8">
-              <div className="w-16 h-16 bg-black rounded-2xl mb-6 flex items-center justify-center">
+              <div className="w-16 h-16 bg-gradient-to-r from-[#998664] to-[#aa9678] rounded-2xl mb-6 flex items-center justify-center">
                 <Phone size={24} className="text-white" />
               </div>
               <h3 className="text-xl font-thin text-black mb-4">Communication Automation</h3>
@@ -150,7 +150,7 @@ const AutomationDesignPage = () => {
             </div>
 
             <div className="bg-gray-50 rounded-2xl p-8">
-              <div className="w-16 h-16 bg-black rounded-2xl mb-6 flex items-center justify-center">
+              <div className="w-16 h-16 bg-gradient-to-r from-[#998664] to-[#aa9678] rounded-2xl mb-6 flex items-center justify-center">
                 <div className="w-6 h-6 border-2 border-white rounded flex items-center justify-center">
                   <div className="w-4 h-3 border border-white rounded"></div>
                 </div>
@@ -169,7 +169,7 @@ const AutomationDesignPage = () => {
             </div>
 
             <div className="bg-gray-50 rounded-2xl p-8">
-              <div className="w-16 h-16 bg-black rounded-2xl mb-6 flex items-center justify-center">
+              <div className="w-16 h-16 bg-gradient-to-r from-[#998664] to-[#aa9678] rounded-2xl mb-6 flex items-center justify-center">
                 <div className="w-6 h-6 border-2 border-white rounded flex items-center justify-center">
                   <div className="w-4 h-1 bg-white rounded transform rotate-45"></div>
                 </div>
@@ -191,11 +191,11 @@ const AutomationDesignPage = () => {
       </section>
 
       {/* Design Process */}
-      <section className="relative w-full bg-gray-50 py-16 md:py-24">
+      <section className="relative w-full bg-gradient-to-r from-[#998664] to-[#aa9678] py-16 md:py-24">
         <div className="max-w-7xl mx-auto px-6 md:px-12">
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-5xl font-thin text-black mb-6">Design Process</h2>
-            <p className="text-lg font-thin text-gray-600 max-w-3xl mx-auto">
+            <h2 className="text-3xl md:text-5xl font-thin text-white mb-6">Design Process</h2>
+            <p className="text-lg font-thin text-white/90 max-w-3xl mx-auto">
               Our systematic approach ensures automation solutions are efficient, reliable, 
               and perfectly aligned with your operational needs.
             </p>
@@ -205,32 +205,32 @@ const AutomationDesignPage = () => {
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
               <div>
                 <div className="flex items-center mb-6">
-                  <div className="w-12 h-12 bg-black text-white rounded-full flex items-center justify-center mr-4">
+                  <div className="w-12 h-12 bg-white text-[#998664] rounded-full flex items-center justify-center mr-4">
                     <span className="text-lg font-thin">1</span>
                   </div>
-                  <h3 className="text-2xl font-thin text-black">Process Discovery</h3>
+                  <h3 className="text-2xl font-thin text-white">Process Discovery</h3>
                 </div>
-                <p className="text-base font-thin text-gray-600 mb-4">
+                <p className="text-base font-thin text-white/90 mb-4">
                   Comprehensive analysis of existing workflows, identifying bottlenecks, 
                   inefficiencies, and automation opportunities through observation and stakeholder interviews.
                 </p>
                 <div className="space-y-2">
                   <div className="flex items-center space-x-3">
-                    <div className="w-2 h-2 bg-black rounded-full"></div>
-                    <span className="text-sm font-thin text-gray-600">Current state mapping</span>
+                    <div className="w-2 h-2 bg-white rounded-full"></div>
+                    <span className="text-sm font-thin text-white/90">Current state mapping</span>
                   </div>
                   <div className="flex items-center space-x-3">
-                    <div className="w-2 h-2 bg-black rounded-full"></div>
-                    <span className="text-sm font-thin text-gray-600">Pain point identification</span>
+                    <div className="w-2 h-2 bg-white rounded-full"></div>
+                    <span className="text-sm font-thin text-white/90">Pain point identification</span>
                   </div>
                   <div className="flex items-center space-x-3">
-                    <div className="w-2 h-2 bg-black rounded-full"></div>
-                    <span className="text-sm font-thin text-gray-600">Volume and frequency analysis</span>
+                    <div className="w-2 h-2 bg-white rounded-full"></div>
+                    <span className="text-sm font-thin text-white/90">Volume and frequency analysis</span>
                   </div>
                 </div>
               </div>
               <div className="bg-white rounded-2xl p-8 shadow-sm">
-                <h4 className="text-lg font-thin text-black mb-4">Discovery Deliverables</h4>
+                <h4 className="text-lg font-thin text-[#998664] mb-4">Discovery Deliverables</h4>
                 <div className="space-y-3">
                   <div className="bg-gray-50 rounded-lg p-3">
                     <div className="text-sm font-thin text-black">Process Flow Diagrams</div>
@@ -251,32 +251,32 @@ const AutomationDesignPage = () => {
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
               <div className="lg:order-2">
                 <div className="flex items-center mb-6">
-                  <div className="w-12 h-12 bg-black text-white rounded-full flex items-center justify-center mr-4">
+                  <div className="w-12 h-12 bg-white text-[#998664] rounded-full flex items-center justify-center mr-4">
                     <span className="text-lg font-thin">2</span>
                   </div>
-                  <h3 className="text-2xl font-thin text-black">Solution Architecture</h3>
+                  <h3 className="text-2xl font-thin text-white">Solution Architecture</h3>
                 </div>
-                <p className="text-base font-thin text-gray-600 mb-4">
+                <p className="text-base font-thin text-white/90 mb-4">
                   Design of intelligent automation systems that integrate with existing infrastructure 
                   while providing scalability and maintainability for future growth.
                 </p>
                 <div className="space-y-2">
                   <div className="flex items-center space-x-3">
-                    <div className="w-2 h-2 bg-black rounded-full"></div>
-                    <span className="text-sm font-thin text-gray-600">Technology selection and integration</span>
+                    <div className="w-2 h-2 bg-white rounded-full"></div>
+                    <span className="text-sm font-thin text-white/90">Technology selection and integration</span>
                   </div>
                   <div className="flex items-center space-x-3">
-                    <div className="w-2 h-2 bg-black rounded-full"></div>
-                    <span className="text-sm font-thin text-gray-600">Data flow and transformation design</span>
+                    <div className="w-2 h-2 bg-white rounded-full"></div>
+                    <span className="text-sm font-thin text-white/90">Data flow and transformation design</span>
                   </div>
                   <div className="flex items-center space-x-3">
-                    <div className="w-2 h-2 bg-black rounded-full"></div>
-                    <span className="text-sm font-thin text-gray-600">Error handling and recovery planning</span>
+                    <div className="w-2 h-2 bg-white rounded-full"></div>
+                    <span className="text-sm font-thin text-white/90">Error handling and recovery planning</span>
                   </div>
                 </div>
               </div>
               <div className="lg:order-1 bg-white rounded-2xl p-8 shadow-sm">
-                <h4 className="text-lg font-thin text-black mb-4">Architecture Components</h4>
+                <h4 className="text-lg font-thin text-[#998664] mb-4">Architecture Components</h4>
                 <div className="space-y-3">
                   <div className="bg-gray-50 rounded-lg p-3">
                     <div className="text-sm font-thin text-black">Automation Engine</div>
@@ -297,32 +297,32 @@ const AutomationDesignPage = () => {
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
               <div>
                 <div className="flex items-center mb-6">
-                  <div className="w-12 h-12 bg-black text-white rounded-full flex items-center justify-center mr-4">
+                  <div className="w-12 h-12 bg-white text-[#998664] rounded-full flex items-center justify-center mr-4">
                     <span className="text-lg font-thin">3</span>
                   </div>
-                  <h3 className="text-2xl font-thin text-black">Implementation & Testing</h3>
+                  <h3 className="text-2xl font-thin text-white">Implementation & Testing</h3>
                 </div>
-                <p className="text-base font-thin text-gray-600 mb-4">
+                <p className="text-base font-thin text-white/90 mb-4">
                   Phased deployment with comprehensive testing to ensure reliability, performance, 
                   and seamless integration with existing operations.
                 </p>
                 <div className="space-y-2">
                   <div className="flex items-center space-x-3">
-                    <div className="w-2 h-2 bg-black rounded-full"></div>
-                    <span className="text-sm font-thin text-gray-600">Pilot deployment and validation</span>
+                    <div className="w-2 h-2 bg-white rounded-full"></div>
+                    <span className="text-sm font-thin text-white/90">Pilot deployment and validation</span>
                   </div>
                   <div className="flex items-center space-x-3">
-                    <div className="w-2 h-2 bg-black rounded-full"></div>
-                    <span className="text-sm font-thin text-gray-600">Performance optimization</span>
+                    <div className="w-2 h-2 bg-white rounded-full"></div>
+                    <span className="text-sm font-thin text-white/90">Performance optimization</span>
                   </div>
                   <div className="flex items-center space-x-3">
-                    <div className="w-2 h-2 bg-black rounded-full"></div>
-                    <span className="text-sm font-thin text-gray-600">User training and documentation</span>
+                    <div className="w-2 h-2 bg-white rounded-full"></div>
+                    <span className="text-sm font-thin text-white/90">User training and documentation</span>
                   </div>
                 </div>
               </div>
               <div className="bg-white rounded-2xl p-8 shadow-sm">
-                <h4 className="text-lg font-thin text-black mb-4">Testing Framework</h4>
+                <h4 className="text-lg font-thin text-[#998664] mb-4">Testing Framework</h4>
                 <div className="space-y-3">
                   <div className="flex justify-between items-center">
                     <span className="text-sm font-thin text-gray-600">Unit Testing</span>
@@ -351,7 +351,7 @@ const AutomationDesignPage = () => {
       <section className="relative w-full bg-white py-16 md:py-24">
         <div className="max-w-7xl mx-auto px-6 md:px-12">
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-5xl font-thin text-black mb-6">Expected Benefits</h2>
+            <h2 className="text-3xl md:text-5xl font-thin text-[#998664] mb-6">Expected Benefits</h2>
             <p className="text-lg font-thin text-gray-600 max-w-3xl mx-auto">
               Our automation design approach is built to deliver significant improvements 
               in efficiency, accuracy, and employee satisfaction.
@@ -360,19 +360,19 @@ const AutomationDesignPage = () => {
 
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
             <div className="text-center">
-              <div className="text-lg font-thin text-black mb-2">Significant</div>
+              <div className="text-lg font-thin text-[#998664] mb-2">Significant</div>
               <div className="text-base font-thin text-gray-600">Time Savings</div>
             </div>
             <div className="text-center">
-              <div className="text-lg font-thin text-black mb-2">Reduced</div>
+              <div className="text-lg font-thin text-[#998664] mb-2">Reduced</div>
               <div className="text-base font-thin text-gray-600">Human Error</div>
             </div>
             <div className="text-center">
-              <div className="text-lg font-thin text-black mb-2">Lower</div>
+              <div className="text-lg font-thin text-[#998664] mb-2">Lower</div>
               <div className="text-base font-thin text-gray-600">Operational Costs</div>
             </div>
             <div className="text-center">
-              <div className="text-lg font-thin text-black mb-2">Improved</div>
+              <div className="text-lg font-thin text-[#998664] mb-2">Improved</div>
               <div className="text-base font-thin text-gray-600">User Experience</div>
             </div>
           </div>
@@ -380,7 +380,7 @@ const AutomationDesignPage = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="relative w-full bg-black py-16 md:py-24">
+      <section className="relative w-full bg-gradient-to-r from-[#998664] to-[#aa9678] py-16 md:py-24">
         <div className="max-w-5xl mx-auto px-6 md:px-12 text-center">
           <h2 className="text-3xl md:text-5xl font-thin text-white mb-6">Transform Your Workflows</h2>
           <p className="text-lg font-thin text-white/80 mb-8 max-w-3xl mx-auto">
@@ -388,10 +388,10 @@ const AutomationDesignPage = () => {
             to focus on high-value activities.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <button className="bg-white text-black px-8 py-4 rounded-full text-lg font-thin hover:bg-gray-100 transition-colors">
+            <button className="bg-white text-[#998664] px-8 py-4 rounded-full text-lg font-thin hover:bg-gray-100 transition-colors">
               Start Automation Assessment
             </button>
-            <button className="border border-white text-white px-8 py-4 rounded-full text-lg font-thin hover:bg-white hover:text-black transition-colors">
+            <button className="border border-white text-white px-8 py-4 rounded-full text-lg font-thin hover:bg-white hover:text-[#998664] transition-colors">
               View Automation Examples
             </button>
           </div>

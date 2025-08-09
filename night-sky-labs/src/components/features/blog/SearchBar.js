@@ -12,7 +12,7 @@ const SearchBar = ({ searchTerm, onSearchChange, placeholder = "Search articles.
         value={searchTerm}
         onChange={(e) => onSearchChange(e.target.value)}
         placeholder={placeholder}
-        className="block w-full pl-10 pr-3 py-2 border border-gray-200 rounded-lg text-sm font-thin placeholder-gray-500 focus:outline-none focus:ring-1 focus:ring-black focus:border-black"
+        className="block w-full pl-10 pr-3 py-2 border border-gray-200 rounded-lg text-sm font-thin placeholder-gray-500 focus:outline-none focus:ring-1 focus:ring-[#998664] focus:border-[#998664]"
       />
     </div>
   );

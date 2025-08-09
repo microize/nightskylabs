@@ -39,14 +39,14 @@ const CommunitySidebar = ({ categories, currentCategory, onCategoryChange, userS
   return (
     <div className={`w-80 bg-gray-50 border-r border-gray-200 h-full overflow-y-auto ${className}`}>
       <div className="p-6 border-b border-gray-200">
-        <h2 className="text-xl font-thin text-black">Community</h2>
+        <h2 className="text-xl font-thin text-[#998664]">Community</h2>
         <p className="text-sm font-thin text-gray-600 mt-2">Connect with developers and users</p>
       </div>
 
       {/* User Stats */}
       <div className="p-4 border-b border-gray-200">
         <div className="bg-white rounded-lg p-4">
-          <h3 className="text-sm font-medium text-black mb-3">Community Stats</h3>
+          <h3 className="text-sm font-medium text-[#998664] mb-3">Community Stats</h3>
           <div className="space-y-2 text-sm">
             <div className="flex justify-between">
               <span className="text-gray-600 font-thin">Active Members</span>

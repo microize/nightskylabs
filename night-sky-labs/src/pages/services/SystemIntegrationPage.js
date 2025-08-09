@@ -10,8 +10,8 @@ const SystemIntegrationPage = () => {
       {/* Hero Section */}
       <section className="relative w-full bg-white pt-32 pb-16 md:pt-40 md:pb-24">
         <div className="max-w-7xl mx-auto px-6 md:px-12 text-center">
-          <h1 className="text-4xl md:text-6xl font-thin text-black mb-6">System Integration</h1>
-          <div className="w-24 h-0.5 bg-black mx-auto mb-8"></div>
+          <h1 className="text-4xl md:text-6xl font-thin text-[#998664] mb-6">System Integration</h1>
+          <div className="w-24 h-0.5 bg-[#998664] mx-auto mb-8"></div>
           <p className="text-lg md:text-xl font-thin text-gray-600 max-w-4xl mx-auto">
             Seamless AI implementation that connects with your existing technology stack and maintains operational continuity.
           </p>
@@ -19,17 +19,17 @@ const SystemIntegrationPage = () => {
       </section>
 
       {/* Overview */}
-      <section className="relative w-full bg-gray-50 py-16 md:py-24">
+      <section className="relative w-full bg-gradient-to-r from-[#998664] to-[#aa9678] py-16 md:py-24">
         <div className="max-w-7xl mx-auto px-6 md:px-12">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div>
-              <h2 className="text-3xl md:text-5xl font-thin text-black mb-8">Enterprise Integration</h2>
+              <h2 className="text-3xl md:text-5xl font-thin text-white mb-8">Enterprise Integration</h2>
               <div className="space-y-6">
-                <p className="text-lg font-thin text-gray-600">
+                <p className="text-lg font-thin text-white/90">
                   Our System Integration service ensures that AI solutions work harmoniously with your 
                   existing infrastructure, applications, and workflows without disrupting business operations.
                 </p>
-                <p className="text-lg font-thin text-gray-600">
+                <p className="text-lg font-thin text-white/90">
                   We specialize in creating robust, scalable integration architectures that enable seamless 
                   data flow, maintain security standards, and provide the foundation for future AI initiatives.
                 </p>
@@ -39,23 +39,23 @@ const SystemIntegrationPage = () => {
               <h3 className="text-2xl font-thin text-black mb-6">Integration Capabilities</h3>
               <div className="space-y-4">
                 <div className="flex items-start space-x-3">
-                  <div className="w-2 h-2 bg-black rounded-full mt-2"></div>
+                  <div className="w-2 h-2 bg-white rounded-full mt-2"></div>
                   <span className="text-base font-thin text-gray-600">Legacy system modernization and connectivity</span>
                 </div>
                 <div className="flex items-start space-x-3">
-                  <div className="w-2 h-2 bg-black rounded-full mt-2"></div>
+                  <div className="w-2 h-2 bg-white rounded-full mt-2"></div>
                   <span className="text-base font-thin text-gray-600">Real-time data synchronization and processing</span>
                 </div>
                 <div className="flex items-start space-x-3">
-                  <div className="w-2 h-2 bg-black rounded-full mt-2"></div>
+                  <div className="w-2 h-2 bg-white rounded-full mt-2"></div>
                   <span className="text-base font-thin text-gray-600">API design and microservices architecture</span>
                 </div>
                 <div className="flex items-start space-x-3">
-                  <div className="w-2 h-2 bg-black rounded-full mt-2"></div>
+                  <div className="w-2 h-2 bg-white rounded-full mt-2"></div>
                   <span className="text-base font-thin text-gray-600">Cloud and hybrid infrastructure integration</span>
                 </div>
                 <div className="flex items-start space-x-3">
-                  <div className="w-2 h-2 bg-black rounded-full mt-2"></div>
+                  <div className="w-2 h-2 bg-white rounded-full mt-2"></div>
                   <span className="text-base font-thin text-gray-600">Security and compliance framework alignment</span>
                 </div>
               </div>
@@ -68,7 +68,7 @@ const SystemIntegrationPage = () => {
       <section className="relative w-full bg-white py-16 md:py-24">
         <div className="max-w-7xl mx-auto px-6 md:px-12">
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-5xl font-thin text-black mb-6">Integration Strategies</h2>
+            <h2 className="text-3xl md:text-5xl font-thin text-[#998664] mb-6">Integration Strategies</h2>
             <p className="text-lg font-thin text-gray-600 max-w-3xl mx-auto">
               Flexible integration approaches that accommodate different technology environments 
               and business requirements.
@@ -77,7 +77,7 @@ const SystemIntegrationPage = () => {
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             <div className="bg-gray-50 rounded-2xl p-8">
-              <div className="w-16 h-16 bg-black rounded-2xl mb-6 flex items-center justify-center">
+              <div className="w-16 h-16 bg-gradient-to-r from-[#998664] to-[#aa9678] rounded-2xl mb-6 flex items-center justify-center">
                 <span className="text-white text-2xl">🔗</span>
               </div>
               <h3 className="text-xl font-thin text-black mb-4">API-First Integration</h3>
@@ -94,7 +94,7 @@ const SystemIntegrationPage = () => {
             </div>
 
             <div className="bg-gray-50 rounded-2xl p-8">
-              <div className="w-16 h-16 bg-black rounded-2xl mb-6 flex items-center justify-center">
+              <div className="w-16 h-16 bg-gradient-to-r from-[#998664] to-[#aa9678] rounded-2xl mb-6 flex items-center justify-center">
                 <span className="text-white text-2xl">⚡</span>
               </div>
               <h3 className="text-xl font-thin text-black mb-4">Event-Driven Architecture</h3>
@@ -111,7 +111,7 @@ const SystemIntegrationPage = () => {
             </div>
 
             <div className="bg-gray-50 rounded-2xl p-8">
-              <div className="w-16 h-16 bg-black rounded-2xl mb-6 flex items-center justify-center">
+              <div className="w-16 h-16 bg-gradient-to-r from-[#998664] to-[#aa9678] rounded-2xl mb-6 flex items-center justify-center">
                 <span className="text-white text-2xl">🏗️</span>
               </div>
               <h3 className="text-xl font-thin text-black mb-4">Microservices Architecture</h3>
@@ -128,7 +128,7 @@ const SystemIntegrationPage = () => {
             </div>
 
             <div className="bg-gray-50 rounded-2xl p-8">
-              <div className="w-16 h-16 bg-black rounded-2xl mb-6 flex items-center justify-center">
+              <div className="w-16 h-16 bg-gradient-to-r from-[#998664] to-[#aa9678] rounded-2xl mb-6 flex items-center justify-center">
                 <span className="text-white text-2xl">🗄️</span>
               </div>
               <h3 className="text-xl font-thin text-black mb-4">Data Integration</h3>
@@ -145,7 +145,7 @@ const SystemIntegrationPage = () => {
             </div>
 
             <div className="bg-gray-50 rounded-2xl p-8">
-              <div className="w-16 h-16 bg-black rounded-2xl mb-6 flex items-center justify-center">
+              <div className="w-16 h-16 bg-gradient-to-r from-[#998664] to-[#aa9678] rounded-2xl mb-6 flex items-center justify-center">
                 <span className="text-white text-2xl">☁️</span>
               </div>
               <h3 className="text-xl font-thin text-black mb-4">Cloud Integration</h3>
@@ -162,7 +162,7 @@ const SystemIntegrationPage = () => {
             </div>
 
             <div className="bg-gray-50 rounded-2xl p-8">
-              <div className="w-16 h-16 bg-black rounded-2xl mb-6 flex items-center justify-center">
+              <div className="w-16 h-16 bg-gradient-to-r from-[#998664] to-[#aa9678] rounded-2xl mb-6 flex items-center justify-center">
                 <span className="text-white text-2xl">🔒</span>
               </div>
               <h3 className="text-xl font-thin text-black mb-4">Security Integration</h3>
@@ -185,7 +185,7 @@ const SystemIntegrationPage = () => {
       <section className="relative w-full bg-gray-50 py-16 md:py-24">
         <div className="max-w-7xl mx-auto px-6 md:px-12">
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-5xl font-thin text-black mb-6">Integration Process</h2>
+            <h2 className="text-3xl md:text-5xl font-thin text-[#998664] mb-6">Integration Process</h2>
             <p className="text-lg font-thin text-gray-600 max-w-3xl mx-auto">
               Our systematic approach ensures smooth, secure, and scalable integration 
               with minimal disruption to existing operations.
@@ -196,10 +196,10 @@ const SystemIntegrationPage = () => {
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
               <div>
                 <div className="flex items-center mb-6">
-                  <div className="w-12 h-12 bg-black text-white rounded-full flex items-center justify-center mr-4">
+                  <div className="w-12 h-12 bg-gradient-to-r from-[#998664] to-[#aa9678] text-white rounded-full flex items-center justify-center mr-4">
                     <span className="text-lg font-thin">1</span>
                   </div>
-                  <h3 className="text-2xl font-thin text-black">System Assessment</h3>
+                  <h3 className="text-2xl font-thin text-[#998664]">System Assessment</h3>
                 </div>
                 <p className="text-base font-thin text-gray-600 mb-4">
                   Comprehensive evaluation of existing systems, data flows, security requirements, 
@@ -207,15 +207,15 @@ const SystemIntegrationPage = () => {
                 </p>
                 <div className="space-y-2">
                   <div className="flex items-center space-x-3">
-                    <div className="w-2 h-2 bg-black rounded-full"></div>
+                    <div className="w-2 h-2 bg-[#998664] rounded-full"></div>
                     <span className="text-sm font-thin text-gray-600">Infrastructure audit and mapping</span>
                   </div>
                   <div className="flex items-center space-x-3">
-                    <div className="w-2 h-2 bg-black rounded-full"></div>
+                    <div className="w-2 h-2 bg-[#998664] rounded-full"></div>
                     <span className="text-sm font-thin text-gray-600">Data architecture analysis</span>
                   </div>
                   <div className="flex items-center space-x-3">
-                    <div className="w-2 h-2 bg-black rounded-full"></div>
+                    <div className="w-2 h-2 bg-[#998664] rounded-full"></div>
                     <span className="text-sm font-thin text-gray-600">Security and compliance review</span>
                   </div>
                 </div>
@@ -242,10 +242,10 @@ const SystemIntegrationPage = () => {
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
               <div className="lg:order-2">
                 <div className="flex items-center mb-6">
-                  <div className="w-12 h-12 bg-black text-white rounded-full flex items-center justify-center mr-4">
+                  <div className="w-12 h-12 bg-gradient-to-r from-[#998664] to-[#aa9678] text-white rounded-full flex items-center justify-center mr-4">
                     <span className="text-lg font-thin">2</span>
                   </div>
-                  <h3 className="text-2xl font-thin text-black">Architecture Design</h3>
+                  <h3 className="text-2xl font-thin text-[#998664]">Architecture Design</h3>
                 </div>
                 <p className="text-base font-thin text-gray-600 mb-4">
                   Development of detailed integration architecture that addresses technical requirements, 
@@ -253,15 +253,15 @@ const SystemIntegrationPage = () => {
                 </p>
                 <div className="space-y-2">
                   <div className="flex items-center space-x-3">
-                    <div className="w-2 h-2 bg-black rounded-full"></div>
+                    <div className="w-2 h-2 bg-[#998664] rounded-full"></div>
                     <span className="text-sm font-thin text-gray-600">API design and specification</span>
                   </div>
                   <div className="flex items-center space-x-3">
-                    <div className="w-2 h-2 bg-black rounded-full"></div>
+                    <div className="w-2 h-2 bg-[#998664] rounded-full"></div>
                     <span className="text-sm font-thin text-gray-600">Data transformation mapping</span>
                   </div>
                   <div className="flex items-center space-x-3">
-                    <div className="w-2 h-2 bg-black rounded-full"></div>
+                    <div className="w-2 h-2 bg-[#998664] rounded-full"></div>
                     <span className="text-sm font-thin text-gray-600">Performance optimization planning</span>
                   </div>
                 </div>
@@ -288,10 +288,10 @@ const SystemIntegrationPage = () => {
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
               <div>
                 <div className="flex items-center mb-6">
-                  <div className="w-12 h-12 bg-black text-white rounded-full flex items-center justify-center mr-4">
+                  <div className="w-12 h-12 bg-gradient-to-r from-[#998664] to-[#aa9678] text-white rounded-full flex items-center justify-center mr-4">
                     <span className="text-lg font-thin">3</span>
                   </div>
-                  <h3 className="text-2xl font-thin text-black">Implementation & Testing</h3>
+                  <h3 className="text-2xl font-thin text-[#998664]">Implementation & Testing</h3>
                 </div>
                 <p className="text-base font-thin text-gray-600 mb-4">
                   Phased implementation with comprehensive testing to ensure reliability, performance, 
@@ -299,15 +299,15 @@ const SystemIntegrationPage = () => {
                 </p>
                 <div className="space-y-2">
                   <div className="flex items-center space-x-3">
-                    <div className="w-2 h-2 bg-black rounded-full"></div>
+                    <div className="w-2 h-2 bg-[#998664] rounded-full"></div>
                     <span className="text-sm font-thin text-gray-600">Staged rollout with fallback plans</span>
                   </div>
                   <div className="flex items-center space-x-3">
-                    <div className="w-2 h-2 bg-black rounded-full"></div>
+                    <div className="w-2 h-2 bg-[#998664] rounded-full"></div>
                     <span className="text-sm font-thin text-gray-600">Integration testing and validation</span>
                   </div>
                   <div className="flex items-center space-x-3">
-                    <div className="w-2 h-2 bg-black rounded-full"></div>
+                    <div className="w-2 h-2 bg-[#998664] rounded-full"></div>
                     <span className="text-sm font-thin text-gray-600">Performance monitoring and optimization</span>
                   </div>
                 </div>
@@ -342,7 +342,7 @@ const SystemIntegrationPage = () => {
       <section className="relative w-full bg-white py-16 md:py-24">
         <div className="max-w-7xl mx-auto px-6 md:px-12">
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-5xl font-thin text-black mb-6">Expected Benefits</h2>
+            <h2 className="text-3xl md:text-5xl font-thin text-[#998664] mb-6">Expected Benefits</h2>
             <p className="text-lg font-thin text-gray-600 max-w-3xl mx-auto">
               Successful system integration is designed to deliver improvements in operational 
               efficiency and technological capability.
@@ -351,19 +351,19 @@ const SystemIntegrationPage = () => {
 
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
             <div className="text-center">
-              <div className="text-4xl md:text-6xl font-thin text-black mb-2">Faster</div>
+              <div className="text-4xl md:text-6xl font-thin text-[#998664] mb-2">Faster</div>
               <div className="text-base font-thin text-gray-600">Data Processing</div>
             </div>
             <div className="text-center">
-              <div className="text-4xl md:text-6xl font-thin text-black mb-2">High</div>
+              <div className="text-4xl md:text-6xl font-thin text-[#998664] mb-2">High</div>
               <div className="text-base font-thin text-gray-600">System Uptime</div>
             </div>
             <div className="text-center">
-              <div className="text-4xl md:text-6xl font-thin text-black mb-2">Lower</div>
+              <div className="text-4xl md:text-6xl font-thin text-[#998664] mb-2">Lower</div>
               <div className="text-base font-thin text-gray-600">Operational Costs</div>
             </div>
             <div className="text-center">
-              <div className="text-4xl md:text-6xl font-thin text-black mb-2">Better</div>
+              <div className="text-4xl md:text-6xl font-thin text-[#998664] mb-2">Better</div>
               <div className="text-base font-thin text-gray-600">Data Accuracy</div>
             </div>
           </div>
@@ -371,7 +371,7 @@ const SystemIntegrationPage = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="relative w-full bg-black py-16 md:py-24">
+      <section className="relative w-full bg-gradient-to-r from-[#998664] to-[#aa9678] py-16 md:py-24">
         <div className="max-w-5xl mx-auto px-6 md:px-12 text-center">
           <h2 className="text-3xl md:text-5xl font-thin text-white mb-6">Integrate AI Seamlessly</h2>
           <p className="text-lg font-thin text-white/80 mb-8 max-w-3xl mx-auto">
@@ -379,10 +379,10 @@ const SystemIntegrationPage = () => {
             efficient technology ecosystem.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <button className="bg-white text-black px-8 py-4 rounded-full text-lg font-thin hover:bg-gray-100 transition-colors">
+            <button className="bg-white text-[#998664] px-8 py-4 rounded-full text-lg font-thin hover:bg-gray-100 hover:text-[#998664] transition-colors">
               Plan Your Integration
             </button>
-            <button className="border border-white text-white px-8 py-4 rounded-full text-lg font-thin hover:bg-white hover:text-black transition-colors">
+            <button className="border border-white text-white px-8 py-4 rounded-full text-lg font-thin hover:bg-white hover:text-[#998664] transition-colors">
               View Integration Examples
             </button>
           </div>

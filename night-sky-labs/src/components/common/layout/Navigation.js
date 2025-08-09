@@ -49,8 +49,8 @@ const Navigation = ({ currentPage }) => {
         <div className="flex items-center justify-between">
           {/* Logo */}
           <div className="flex items-center">
-            <Link to="/" className="text-lg md:text-body font-thin text-black">
-              NightSkyLabs
+            <Link to="/" className="text-lg md:text-body font-bold text-black">
+              NightSky Labs
             </Link>
           </div>
           
@@ -364,7 +364,7 @@ const Navigation = ({ currentPage }) => {
                 >
                   Sign In
                 </Link>
-                <Link to="/contact" className="bg-black text-white px-4 py-2 rounded-full text-small font-thin hover:bg-gray-800 transition-colors">
+                <Link to="/contact" className="bg-gradient-to-r from-[#998664] to-[#aa9678] text-white px-4 py-2 rounded-full text-small font-thin hover:opacity-90 transition-opacity">
                   Get In Touch
                 </Link>
               </>
@@ -393,8 +393,8 @@ const Navigation = ({ currentPage }) => {
         <div className="flex flex-col h-full overflow-y-auto">
           {/* Mobile Menu Header */}
           <div className="flex items-center justify-between p-6 border-b border-gray-100">
-            <Link to="/" className="text-xl font-thin text-black" onClick={closeMobileMenu}>
-              NightSkyLabs
+            <Link to="/" className="text-xl font-bold text-black" onClick={closeMobileMenu}>
+              NightSky Labs
             </Link>
             <button 
               onClick={closeMobileMenu}
@@ -638,7 +638,7 @@ const Navigation = ({ currentPage }) => {
               <div className="text-center">
                 <Link 
                   to="/contact"
-                  className="block bg-black text-white px-8 py-4 rounded-full text-lg font-thin hover:bg-gray-800 transition-colors"
+                  className="block bg-gradient-to-r from-[#998664] to-[#aa9678] text-white px-8 py-4 rounded-full text-lg font-thin hover:opacity-90 transition-opacity"
                   onClick={closeMobileMenu}
                 >
                   Get In Touch

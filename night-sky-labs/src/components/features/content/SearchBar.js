@@ -86,7 +86,7 @@ const SearchBar = ({
       }`}>
         <div className="absolute inset-y-0 left-0 pl-4 flex items-center pointer-events-none">
           <MagnifyingGlassIcon className={`h-5 w-5 transition-colors ${
-            isFocused ? 'text-black' : 'text-gray-400'
+            isFocused ? 'text-[#998664]' : 'text-gray-400'
           }`} />
         </div>
         
@@ -101,8 +101,8 @@ const SearchBar = ({
           placeholder={placeholder}
           className={`block w-full pl-12 pr-12 py-4 text-base font-thin rounded-full border-2 transition-all duration-200 bg-white ${
             isFocused 
-              ? 'border-black shadow-lg focus:outline-none' 
-              : 'border-gray-200 hover:border-gray-300 focus:outline-none focus:border-black'
+              ? 'border-[#998664] shadow-lg focus:outline-none' 
+              : 'border-gray-200 hover:border-gray-300 focus:outline-none focus:border-[#998664]'
           }`}
         />
         
@@ -134,7 +134,7 @@ const SearchBar = ({
               <button
                 key={index}
                 onClick={() => handleSuggestionClick(suggestion)}
-                className="w-full text-left px-4 py-2 text-sm font-thin text-gray-700 hover:bg-gray-50 hover:text-black transition-colors flex items-center space-x-2"
+                className="w-full text-left px-4 py-2 text-sm font-thin text-gray-700 hover:bg-gray-50 hover:text-[#998664] transition-colors flex items-center space-x-2"
               >
                 <MagnifyingGlassIcon className="h-4 w-4 text-gray-400" />
                 <span>{suggestion}</span>

@@ -10,8 +10,8 @@ const DeploymentOptimizationPage = () => {
       {/* Hero Section */}
       <section className="relative w-full bg-white pt-32 pb-16 md:pt-40 md:pb-24">
         <div className="max-w-7xl mx-auto px-6 md:px-12 text-center">
-          <h1 className="text-4xl md:text-6xl font-thin text-black mb-6">Deployment & Optimization</h1>
-          <div className="w-24 h-0.5 bg-black mx-auto mb-8"></div>
+          <h1 className="text-4xl md:text-6xl font-thin text-[#998664] mb-6">Deployment & Optimization</h1>
+          <div className="w-24 h-0.5 bg-[#998664] mx-auto mb-8"></div>
           <p className="text-lg md:text-xl font-thin text-gray-600 max-w-4xl mx-auto">
             Production-ready AI deployment, intelligent scaling, performance tuning, and comprehensive monitoring for enterprise-grade reliability.
           </p>
@@ -19,18 +19,18 @@ const DeploymentOptimizationPage = () => {
       </section>
 
       {/* Overview */}
-      <section className="relative w-full bg-gray-50 py-16 md:py-24">
+      <section className="relative w-full bg-gradient-to-r from-[#998664] to-[#aa9678] py-16 md:py-24">
         <div className="max-w-7xl mx-auto px-6 md:px-12">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div>
-              <h2 className="text-3xl md:text-5xl font-thin text-black mb-8">Production Excellence</h2>
+              <h2 className="text-3xl md:text-5xl font-thin text-white mb-8">Production Excellence</h2>
               <div className="space-y-6">
-                <p className="text-lg font-thin text-gray-600">
+                <p className="text-lg font-thin text-white/90">
                   Our Deployment & Optimization service ensures your AI solutions perform flawlessly 
                   in production environments. We handle the complex transition from development to 
                   live operations with enterprise-grade reliability and scalability.
                 </p>
-                <p className="text-lg font-thin text-gray-600">
+                <p className="text-lg font-thin text-white/90">
                   From automated deployment pipelines to intelligent performance monitoring, we create 
                   robust production environments that adapt to changing demands while maintaining 
                   optimal performance and cost efficiency.
@@ -41,23 +41,23 @@ const DeploymentOptimizationPage = () => {
               <h3 className="text-2xl font-thin text-black mb-6">Deployment Services</h3>
               <div className="space-y-4">
                 <div className="flex items-start space-x-3">
-                  <div className="w-2 h-2 bg-black rounded-full mt-2"></div>
+                  <div className="w-2 h-2 bg-white rounded-full mt-2"></div>
                   <span className="text-base font-thin text-gray-600">Automated CI/CD pipeline development</span>
                 </div>
                 <div className="flex items-start space-x-3">
-                  <div className="w-2 h-2 bg-black rounded-full mt-2"></div>
+                  <div className="w-2 h-2 bg-white rounded-full mt-2"></div>
                   <span className="text-base font-thin text-gray-600">Cloud-native scaling and load balancing</span>
                 </div>
                 <div className="flex items-start space-x-3">
-                  <div className="w-2 h-2 bg-black rounded-full mt-2"></div>
+                  <div className="w-2 h-2 bg-white rounded-full mt-2"></div>
                   <span className="text-base font-thin text-gray-600">Performance optimization and tuning</span>
                 </div>
                 <div className="flex items-start space-x-3">
-                  <div className="w-2 h-2 bg-black rounded-full mt-2"></div>
+                  <div className="w-2 h-2 bg-white rounded-full mt-2"></div>
                   <span className="text-base font-thin text-gray-600">Comprehensive monitoring and alerting</span>
                 </div>
                 <div className="flex items-start space-x-3">
-                  <div className="w-2 h-2 bg-black rounded-full mt-2"></div>
+                  <div className="w-2 h-2 bg-white rounded-full mt-2"></div>
                   <span className="text-base font-thin text-gray-600">Disaster recovery and backup systems</span>
                 </div>
               </div>
@@ -70,7 +70,7 @@ const DeploymentOptimizationPage = () => {
       <section className="relative w-full bg-white py-16 md:py-24">
         <div className="max-w-7xl mx-auto px-6 md:px-12">
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-5xl font-thin text-black mb-6">Deployment Process</h2>
+            <h2 className="text-3xl md:text-5xl font-thin text-[#998664] mb-6">Deployment Process</h2>
             <p className="text-lg font-thin text-gray-600 max-w-3xl mx-auto">
               A comprehensive deployment methodology that ensures reliable, scalable, and 
               optimized AI systems in production environments with zero-downtime deployments.
@@ -80,13 +80,13 @@ const DeploymentOptimizationPage = () => {
           <div className="space-y-12">
             <div className="flex flex-col md:flex-row items-start gap-8">
               <div className="w-full md:w-1/4">
-                <div className="bg-black text-white rounded-2xl p-6 text-center">
+                <div className="bg-gradient-to-r from-[#998664] to-[#aa9678] text-white rounded-2xl p-6 text-center">
                   <div className="text-3xl font-thin mb-2">01</div>
                   <div className="text-lg font-thin">Preparation</div>
                 </div>
               </div>
               <div className="w-full md:w-3/4">
-                <h3 className="text-2xl font-thin text-black mb-4">Environment Setup & Configuration</h3>
+                <h3 className="text-2xl font-thin text-[#998664] mb-4">Environment Setup & Configuration</h3>
                 <p className="text-base font-thin text-gray-600 mb-4">
                   Comprehensive preparation of production environments with optimized configurations, 
                   security protocols, and infrastructure provisioning tailored to your AI workloads.
@@ -106,13 +106,13 @@ const DeploymentOptimizationPage = () => {
 
             <div className="flex flex-col md:flex-row items-start gap-8">
               <div className="w-full md:w-1/4">
-                <div className="bg-black text-white rounded-2xl p-6 text-center">
+                <div className="bg-gradient-to-r from-[#998664] to-[#aa9678] text-white rounded-2xl p-6 text-center">
                   <div className="text-3xl font-thin mb-2">02</div>
                   <div className="text-lg font-thin">Deployment</div>
                 </div>
               </div>
               <div className="w-full md:w-3/4">
-                <h3 className="text-2xl font-thin text-black mb-4">Automated Release Management</h3>
+                <h3 className="text-2xl font-thin text-[#998664] mb-4">Automated Release Management</h3>
                 <p className="text-base font-thin text-gray-600 mb-4">
                   Seamless deployment processes with automated testing, staged rollouts, and 
                   immediate rollback capabilities to ensure consistent and reliable releases.
@@ -132,13 +132,13 @@ const DeploymentOptimizationPage = () => {
 
             <div className="flex flex-col md:flex-row items-start gap-8">
               <div className="w-full md:w-1/4">
-                <div className="bg-black text-white rounded-2xl p-6 text-center">
+                <div className="bg-gradient-to-r from-[#998664] to-[#aa9678] text-white rounded-2xl p-6 text-center">
                   <div className="text-3xl font-thin mb-2">03</div>
                   <div className="text-lg font-thin">Optimization</div>
                 </div>
               </div>
               <div className="w-full md:w-3/4">
-                <h3 className="text-2xl font-thin text-black mb-4">Performance Monitoring & Tuning</h3>
+                <h3 className="text-2xl font-thin text-[#998664] mb-4">Performance Monitoring & Tuning</h3>
                 <p className="text-base font-thin text-gray-600 mb-4">
                   Continuous performance optimization with real-time monitoring, intelligent scaling, 
                   and proactive issue resolution to maintain peak system performance.
@@ -163,7 +163,7 @@ const DeploymentOptimizationPage = () => {
       <section className="relative w-full bg-gray-50 py-16 md:py-24">
         <div className="max-w-7xl mx-auto px-6 md:px-12">
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-5xl font-thin text-black mb-6">Expected Benefits</h2>
+            <h2 className="text-3xl md:text-5xl font-thin text-[#998664] mb-6">Expected Benefits</h2>
             <p className="text-lg font-thin text-gray-600 max-w-3xl mx-auto">
               Professional deployment and optimization services are designed to deliver superior reliability, 
               performance, and cost efficiency for production AI systems.
@@ -205,7 +205,7 @@ const DeploymentOptimizationPage = () => {
       <section className="relative w-full bg-white py-16 md:py-24">
         <div className="max-w-7xl mx-auto px-6 md:px-12">
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-5xl font-thin text-black mb-6">Our Approach</h2>
+            <h2 className="text-3xl md:text-5xl font-thin text-[#998664] mb-6">Our Approach</h2>
             <p className="text-lg font-thin text-gray-600 max-w-3xl mx-auto">
               Our systematic deployment methodology focuses on building scalable, reliable systems 
               that can handle high-performance requirements for enterprise applications.
@@ -222,15 +222,15 @@ const DeploymentOptimizationPage = () => {
                 </p>
                 <div className="space-y-3">
                   <div className="flex items-center space-x-3">
-                    <div className="w-2 h-2 border border-black rounded-full"></div>
+                    <div className="w-2 h-2 border border-[#998664] rounded-full"></div>
                     <span className="text-sm font-thin text-gray-600">Extreme performance requirements for real-time processing</span>
                   </div>
                   <div className="flex items-center space-x-3">
-                    <div className="w-2 h-2 border border-black rounded-full"></div>
+                    <div className="w-2 h-2 border border-[#998664] rounded-full"></div>
                     <span className="text-sm font-thin text-gray-600">Zero tolerance for downtime in financial transactions</span>
                   </div>
                   <div className="flex items-center space-x-3">
-                    <div className="w-2 h-2 border border-black rounded-full"></div>
+                    <div className="w-2 h-2 border border-[#998664] rounded-full"></div>
                     <span className="text-sm font-thin text-gray-600">Complex scaling patterns with traffic spikes</span>
                   </div>
                 </div>
@@ -244,15 +244,15 @@ const DeploymentOptimizationPage = () => {
                 </p>
                 <div className="space-y-3">
                   <div className="flex items-center space-x-3">
-                    <div className="w-2 h-2 border border-black rounded-full"></div>
+                    <div className="w-2 h-2 border border-[#998664] rounded-full"></div>
                     <span className="text-sm font-thin text-gray-600">Kubernetes orchestration with predictive auto-scaling</span>
                   </div>
                   <div className="flex items-center space-x-3">
-                    <div className="w-2 h-2 border border-black rounded-full"></div>
+                    <div className="w-2 h-2 border border-[#998664] rounded-full"></div>
                     <span className="text-sm font-thin text-gray-600">Multi-region deployment with intelligent failover</span>
                   </div>
                   <div className="flex items-center space-x-3">
-                    <div className="w-2 h-2 border border-black rounded-full"></div>
+                    <div className="w-2 h-2 border border-[#998664] rounded-full"></div>
                     <span className="text-sm font-thin text-gray-600">Real-time performance optimization and alerting</span>
                   </div>
                 </div>
@@ -277,7 +277,7 @@ const DeploymentOptimizationPage = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="relative w-full bg-black py-16 md:py-24">
+      <section className="relative w-full bg-gradient-to-r from-[#998664] to-[#aa9678] py-16 md:py-24">
         <div className="max-w-5xl mx-auto px-6 md:px-12 text-center">
           <h2 className="text-3xl md:text-5xl font-thin text-white mb-6">Ready for Production Deployment?</h2>
           <p className="text-lg font-thin text-white/80 mb-8 max-w-3xl mx-auto">
@@ -285,10 +285,10 @@ const DeploymentOptimizationPage = () => {
             and scalability that meets your most demanding requirements.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <button className="bg-white text-black px-8 py-4 rounded-full text-lg font-thin hover:bg-gray-100 transition-colors">
+            <button className="bg-white text-[#998664] px-8 py-4 rounded-full text-lg font-thin hover:bg-gray-100 hover:text-[#998664] transition-colors">
               Plan Deployment
             </button>
-            <button className="border border-white text-white px-8 py-4 rounded-full text-lg font-thin hover:bg-white hover:text-black transition-colors">
+            <button className="border border-white text-white px-8 py-4 rounded-full text-lg font-thin hover:bg-white hover:text-[#998664] transition-colors">
               Performance Audit
             </button>
           </div>

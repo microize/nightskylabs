@@ -53,8 +53,8 @@ const ProductSidebar = ({ currentProduct, productId, sectionId, pageId, onSectio
       {/* Product Header */}
       <div className="p-6 border-b border-gray-200">
         <div className="flex items-center space-x-3 mb-3">
-          <ProductIcon className="w-6 h-6 text-black" />
-          <h2 className="text-xl font-thin text-black">{currentProduct.name}</h2>
+          <ProductIcon className="w-6 h-6 text-[#998664]" />
+          <h2 className="text-xl font-thin text-[#998664]">{currentProduct.name}</h2>
         </div>
         <p className="text-sm font-thin text-gray-600">{currentProduct.description}</p>
       </div>
@@ -83,8 +83,8 @@ const ProductSidebar = ({ currentProduct, productId, sectionId, pageId, onSectio
                 }}
                 className={`w-full flex items-center justify-between p-3 rounded-lg text-left transition-colors ${
                   isCurrentSection
-                    ? 'bg-black text-white'
-                    : 'text-gray-700 hover:bg-white hover:text-black'
+                    ? 'bg-gradient-to-r from-[#998664] to-[#aa9678] text-white'
+                    : 'text-gray-700 hover:bg-white hover:text-[#998664]'
                 }`}
               >
                 <div className="flex items-center space-x-3">

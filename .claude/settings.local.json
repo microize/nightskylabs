@@ -28,7 +28,10 @@
       "Bash(timeout 30s npm start:*)",
       "Bash(timeout 60s npm run build)",
       "Bash(npm audit:*)",
-      "Bash(npm update)"
+      "Bash(npm update)",
+      "Bash(timeout 15s npm start)",
+      "Bash(sed:*)",
+      "Bash(timeout 15s npm run build)"
     ],
     "deny": []
   }

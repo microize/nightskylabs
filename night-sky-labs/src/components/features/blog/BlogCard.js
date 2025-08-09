@@ -1,15 +1,26 @@
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 import { LuCalendar, LuClock, LuUser, LuFileText } from 'react-icons/lu';
 import { formatDate } from '../../../utils/blogUtils';
 import { BlogHeroImage } from './BlogImage';
 
 const BlogCard = ({ post, featured = false, onPostClick }) => {
+  const navigate = useNavigate();
+  
   const cardClass = featured 
     ? "bg-white rounded-2xl shadow-lg overflow-hidden col-span-full lg:col-span-2 cursor-pointer hover:shadow-xl transition-shadow"
     : "bg-white rounded-2xl shadow-lg overflow-hidden cursor-pointer hover:shadow-xl transition-shadow";
 
+  const handleClick = () => {
+    if (onPostClick) {
+      onPostClick(post);
+    } else if (post.slug) {
+      navigate(`/blog/${post.slug}`);
+    }
+  };
+
   return (
-    <article className={cardClass} onClick={() => onPostClick && onPostClick(post)}>
+    <article className={cardClass} onClick={handleClick}>
       {/* Blog Post Image/Icon */}
       {post.image ? (
         <BlogHeroImage 
@@ -35,7 +46,7 @@ const BlogCard = ({ post, featured = false, onPostClick }) => {
         </div>
         
         {/* Title */}
-        <h2 className={`${featured ? 'text-2xl md:text-3xl' : 'text-xl md:text-2xl'} font-thin text-black mb-4 leading-tight hover:text-gray-700 transition-colors cursor-pointer`}>
+        <h2 className={`${featured ? 'text-2xl md:text-3xl' : 'text-xl md:text-2xl'} font-thin text-[#998664] mb-4 leading-tight hover:text-[#aa9678] transition-colors cursor-pointer`}>
           {post.title}
         </h2>
         
@@ -64,7 +75,7 @@ const BlogCard = ({ post, featured = false, onPostClick }) => {
         
         {/* Read More Button */}
         <div className="mt-6">
-          <span className="text-black font-thin hover:text-gray-600 transition-colors text-sm uppercase tracking-wide">
+          <span className="text-[#998664] font-thin hover:text-[#aa9678] transition-colors text-sm uppercase tracking-wide">
             Read Article
           </span>
         </div>

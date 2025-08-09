@@ -39,8 +39,8 @@ const CategoryFilter = ({
           onClick={() => handleCategoryClick(category)}
           className={`px-4 py-2 rounded-full text-sm font-thin transition-all duration-200 ${
             selectedCategory === category
-              ? 'bg-black text-white shadow-md'
-              : 'bg-white text-gray-600 hover:text-black hover:bg-gray-50 border border-gray-200 hover:border-gray-300'
+              ? 'bg-[#998664] text-white shadow-md'
+              : 'bg-white text-gray-600 hover:text-[#998664] hover:bg-gray-50 border border-gray-200 hover:border-gray-300'
           }`}
         >
           {category}
@@ -54,10 +54,10 @@ const CategoryFilter = ({
     <div className="relative inline-block text-left">
       <button
         onClick={toggleDropdown}
-        className="inline-flex items-center justify-center w-full px-6 py-3 bg-white border border-gray-200 rounded-full text-sm font-thin text-gray-700 hover:bg-gray-50 hover:border-gray-300 focus:outline-none focus:ring-2 focus:ring-black focus:ring-opacity-20 transition-all duration-200"
+        className="inline-flex items-center justify-center w-full px-6 py-3 bg-white border border-gray-200 rounded-full text-sm font-thin text-gray-700 hover:bg-gray-50 hover:border-gray-300 focus:outline-none focus:ring-2 focus:ring-[#998664] focus:ring-opacity-20 transition-all duration-200"
       >
         <span className="mr-2">{getFilterLabel()}</span>
-        <span className="font-medium text-black">
+        <span className="font-medium text-[#998664]">
           {selectedCategory}
         </span>
         <ChevronDownIcon 
@@ -84,8 +84,8 @@ const CategoryFilter = ({
                   onClick={() => handleCategoryClick(category)}
                   className={`w-full text-left px-4 py-3 text-sm font-thin transition-colors flex items-center justify-between ${
                     selectedCategory === category
-                      ? 'bg-black text-white'
-                      : 'text-gray-700 hover:bg-gray-50 hover:text-black'
+                      ? 'bg-[#998664] text-white'
+                      : 'text-gray-700 hover:bg-gray-50 hover:text-[#998664]'
                   }`}
                 >
                   <span>{category}</span>
@@ -128,7 +128,7 @@ const CategoryFilter = ({
       {selectedCategory !== 'All' && (
         <div className="flex items-center space-x-2 text-xs text-gray-500">
           <span>Active filter:</span>
-          <span className="font-medium text-black">{selectedCategory}</span>
+          <span className="font-medium text-[#998664]">{selectedCategory}</span>
           <button
             onClick={() => handleCategoryClick('All')}
             className="text-gray-400 hover:text-gray-600 transition-colors"

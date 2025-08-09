@@ -12,8 +12,11 @@ const VoicePage = React.lazy(() => import('./pages/VoicePage'));
 const QuriousPage = React.lazy(() => import('./pages/QuriousPage'));
 const AboutPage = React.lazy(() => import('./pages/AboutPage'));
 const BlogPage = React.lazy(() => import('./pages/BlogPage'));
+const BlogPostPage = React.lazy(() => import('./pages/BlogPostPage'));
 const CaseStudiesPage = React.lazy(() => import('./pages/CaseStudiesPage'));
+const CaseStudyPostPage = React.lazy(() => import('./pages/CaseStudyPostPage'));
 const ResearchPage = React.lazy(() => import('./pages/ResearchPage'));
+const ResearchPostPage = React.lazy(() => import('./pages/ResearchPostPage'));
 const DocumentationPage = React.lazy(() => import('./pages/DocumentationPage'));
 const HelpCenterPage = React.lazy(() => import('./pages/HelpCenterPage'));
 const CommunityPage = React.lazy(() => import('./pages/CommunityPage'));
@@ -66,8 +69,11 @@ function App() {
               <Route path="/qurious" element={<QuriousPage />} />
               <Route path="/about" element={<AboutPage />} />
               <Route path="/blog" element={<BlogPage />} />
+              <Route path="/blog/:slug" element={<BlogPostPage />} />
               <Route path="/case-studies" element={<CaseStudiesPage />} />
+              <Route path="/case-studies/:slug" element={<CaseStudyPostPage />} />
               <Route path="/research" element={<ResearchPage />} />
+              <Route path="/research/:slug" element={<ResearchPostPage />} />
               
               {/* Documentation Routes - Product-specific structure */}
               <Route path="/documentation" element={<DocumentationPage />} />

@@ -38,7 +38,7 @@ const Pagination = ({
         className={`flex items-center px-3 py-2 rounded-lg text-sm font-thin transition-colors ${
           currentPage === 1
             ? 'text-gray-400 cursor-not-allowed'
-            : 'text-gray-700 hover:text-black hover:bg-gray-100'
+            : 'text-gray-700 hover:text-[#998664] hover:bg-[#998664] hover:bg-opacity-20'
         }`}
       >
         <LuChevronLeft className="h-4 w-4 mr-1" />
@@ -53,7 +53,7 @@ const Pagination = ({
             <>
               <button
                 onClick={() => onPageChange(1)}
-                className="px-3 py-2 rounded-lg text-sm font-thin text-gray-700 hover:text-black hover:bg-gray-100"
+                className="px-3 py-2 rounded-lg text-sm font-thin text-gray-700 hover:text-[#998664] hover:bg-[#998664] hover:bg-opacity-20"
               >
                 1
               </button>
@@ -70,8 +70,8 @@ const Pagination = ({
               onClick={() => onPageChange(page)}
               className={`px-3 py-2 rounded-lg text-sm font-thin transition-colors ${
                 page === currentPage
-                  ? 'bg-black text-white'
-                  : 'text-gray-700 hover:text-black hover:bg-gray-100'
+                  ? 'bg-[#998664] text-white'
+                  : 'text-gray-700 hover:text-[#998664] hover:bg-[#998664] hover:bg-opacity-20'
               }`}
             >
               {page}
@@ -86,7 +86,7 @@ const Pagination = ({
               )}
               <button
                 onClick={() => onPageChange(totalPages)}
-                className="px-3 py-2 rounded-lg text-sm font-thin text-gray-700 hover:text-black hover:bg-gray-100"
+                className="px-3 py-2 rounded-lg text-sm font-thin text-gray-700 hover:text-[#998664] hover:bg-[#998664] hover:bg-opacity-20"
               >
                 {totalPages}
               </button>
@@ -102,7 +102,7 @@ const Pagination = ({
         className={`flex items-center px-3 py-2 rounded-lg text-sm font-thin transition-colors ${
           currentPage === totalPages
             ? 'text-gray-400 cursor-not-allowed'
-            : 'text-gray-700 hover:text-black hover:bg-gray-100'
+            : 'text-gray-700 hover:text-[#998664] hover:bg-[#998664] hover:bg-opacity-20'
         }`}
       >
         Next

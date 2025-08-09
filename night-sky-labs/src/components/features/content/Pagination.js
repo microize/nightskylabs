@@ -89,7 +89,7 @@ const Pagination = ({
           className={`flex items-center px-3 py-2 rounded-lg text-sm font-thin transition-all duration-200 ${
             currentPage === 1
               ? 'text-gray-300 cursor-not-allowed'
-              : 'text-gray-600 hover:text-black hover:bg-gray-50'
+              : 'text-gray-600 hover:text-[#998664] hover:bg-gray-50'
           }`}
           aria-label="Previous page"
         >
@@ -118,8 +118,8 @@ const Pagination = ({
                 onClick={() => handlePageClick(page)}
                 className={`min-w-[2.5rem] h-10 flex items-center justify-center rounded-lg text-sm font-thin transition-all duration-200 ${
                   page === currentPage
-                    ? 'bg-black text-white shadow-md'
-                    : 'text-gray-600 hover:text-black hover:bg-gray-50'
+                    ? 'bg-[#998664] text-white shadow-md'
+                    : 'text-gray-600 hover:text-[#998664] hover:bg-gray-50'
                 }`}
                 aria-label={`Go to page ${page}`}
                 aria-current={page === currentPage ? 'page' : undefined}
@@ -137,7 +137,7 @@ const Pagination = ({
           className={`flex items-center px-3 py-2 rounded-lg text-sm font-thin transition-all duration-200 ${
             currentPage === totalPages
               ? 'text-gray-300 cursor-not-allowed'
-              : 'text-gray-600 hover:text-black hover:bg-gray-50'
+              : 'text-gray-600 hover:text-[#998664] hover:bg-gray-50'
           }`}
           aria-label="Next page"
         >
@@ -151,7 +151,7 @@ const Pagination = ({
         <select
           value={currentPage}
           onChange={(e) => handlePageClick(parseInt(e.target.value))}
-          className="px-3 py-2 border border-gray-200 rounded-lg text-sm font-thin bg-white focus:outline-none focus:ring-2 focus:ring-black focus:ring-opacity-20"
+          className="px-3 py-2 border border-gray-200 rounded-lg text-sm font-thin bg-white focus:outline-none focus:ring-2 focus:ring-[#998664] focus:ring-opacity-20"
           aria-label="Select page"
         >
           {Array.from({ length: totalPages }, (_, i) => i + 1).map((page) => (
@@ -180,7 +180,7 @@ const Pagination = ({
                 }
               }
             }}
-            className="w-16 px-2 py-1 border border-gray-200 rounded text-center text-sm font-thin focus:outline-none focus:ring-2 focus:ring-black focus:ring-opacity-20"
+            className="w-16 px-2 py-1 border border-gray-200 rounded text-center text-sm font-thin focus:outline-none focus:ring-2 focus:ring-[#998664] focus:ring-opacity-20"
           />
         </div>
       )}

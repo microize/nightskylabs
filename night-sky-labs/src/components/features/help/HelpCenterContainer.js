@@ -65,7 +65,7 @@ const HelpArticleCard = ({ article, onArticleClick }) => {
       {/* Article header */}
       <div className="flex items-start justify-between mb-4">
         <div className="flex-1">
-          <h3 className="text-lg font-thin text-black mb-2 leading-tight hover:text-gray-700 transition-colors">
+          <h3 className="text-lg font-thin text-[#998664] mb-2 leading-tight hover:text-gray-700 transition-colors">
             {article.title}
           </h3>
           
@@ -97,7 +97,7 @@ const HelpArticleCard = ({ article, onArticleClick }) => {
           <span>•</span>
           <span>{article.readTime}</span>
         </div>
-        <span className="text-black hover:text-gray-600 transition-colors">
+        <span className="text-[#998664] hover:text-gray-600 transition-colors">
           Read Article →
         </span>
       </div>
